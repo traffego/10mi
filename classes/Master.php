@@ -1913,225 +1913,133 @@ Class Master extends DBConnection {
 	}
 
 	function search_raffle_winner(){    
-		global $conn; 
-		$draw_number = trim($conn->real_escape_string($_POST['number'])); // Prevenir SQL injection
-		$raffle = $conn->real_escape_string($_POST['raffle']); // Prevenir SQL injection
+		extract($_POST);
 
-		$sqlx = "
-		SELECT type_of_draw, qty_numbers
-		FROM product_list
-		WHERE id = '{$raffle}'
-		LIMIT 1
-		";    
-		$resultx = $conn->query($sqlx);
-
-		if ($resultx && $resultx->num_rows > 0) {
-			$row = $resultx->fetch_assoc();
-			$type_of_draw = $row['type_of_draw']; 
-			$qty_numbers = $row['qty_numbers'];
-			$qty_numbers = $qty_numbers - 1;
-		}
-
-		$bichos = array();
-		if($type_of_draw == 3){
-			$bichos = array(
-				"00" => "Avestruz",
-				"01" => "Águia",
-				"02" => "Burro",
-				"03" => "Borboleta",
-				"04" => "Cachorro",
-				"05" => "Cabra",
-				"06" => "Carneiro",
-				"07" => "Camelo",
-				"08" => "Cobra",
-				"09" => "Coelho",
-				"10" => "Cavalo",
-				"11" => "Elefante",
-				"12" => "Galo",
-				"13" => "Gato",
-				"14" => "Jacaré",
-				"15" => "Leão",
-				"16" => "Macaco",
-				"17" => "Porco",
-				"18" => "Pavão",
-				"19" => "Peru",
-				"20" => "Touro",
-				"21" => "Tigre",
-				"22" => "Urso",
-				"23" => "Veado",
-				"24" => "Vaca"
-			);
-		} 
-		if($type_of_draw == 4){
-			$bichos = array(
-				"00" => "Avestruz M1",
-				"01" => "Avestruz M2",
-				"02" => "Águia M1",
-				"03" => "Águia M2",
-				"04" => "Burro M1",
-				"05" => "Burro M2",
-				"06" => "Borboleta M1",
-				"07" => "Borboleta M2",
-				"08" => "Cachorro M1",
-				"09" => "Cachorro M2",
-				"10" => "Cabra M1",
-				"11" => "Cabra M2",
-				"12" => "Carneiro M1",
-				"13" => "Carneiro M2",
-				"14" => "Camelo M1",
-				"15" => "Camelo M2",
-				"16" => "Cobra M1",
-				"17" => "Cobra M2",
-				"18" => "Coelho M1",
-				"19" => "Coelho M2",
-				"20" => "Cavalo M1",
-				"21" => "Cavalo M2",
-				"22" => "Elefante M1",
-				"23" => "Elefante M2",
-				"24" => "Galo M1",
-				"25" => "Galo M2",
-				"26" => "Gato M1",
-				"27" => "Gato M2",
-				"28" => "Jacaré M1",
-				"29" => "Jacaré M2",
-				"30" => "Leão M1",
-				"31" => "Leão M2",
-				"32" => "Macaco M1",
-				"33" => "Macaco M2",
-				"34" => "Porco M1",
-				"35" => "Porco M2",
-				"36" => "Pavão M1",
-				"37" => "Pavão M2",
-				"38" => "Peru M1",
-				"39" => "Peru M2",
-				"40" => "Touro M1",
-				"41" => "Touro M2",
-				"42" => "Tigre M1",
-				"43" => "Tigre M2",
-				"44" => "Urso M1",
-				"45" => "Urso M2",
-				"46" => "Veado M1",
-				"47" => "Veado M2",
-				"48" => "Vaca M1",
-				"49" => "Vaca M2"
-			);  
-		}
-
-		if ($draw_number === null || !isset($draw_number)) {
-			$draw_number_normalize = '';
-		} else if (is_numeric($draw_number)) {
-			$draw_number_normalize = strval($draw_number);
-		} else if (is_string($draw_number)) {
-			$draw_number_normalize = $draw_number;
-		} else {
-			$draw_number_normalize = strval($draw_number);
-		}
-
-		$draw_number_normalized = $draw_number_normalize;
-		$bicho = '';
-
-		foreach ($bichos as $key => $value) {
-
-			if ($value === null || !isset($value)) {
-				$normalizeValue = '';
-			} else if (is_numeric($value)) {
-				$normalizeValue = strval($value);
-			} else if (is_string($value)) {
-				$normalizeValue = $value;
-			} else {
-				$normalizeValue = strval($value);
-			}
-
-			$normalizedValue = $normalizeValue;
-
-			if (strcmp($draw_number_normalized, $normalizedValue) === 0) {
-				$draw_number = $key;
-				$bicho = $value;
-				break;
-			}
-		}
-
-		$draw_number = ltrim($draw_number, '0');
-		if ($draw_number === '') {
-			$draw_number = 0;
-		}
-
-		$aw_number_condition = "";
-		if ($draw_number === "0" || $draw_number === 0) {
-			$aw_number_condition = " AND FIND_IN_SET('0', (SELECT GROUP_CONCAT(DISTINCT onum.number ORDER BY onum.number ASC) 
-											FROM order_numbers onum 
-											WHERE onum.order_id = o.id)) > 0";
-		} else {
-			$aw_number_condition = " AND FIND_IN_SET(?, (SELECT GROUP_CONCAT(DISTINCT onum.number ORDER BY onum.number ASC) 
-											FROM order_numbers onum 
-											WHERE onum.order_id = o.id)) > 0";
-		}
-
-		$sql = "
-			SELECT c.firstname, 
-			c.lastname, 
-			c.email, 
-			c.phone, 
-			o.date_created, 
-			o.status,
-			(
-				SELECT GROUP_CONCAT(DISTINCT LPAD(onum.number, FLOOR(LOG10(p.qty_numbers - 1)) + 1, '0') ORDER BY onum.number ASC) 
-				FROM order_numbers onum 
-				WHERE onum.order_id = o.id
-			) AS o_numbers 
-			FROM `order_list` o
+		$resp = array(
+			'status' => 'failed',
+			'name' => '',
+			'phone' => '',
+			'raffle' => '',
+			'date' => '',
+			'payment_status' => '',
+			'number' => '',
+		);
+	
+		$stmt = $this->conn->prepare("
+			SELECT 
+			o.id, o.code, o.date_created, o.status,
+			p.name,
+			c.firstname, c.lastname, c.phone,
+			n.number
+			FROM 
+			product_list p
+			INNER JOIN order_list o ON p.id = o.product_id
 			INNER JOIN customer_list c ON o.customer_id = c.id
-			INNER JOIN product_list p ON o.product_id = p.id
-			WHERE 1=1 AND o.product_id = ? $aw_number_condition";
-
-		$stmt = $conn->prepare($sql);
-		if ($draw_number === "0" || $draw_number === 0) {
-			$stmt->bind_param("i", $raffle);
-		} else {
-			$stmt->bind_param("is", $raffle, $draw_number);
+			INNER JOIN order_numbers n ON o.id = n.order_id
+			WHERE 
+			p.id = ? AND n.number = ? AND o.status = 2
+		");
+	  
+		if ($stmt === false) {
+			$resp['status'] = 'failed';
+			return json_encode($resp);
 		}
-		$stmt->execute();
+	  
+		$stmt->bind_param("is", $raffle, $number);
+	  
+		if (!$stmt->execute()) {
+			$resp['status'] = 'failed';
+			return json_encode($resp);
+		}
+	  
 		$result = $stmt->get_result();
-
-		if ($result && $result->num_rows > 0) {
+	  
+		if ($result->num_rows > 0) {
 			$row = $result->fetch_assoc();
-			$firstname = $row['firstname'];
-			$lastname = $row['lastname'];
-			$email = $row['email'];
-			$phone = formatPhoneNumber($row['phone']);
-			$date = date("d-m-Y", strtotime($row['date_created']));
-			$fullname = ''.$firstname.' '.$lastname.'';
-			$payment_status = $row['status'];
-
-			$globos = strlen($qty_numbers);
-		
-			if($payment_status == 1){
-				$payment_status = 'Pendente';
-			}
-			if($payment_status == 2){
-				$payment_status = 'Pago';
-			}
-			if($payment_status == 3){
-				$payment_status = 'Cancelado';
-			}
-			if($bicho){
-				$draw_number = $bicho; 
-			} else {
-				$draw_number = str_pad($draw_number, $globos, "0", STR_PAD_LEFT);
-			}
-			$resultado['status'] = 'success';
-			$resultado['name'] = $fullname;
-			$resultado['phone'] = $phone;
-			$resultado['date'] = $date;
-			$resultado['number'] = $draw_number;
-			$resultado['payment_status'] = $payment_status;
-			echo json_encode($resultado);
-			exit;
-		} else {
-		$resultado['status'] = 'failed';
-		echo json_encode($resultado);
-		exit;
+			$resp['status'] = 'success';
+			$resp['name'] = $row['firstname'] . ' ' . $row['lastname'];
+			$resp['phone'] = formatPhoneNumber($row['phone']);
+			$resp['raffle'] = $row['name'];
+			$resp['date'] = date("d/m/Y H:i", strtotime($row['date_created']));
+			$resp['payment_status'] = ($row['status'] == 2) ? 'Pago' : 'Pendente';
+			$resp['number'] = $row['number'];
 		}
+	  
+		$stmt->close();
+	  
+		return json_encode($resp);
+	}
+
+	function analyze_raffle_numbers() {
+		extract($_POST);
+		
+		$resp = array(
+			'status' => 'failed',
+			'raffle_name' => '',
+			'highest_number' => '',
+			'lowest_number' => ''
+		);
+		
+		// Buscar o nome do sorteio
+		$raffle_query = $this->conn->prepare("SELECT name FROM product_list WHERE id = ?");
+		if ($raffle_query === false) {
+			return json_encode($resp);
+		}
+		
+		$raffle_query->bind_param("i", $raffle_id);
+		$raffle_query->execute();
+		$raffle_result = $raffle_query->get_result();
+		
+		if ($raffle_result->num_rows > 0) {
+			$raffle_row = $raffle_result->fetch_assoc();
+			$resp['raffle_name'] = $raffle_row['name'];
+		} else {
+			return json_encode($resp);
+		}
+		
+		// Buscar o maior e menor número dos pedidos pagos deste sorteio
+		$numbers_query = $this->conn->prepare("
+			SELECT 
+				MIN(n.number) as min_number,
+				MAX(n.number) as max_number
+			FROM 
+				order_numbers n
+			INNER JOIN 
+				order_list o ON n.order_id = o.id
+			WHERE 
+				o.product_id = ? AND o.status = 2
+		");
+		
+		if ($numbers_query === false) {
+			return json_encode($resp);
+		}
+		
+		$numbers_query->bind_param("i", $raffle_id);
+		$numbers_query->execute();
+		$numbers_result = $numbers_query->get_result();
+		
+		if ($numbers_result->num_rows > 0) {
+			$numbers_row = $numbers_result->fetch_assoc();
+			
+			if ($numbers_row['min_number'] !== null && $numbers_row['max_number'] !== null) {
+				// Obter o número de dígitos para formatação
+				$digits_query = $this->conn->prepare("SELECT qty_numbers FROM product_list WHERE id = ?");
+				$digits_query->bind_param("i", $raffle_id);
+				$digits_query->execute();
+				$digits_result = $digits_query->get_result();
+				$digits_row = $digits_result->fetch_assoc();
+				
+				$qty_numbers = $digits_row['qty_numbers'];
+				$num_digits = strlen($qty_numbers) - 1;
+				
+				// Formatar os números com zeros à esquerda
+				$resp['lowest_number'] = str_pad($numbers_row['min_number'], $num_digits, '0', STR_PAD_LEFT);
+				$resp['highest_number'] = str_pad($numbers_row['max_number'], $num_digits, '0', STR_PAD_LEFT);
+				$resp['status'] = 'success';
+			}
+		}
+		
+		return json_encode($resp);
 	}
 
 	public function verify_orders_mp() {
@@ -2584,6 +2492,9 @@ switch ($action) {
 		break;
 	case 'search_raffle_winner':
 		echo $Master->search_raffle_winner();
+		break;
+	case 'analyze_raffle_numbers':
+		echo $Master->analyze_raffle_numbers();
 		break;
 
 	default:

@@ -336,7 +336,7 @@ tbody {
   </script>
 
 <!--Busca Ganhador x Ranking -->
-<div class="grid gap-6 mb-8 md:grid-cols-2 xl:grid-cols-2">
+<div class="grid gap-6 mb-8 md:grid-cols-2 xl:grid-cols-3">
     <!-- Card Buscar Ganhador -->
     <div class="bg-white rounded-lg shadow-xs overflow-hidden dark:bg-gray-800">
         <div class="flex items-center p-4 bg-purple-50 dark:bg-gray-700">
@@ -386,6 +386,48 @@ tbody {
                 <span id="number"></span>
                 <span class="winner"></span>
             </p>
+        </div>
+    </div>
+    <!-- Card Análise de Números -->
+    <div class="bg-white rounded-lg shadow-xs overflow-hidden dark:bg-gray-800">
+        <div class="flex items-center p-4 bg-green-50 dark:bg-gray-700">
+            <div class="p-3 mr-4 text-green-500 bg-green-100 rounded-full dark:text-green-100 dark:bg-green-500">
+                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M3 3a1 1 0 000 2v8a2 2 0 002 2h2.586l-1.293 1.293a1 1 0 101.414 1.414L10 15.414l2.293 2.293a1 1 0 001.414-1.414L12.414 15H15a2 2 0 002-2V5a1 1 0 100-2H3zm11.707 4.707a1 1 0 00-1.414-1.414L10 9.586 8.707 8.293a1 1 0 00-1.414 0l-2 2a1 1 0 101.414 1.414L8 10.414l1.293 1.293a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                </svg>
+            </div>
+            <h3 class="text-lg font-semibold text-gray-700 dark:text-gray-200">
+                ANÁLISE DE NÚMEROS
+            </h3>
+        </div>
+        <div class="border-t border-gray-200 dark:border-gray-700"></div>
+        <div class="p-4">
+            <form action="" id="number-analysis" style="margin-bottom:10px">
+                <div class="flex flex-col w-full">
+                    <div class="w-full mb-4">
+                        <p class="mb-2 text-sm font-medium text-gray-600 dark:text-gray-400">Selecione o sorteio:</p>
+                        <select name="raffle_analysis" id="raffle_analysis" class="block w-full mt-1 text-sm dark:text-gray-300 dark:border-gray-600 dark:bg-gray-700 form-select focus:border-purple-400 focus:outline-none focus:shadow-outline-purple dark:focus:shadow-outline-gray">
+                            <option value="">Selecione</option>
+                            <?php 
+                            $qry = $conn->query("SELECT * FROM `product_list`");
+                            while ($row = $qry->fetch_assoc()) { ?>
+                          <option value="<?= $row['id'] ?>"><?= $row['name'] ?></option>
+                           <?php }  ?>
+                        </select>
+                    </div>
+                    <div class="w-full">
+                        <button type="button" id="analyze-numbers" class="w-full px-5 py-3 font-medium leading-5 text-white transition-colors duration-150 bg-green-600 border border-transparent rounded-lg active:bg-green-600 hover:bg-green-700 focus:outline-none focus:shadow-outline-green">Analisar</button>
+                    </div>
+                </div>
+            </form>
+
+            <div class="mt-4 text-gray-700 dark:text-gray-200" id="number-analysis-result">
+                <div class="p-4 bg-gray-50 dark:bg-gray-700 rounded-lg">
+                    <p class="mb-2"><strong>Sorteio:</strong> <span id="raffle-name">-</span></p>
+                    <p class="mb-2"><strong>Maior número:</strong> <span id="highest-number">-</span></p>
+                    <p><strong>Menor número:</strong> <span id="lowest-number">-</span></p>
+                </div>
+            </div>
         </div>
     </div>
     <!-- Card Ranking de Compradores -->
@@ -806,5 +848,40 @@ $stat_arr = ['Pending Orders', 'Packed Orders', 'Our for Delivery', 'Completed O
     }
     })
   })
+  
+  // Funcionalidade para análise de números
+  $('#analyze-numbers').click(function() {
+    const raffleId = $('#raffle_analysis').val();
+    
+    if (!raffleId) {
+      alert('Por favor, selecione um sorteio para analisar.');
+      return;
+    }
+    
+    $.ajax({
+      url: _base_url_+"classes/Master.php?f=analyze_raffle_numbers",
+      method: 'POST',
+      data: {raffle_id: raffleId},
+      dataType: 'json',
+      success: function(resp) {
+        if (resp.status == 'success') {
+          $('#raffle-name').text(resp.raffle_name);
+          $('#highest-number').text(resp.highest_number);
+          $('#lowest-number').text(resp.lowest_number);
+        } else {
+          $('#raffle-name').text(resp.raffle_name);
+          $('#highest-number').text('-');
+          $('#lowest-number').text('-');
+          alert('Nenhum número encontrado para este sorteio.');
+        }
+      },
+      error: function(err) {
+        $('#raffle-name').text('-');
+        $('#highest-number').text('-');
+        $('#lowest-number').text('-');
+        alert('Ocorreu um erro ao analisar os números.');
+      }
+    });
+  });
   })
 </script>
