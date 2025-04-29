@@ -507,6 +507,21 @@ html[data-theme="dark"] footer .text-gray-500,
   background-color: var(--color-purple-600, #805ad5) !important;
 }
 
+/* Fix for modal buttons */
+@media (max-width: 640px) {
+  #modal-admin footer {
+    padding-left: 1rem !important;
+    padding-right: 1rem !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
+  
+  #modal-admin footer button {
+    font-size: 0.75rem !important;
+    padding: 0.5rem 0.75rem !important;
+  }
+}
+
 </style>
 
 <script>
