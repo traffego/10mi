@@ -545,6 +545,14 @@ $d_end = isset($_GET['ranking_date_end']) ? $_GET['ranking_date_end'] : date('Y-
 $top = isset($_GET['top']) ? $_GET['top'] : '';
  ?>
  <style>
+
+html[class*="theme-dark"] .adm-pedido-numeros  {
+  color: #000 !important;
+}
+html[class*="theme-dark"] .adm-pedido-numeros a:hover{
+  color: #000 !important;
+}
+
  .adm-pedido-numeros {
 position: relative;
     display: block;
