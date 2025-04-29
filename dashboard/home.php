@@ -462,11 +462,9 @@ tbody {
                         <input name="ranking_date_start" id="ranking_date_start" type="date" value="<?=$d_start;?>" class="mr-2 block w-full mt-1 text-sm dark:border-gray-600 dark:bg-gray-700 focus:border-purple-400 focus:outline-none focus:shadow-outline-purple dark:text-gray-300 dark:focus:shadow-outline-gray form-input">
                     </div>
                     <div class="xs:w-4/12 w-auto mb-4 md:mb-0">
-                        <p class="mb-2 text-sm font-medium text-gray-600 dark:text-gray-400">Data Final</p>
-                        <input name="ranking_date_end" id="ranking_date_end" type="date" value="<?=$d_end;?>" class="mr-2 block w-full mt-1 text-sm dark:border-gray-600 dark:bg-gray-700 focus:border-purple-400 focus:outline-none focus:shadow-outline-purple dark:text-gray-300 dark:focus:shadow-outline-gray form-input">
+                        <input name="ranking_date_end" id="ranking_date_end" placeholder="Data Final" type="date" value="<?=$d_end;?>" class="mr-2 block w-full mt-1 text-sm dark:border-gray-600 dark:bg-gray-700 focus:border-purple-400 focus:outline-none focus:shadow-outline-purple dark:text-gray-300 dark:focus:shadow-outline-gray form-input">
                     </div>
                     <div class="xs:w-5/12 w-auto mb-4 md:mb-0">
-                        <p class="mb-2 text-sm font-medium text-gray-600 dark:text-gray-400">Quantidade</p>
                         <select name="top" id="top" class="block w-full mt-1 text-sm dark:text-gray-300 dark:border-gray-600 dark:bg-gray-700 form-select focus:border-purple-400 focus:outline-none focus:shadow-outline-purple dark:focus:shadow-outline-gray">
                           <option value="1" <?php if($top == 1){echo 'selected';} ?>>1</option>               
                           <option value="2" <?php if($top == 2){echo 'selected';} ?>>2</option>               
