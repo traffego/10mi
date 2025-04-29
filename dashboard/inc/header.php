@@ -308,6 +308,25 @@ require_once('sess_auth.php');
     :root.theme-dark #mobile-menu-button svg {
       color: #e2e8f0 !important;
     }
+
+    /* Global layout for sticky footer */
+    html, body {
+      height: 100%;
+    }
+    
+    body {
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+    
+    main {
+      flex: 1 0 auto;
+    }
+    
+    footer {
+      flex-shrink: 0;
+    }
   </style>
 </head>
 <body>

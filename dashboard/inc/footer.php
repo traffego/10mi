@@ -1,11 +1,11 @@
       </div>
       <!-- Footer -->
-      <footer class="bg-white shadow-md dark:bg-gray-800 mt-8">
+      <footer class="bg-white shadow-md dark:bg-gray-800" style="position: sticky; bottom: 0; width: 100vw; margin-left: calc(-50vw + 50%); z-index: 10;">
         <div class="container px-6 py-4 mx-auto">
           <div class="flex flex-col md:flex-row justify-between items-center">
             <div class="mb-4 md:mb-0">
               <p class="text-sm text-gray-600 dark:text-gray-400">
-                &copy; <?php echo date('Y'); ?> FullRifas. Todos os direitos reservados.
+                &copy; <?php echo date('Y'); ?> Rifa10mi2. Todos os direitos reservados.
               </p>
             </div>
             <div class="flex space-x-4">
