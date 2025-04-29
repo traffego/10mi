@@ -13,16 +13,20 @@ if(isset($_SERVER['HTTP_USER_AGENT'])) {
 <script>
 // Apply dark mode immediately before Alpine.js initializes
 (function() {
+    // Set dark mode in localStorage if not set
+    if (localStorage.getItem('dark') === null) {
+        localStorage.setItem('dark', 'true');
+    }
     document.documentElement.classList.add('theme-dark');
     document.documentElement.style.backgroundColor = '#1a1c23';
 })();
 
 // Ensure dark mode is set on page load
 document.addEventListener('DOMContentLoaded', function() {
-    if (!localStorage.getItem('dark')) {
-        localStorage.setItem('dark', 'true');
+    // Only apply dark mode if not explicitly set to false
+    if (localStorage.getItem('dark') !== 'false') {
+        document.documentElement.classList.add('theme-dark');
     }
-    document.documentElement.classList.add('theme-dark');
 });
 </script>
 

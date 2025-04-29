@@ -1,11 +1,11 @@
 function data() {
   function getThemeFromLocalStorage() {
     // if user already changed the theme, use it
-    if (window.localStorage.getItem('dark')) {
+    if (window.localStorage.getItem('dark') !== null) {
       return JSON.parse(window.localStorage.getItem('dark'))
     }
 
-    // Set dark mode as default
+    // Default to dark mode
     return true
   }
 
@@ -17,8 +17,9 @@ function data() {
     dark: getThemeFromLocalStorage(),
     initTheme() {
       // Set dark theme in localStorage if it's not already set
-      if (!window.localStorage.getItem('dark')) {
-        window.localStorage.setItem('dark', 'true')
+      if (localStorage.getItem('dark') === null) {
+        localStorage.setItem('dark', 'true');
+        this.dark = true;
       }
     },
     toggleTheme() {
