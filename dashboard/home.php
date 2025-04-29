@@ -292,14 +292,24 @@ tbody {
       <div class="stat-content">
         <p class="stat-title">Faturamento</p>
         <?php 
-        $total_billing = $conn->query("SELECT SUM(total_amount) as total FROM order_list WHERE status = 2")->fetch_assoc()['total'];
+        $total_billing = $conn->query("SELECT SUM(ol.total_amount) as total 
+                                     FROM order_list ol 
+                                     INNER JOIN product_list pl ON ol.product_id = pl.id
+                                     WHERE ol.status = 2 AND pl.status = 1")->fetch_assoc()['total'];
         $total_billing = $total_billing ? format_num($total_billing, 2) : '0.00';
         ?>
         <p class="stat-value">
-          <svg class="w-5 h-5 stat-eye inline-block" fill="currentColor" viewBox="0 0 20 20">
-            <path d="M10 12a2 2 0 100-4 2 2 0 000 4z"></path>
-            <path fill-rule="evenodd" d="M10 3C5.5 3 2 8 2 10c0 2 3.5 7 8 7s8-5 8-7c0-2-3.5-7-8-7zm0 11c-3.3 0-6-4-6-6 0-2 2.7-6 6-6s6 4 6 6c0 2-2.7 6-6 6z" clip-rule="evenodd"></path>
-          </svg>
+          <span id="billing-value" class="hidden">R$ <?= $total_billing ?></span>
+          <button id="toggle-billing" class="focus:outline-none">
+            <svg id="eye-open" class="w-5 h-5 inline-block" fill="currentColor" viewBox="0 0 20 20">
+              <path d="M10 12a2 2 0 100-4 2 2 0 000 4z"></path>
+              <path fill-rule="evenodd" d="M10 3C5.5 3 2 8 2 10c0 2 3.5 7 8 7s8-5 8-7c0-2-3.5-7-8-7zm0 11c-3.3 0-6-4-6-6 0-2 2.7-6 6-6s6 4 6 6c0 2-2.7 6-6 6z" clip-rule="evenodd"></path>
+            </svg>
+            <svg id="eye-closed" class="w-5 h-5 inline-block hidden" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M3.707 2.293a1 1 0 00-1.414 1.414l14 14a1 1 0 001.414-1.414l-1.473-1.473A10.014 10.014 0 0019.542 10C18.268 5.943 14.478 3 10 3a9.958 9.958 0 00-4.512 1.074l-1.78-1.781zm4.261 4.26l1.514 1.515a2.003 2.003 0 012.45 2.45l1.514 1.514a4 4 0 00-5.478-5.478z" clip-rule="evenodd"></path>
+              <path d="M12.454 16.697L9.75 13.992a4 4 0 01-3.742-3.741L2.335 6.578A9.98 9.98 0 00.458 10c1.274 4.057 5.065 7 9.542 7 .847 0 1.669-.105 2.454-.303z"></path>
+            </svg>
+          </button>
         </p>
       </div>
       <div class="stat-icon billing">
@@ -310,6 +320,21 @@ tbody {
     </div>
   </div>
   <!-- Fim dos Cards Estatísticos -->
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const toggleButton = document.getElementById('toggle-billing');
+      const billingValue = document.getElementById('billing-value');
+      const eyeOpen = document.getElementById('eye-open');
+      const eyeClosed = document.getElementById('eye-closed');
+      
+      toggleButton.addEventListener('click', function() {
+        billingValue.classList.toggle('hidden');
+        eyeOpen.classList.toggle('hidden');
+        eyeClosed.classList.toggle('hidden');
+      });
+    });
+  </script>
 
 <!--Busca Ganhador x Ranking -->
 <div class="grid gap-6 mb-8 md:grid-cols-2 xl:grid-cols-2">
