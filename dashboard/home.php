@@ -70,8 +70,8 @@ if(isset($_SERVER['HTTP_USER_AGENT'])) {
 
 .dark .stat-card {
   background-color: #1a1c23 !important;
-  border: 1px solid rgba(74, 85, 104, 0.2);
-  color: #e2e8f0;
+  border: 1px solid rgba(74, 85, 104, 0.2) !important;
+  color: #e2e8f0 !important;
 }
 
 .stat-card:hover {
@@ -293,6 +293,96 @@ footer {
 /* Garantir que modais e cards de análise tenham cores corretas no modo escuro */
 .dark .bg-white {
   background-color: #1a1c23 !important;
+}
+
+/* Corrigindo problema dos cards no modo escuro, com seletores mais específicos */
+html[class*="theme-dark"] .stat-card,
+.theme-dark .stat-card,
+:root.theme-dark .stat-card {
+  background-color: #1a1c23 !important;
+  border: 1px solid rgba(74, 85, 104, 0.2) !important;
+  color: #e2e8f0 !important;
+}
+
+html[class*="theme-dark"] .stat-title,
+.theme-dark .stat-title,
+:root.theme-dark .stat-title {
+  color: #d5d6d7 !important;
+}
+
+html[class*="theme-dark"] .stat-value,
+.theme-dark .stat-value,
+:root.theme-dark .stat-value {
+  color: #f7fafc !important;
+}
+
+html[class*="theme-dark"] .stat-icon.campaigns,
+.theme-dark .stat-icon.campaigns,
+:root.theme-dark .stat-icon.campaigns {
+  background-color: rgba(72, 187, 120, 0.1) !important;
+  color: #68d391 !important;
+}
+
+html[class*="theme-dark"] .stat-icon.clients,
+.theme-dark .stat-icon.clients,
+:root.theme-dark .stat-icon.clients {
+  background-color: rgba(237, 137, 54, 0.1) !important;
+  color: #f6ad55 !important;
+}
+
+html[class*="theme-dark"] .stat-icon.orders,
+.theme-dark .stat-icon.orders,
+:root.theme-dark .stat-icon.orders {
+  background-color: rgba(66, 153, 225, 0.1) !important;
+  color: #63b3ed !important;
+}
+
+html[class*="theme-dark"] .stat-icon.billing,
+.theme-dark .stat-icon.billing,
+:root.theme-dark .stat-icon.billing {
+  background-color: rgba(160, 174, 192, 0.1) !important;
+  color: #cbd5e0 !important;
+}
+
+/* Corrigir navegação no modo escuro */
+html[class*="theme-dark"] nav a,
+.theme-dark nav a,
+:root.theme-dark nav a {
+  color: #e2e8f0 !important;
+}
+
+html[class*="theme-dark"] nav a:hover,
+.theme-dark nav a:hover,
+:root.theme-dark nav a:hover {
+  color: #fff !important;
+}
+
+html[class*="theme-dark"] .nav-item.active,
+.theme-dark .nav-item.active,
+:root.theme-dark .nav-item.active {
+  color: #fff !important;
+  background-color: rgba(159, 122, 234, 0.2) !important;
+}
+
+/* Garantir logo visível no modo escuro */
+html[class*="theme-dark"] .text-gray-800,
+.theme-dark .text-gray-800,
+:root.theme-dark .text-gray-800 {
+  color: #e2e8f0 !important;
+}
+
+/* Menu Items in Dark Mode */
+html.theme-dark .nav-item {
+  color: #e2e8f0 !important;
+}
+
+html.theme-dark .nav-item:hover {
+  color: #fff !important;
+}
+
+html.theme-dark .nav-item.active {
+  color: #fff !important;
+  background-color: rgba(159, 122, 234, 0.2) !important;
 }
 
 </style>

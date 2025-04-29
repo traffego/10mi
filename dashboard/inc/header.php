@@ -201,25 +201,112 @@ require_once('sess_auth.php');
       border-radius: 1px;
     }
 
-    /* Dark mode menu fixes */
-    .dark .sidebar .sidebar-content a {
+    /* Dark mode fixes with more specific selectors */
+    .dark .sidebar .sidebar-content a,
+    html[class*="theme-dark"] .sidebar .sidebar-content a,
+    .theme-dark .sidebar .sidebar-content a,
+    :root.theme-dark .sidebar .sidebar-content a {
       color: #e2e8f0 !important;
     }
     
-    .dark .sidebar .sidebar-content a:hover {
+    .dark .sidebar .sidebar-content a:hover,
+    html[class*="theme-dark"] .sidebar .sidebar-content a:hover,
+    .theme-dark .sidebar .sidebar-content a:hover,
+    :root.theme-dark .sidebar .sidebar-content a:hover {
       color: #fff !important;
     }
     
-    .dark .sidebar-header h1 {
+    .dark .sidebar-header h1,
+    html[class*="theme-dark"] .sidebar-header h1,
+    .theme-dark .sidebar-header h1,
+    :root.theme-dark .sidebar-header h1 {
       color: #e2e8f0 !important;
     }
     
-    .dark .sidebar-menu li a {
+    .dark .sidebar-menu li a,
+    html[class*="theme-dark"] .sidebar-menu li a,
+    .theme-dark .sidebar-menu li a,
+    :root.theme-dark .sidebar-menu li a {
       color: #e2e8f0 !important;
     }
     
-    .dark .sidebar-menu li a:hover {
+    .dark .sidebar-menu li a:hover,
+    html[class*="theme-dark"] .sidebar-menu li a:hover,
+    .theme-dark .sidebar-menu li a:hover,
+    :root.theme-dark .sidebar-menu li a:hover {
       color: #fff !important;
+    }
+
+    /* Mobile menu dark mode fixes */
+    .dark .mobile-menu,
+    html[class*="theme-dark"] .mobile-menu,
+    .theme-dark .mobile-menu,
+    :root.theme-dark .mobile-menu {
+      background-color: #1a1c23 !important;
+    }
+    
+    .dark .mobile-menu a,
+    .dark .nav-item,
+    html[class*="theme-dark"] .mobile-menu a,
+    html[class*="theme-dark"] .nav-item,
+    .theme-dark .mobile-menu a,
+    .theme-dark .nav-item,
+    :root.theme-dark .mobile-menu a,
+    :root.theme-dark .nav-item {
+      color: #e2e8f0 !important;
+    }
+    
+    .dark .mobile-menu a:hover,
+    .dark .nav-item:hover,
+    html[class*="theme-dark"] .mobile-menu a:hover,
+    html[class*="theme-dark"] .nav-item:hover,
+    .theme-dark .mobile-menu a:hover,
+    .theme-dark .nav-item:hover,
+    :root.theme-dark .mobile-menu a:hover,
+    :root.theme-dark .nav-item:hover {
+      color: #fff !important;
+    }
+    
+    .dark .mobile-menu a.active,
+    .dark .nav-item.active,
+    html[class*="theme-dark"] .mobile-menu a.active,
+    html[class*="theme-dark"] .nav-item.active,
+    .theme-dark .mobile-menu a.active,
+    .theme-dark .nav-item.active,
+    :root.theme-dark .mobile-menu a.active,
+    :root.theme-dark .nav-item.active {
+      color: #fff !important;
+      background-color: rgba(159, 122, 234, 0.2) !important;
+    }
+    
+    /* Desktop menu override */
+    .dark nav.hidden.md\:flex .nav-item,
+    html[class*="theme-dark"] nav.hidden.md\:flex .nav-item,
+    .theme-dark nav.hidden.md\:flex .nav-item,
+    :root.theme-dark nav.hidden.md\:flex .nav-item {
+      color: #e2e8f0 !important;
+    }
+    
+    .dark nav.hidden.md\:flex .nav-item:hover,
+    html[class*="theme-dark"] nav.hidden.md\:flex .nav-item:hover,
+    .theme-dark nav.hidden.md\:flex .nav-item:hover,
+    :root.theme-dark nav.hidden.md\:flex .nav-item:hover {
+      color: #fff !important;
+    }
+    
+    .dark header.z-10.py-4.bg-white,
+    html[class*="theme-dark"] header.z-10.py-4.bg-white,
+    .theme-dark header.z-10.py-4.bg-white,
+    :root.theme-dark header.z-10.py-4.bg-white {
+      background-color: #1a1c23 !important;
+    }
+    
+    /* Menu icon color */
+    .dark #mobile-menu-button svg,
+    html[class*="theme-dark"] #mobile-menu-button svg,
+    .theme-dark #mobile-menu-button svg,
+    :root.theme-dark #mobile-menu-button svg {
+      color: #e2e8f0 !important;
     }
   </style>
 </head>
