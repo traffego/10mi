@@ -336,7 +336,7 @@ tbody {
   </script>
 
 <!--Busca Ganhador x Ranking -->
-<div class="grid gap-6 mb-8 md:grid-cols-2 xl:grid-cols-3">
+<div class="grid gap-6 mb-8 md:grid-cols-3 xl:grid-cols-3">
     <!-- Card Buscar Ganhador -->
     <div class="bg-white rounded-lg shadow-xs overflow-hidden dark:bg-gray-800">
         <div class="flex items-center p-4 bg-purple-50 dark:bg-gray-700">
