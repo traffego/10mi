@@ -2,7 +2,7 @@
 require_once('sess_auth.php');  
 ?>
 <!DOCTYPE html>
-<html :class="{ 'theme-dark': dark }" x-data="data()" lang="en">
+<html :class="{ 'theme-dark': dark }" x-data="data()" x-init="initTheme()" lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -329,8 +329,8 @@ require_once('sess_auth.php');
     }
   </style>
 </head>
-<body>
-  <div class="flex flex-col h-screen bg-gray-50 dark:bg-gray-900">
+<body :class="{ 'dark': dark }">
+  <div x-cloak class="flex flex-col h-screen bg-gray-50 dark:bg-gray-900">
     <!-- Main Navbar -->
     <header class="z-10 py-4 bg-white shadow-md dark:bg-gray-800">
       <div class="container flex flex-wrap items-center justify-between px-6 mx-auto">

@@ -5,11 +5,8 @@ function data() {
       return JSON.parse(window.localStorage.getItem('dark'))
     }
 
-    // else return their preferences
-    return (
-      !!window.matchMedia &&
-      window.matchMedia('(prefers-color-scheme: dark)').matches
-    )
+    // Set dark mode as default
+    return true
   }
 
   function setThemeToLocalStorage(value) {
@@ -18,6 +15,12 @@ function data() {
 
   return {
     dark: getThemeFromLocalStorage(),
+    initTheme() {
+      // Set dark theme in localStorage if it's not already set
+      if (!window.localStorage.getItem('dark')) {
+        window.localStorage.setItem('dark', 'true')
+      }
+    },
     toggleTheme() {
       this.dark = !this.dark
       setThemeToLocalStorage(this.dark)

@@ -10,8 +10,27 @@ if(isset($_SERVER['HTTP_USER_AGENT'])) {
 }
 ?>
 
+<script>
+// Apply dark mode immediately before Alpine.js initializes
+(function() {
+    document.documentElement.classList.add('theme-dark');
+    document.documentElement.style.backgroundColor = '#1a1c23';
+})();
+
+// Ensure dark mode is set on page load
+document.addEventListener('DOMContentLoaded', function() {
+    if (!localStorage.getItem('dark')) {
+        localStorage.setItem('dark', 'true');
+    }
+    document.documentElement.classList.add('theme-dark');
+});
+</script>
 
 <style>
+/* Prevent flash of unstyled content */
+[x-cloak] {
+  display: none !important;
+}
 
 .enable_raffle_mode_class_phone_blur {
   filter: blur(4px);
