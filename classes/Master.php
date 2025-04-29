@@ -1977,7 +1977,11 @@ Class Master extends DBConnection {
 			'status' => 'failed',
 			'raffle_name' => '',
 			'highest_number' => '',
-			'lowest_number' => ''
+			'highest_client' => '',
+			'highest_order' => '',
+			'lowest_number' => '',
+			'lowest_client' => '',
+			'lowest_order' => ''
 		);
 		
 		// Buscar o nome do sorteio
@@ -1997,46 +2001,86 @@ Class Master extends DBConnection {
 			return json_encode($resp);
 		}
 		
-		// Buscar o maior e menor número dos pedidos pagos deste sorteio
-		$numbers_query = $this->conn->prepare("
+		// Buscar o maior número, com informações do cliente e pedido
+		$highest_query = $this->conn->prepare("
 			SELECT 
-				MIN(n.number) as min_number,
-				MAX(n.number) as max_number
+				n.number,
+				o.id AS order_id,
+				o.code AS order_code,
+				CONCAT(c.firstname, ' ', c.lastname) AS client_name
 			FROM 
 				order_numbers n
 			INNER JOIN 
 				order_list o ON n.order_id = o.id
+			INNER JOIN 
+				customer_list c ON o.customer_id = c.id
 			WHERE 
 				o.product_id = ? AND o.status = 2
+			ORDER BY 
+				CAST(n.number AS UNSIGNED) DESC
+			LIMIT 1
 		");
 		
-		if ($numbers_query === false) {
+		if ($highest_query === false) {
 			return json_encode($resp);
 		}
 		
-		$numbers_query->bind_param("i", $raffle_id);
-		$numbers_query->execute();
-		$numbers_result = $numbers_query->get_result();
+		$highest_query->bind_param("i", $raffle_id);
+		$highest_query->execute();
+		$highest_result = $highest_query->get_result();
 		
-		if ($numbers_result->num_rows > 0) {
-			$numbers_row = $numbers_result->fetch_assoc();
+		// Buscar o menor número, com informações do cliente e pedido
+		$lowest_query = $this->conn->prepare("
+			SELECT 
+				n.number,
+				o.id AS order_id,
+				o.code AS order_code,
+				CONCAT(c.firstname, ' ', c.lastname) AS client_name
+			FROM 
+				order_numbers n
+			INNER JOIN 
+				order_list o ON n.order_id = o.id
+			INNER JOIN 
+				customer_list c ON o.customer_id = c.id
+			WHERE 
+				o.product_id = ? AND o.status = 2
+			ORDER BY 
+				CAST(n.number AS UNSIGNED) ASC
+			LIMIT 1
+		");
+		
+		if ($lowest_query === false) {
+			return json_encode($resp);
+		}
+		
+		$lowest_query->bind_param("i", $raffle_id);
+		$lowest_query->execute();
+		$lowest_result = $lowest_query->get_result();
+	 
+		if ($highest_result->num_rows > 0 && $lowest_result->num_rows > 0) {
+			$highest_row = $highest_result->fetch_assoc();
+			$lowest_row = $lowest_result->fetch_assoc();
 			
-			if ($numbers_row['min_number'] !== null && $numbers_row['max_number'] !== null) {
-				// Obter o número de dígitos para formatação
-				$digits_query = $this->conn->prepare("SELECT qty_numbers FROM product_list WHERE id = ?");
-				$digits_query->bind_param("i", $raffle_id);
-				$digits_query->execute();
-				$digits_result = $digits_query->get_result();
-				$digits_row = $digits_result->fetch_assoc();
-				
-				$qty_numbers = $digits_row['qty_numbers'];
-				$num_digits = strlen($qty_numbers) - 1;
-				
-				// Formatar os números com zeros à esquerda
-				$resp['lowest_number'] = str_pad($numbers_row['min_number'], $num_digits, '0', STR_PAD_LEFT);
-				$resp['highest_number'] = str_pad($numbers_row['max_number'], $num_digits, '0', STR_PAD_LEFT);
-				$resp['status'] = 'success';
-			}
+			// Obter o número de dígitos para formatação
+			$digits_query = $this->conn->prepare("SELECT qty_numbers FROM product_list WHERE id = ?");
+			$digits_query->bind_param("i", $raffle_id);
+			$digits_query->execute();
+			$digits_result = $digits_query->get_result();
+			$digits_row = $digits_result->fetch_assoc();
+			
+			$qty_numbers = $digits_row['qty_numbers'];
+			$num_digits = strlen($qty_numbers) - 1;
+			
+			// Formatar os números com zeros à esquerda
+			$resp['highest_number'] = str_pad($highest_row['number'], $num_digits, '0', STR_PAD_LEFT);
+			$resp['highest_client'] = $highest_row['client_name'];
+			$resp['highest_order'] = '#' . $highest_row['order_id'] . ' (' . $highest_row['order_code'] . ')';
+			
+			$resp['lowest_number'] = str_pad($lowest_row['number'], $num_digits, '0', STR_PAD_LEFT);
+			$resp['lowest_client'] = $lowest_row['client_name'];
+			$resp['lowest_order'] = '#' . $lowest_row['order_id'] . ' (' . $lowest_row['order_code'] . ')';
+			
+			$resp['status'] = 'success';
 		}
 		
 		return json_encode($resp);

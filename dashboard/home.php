@@ -422,10 +422,14 @@ tbody {
             </form>
 
             <div class="mt-4 text-gray-700 dark:text-gray-200" id="number-minmax-result">
-                <div class="p-4 bg-gray-50 dark:bg-gray-700 rounded-lg">
+                <div class="p-4 bg-gray-50 dark:bg-gray-700 rounded-lg hidden">
                     <p class="mb-2"><strong>Sorteio:</strong> <span id="raffle-name">-</span></p>
                     <p class="mb-2"><strong>Maior número:</strong> <span id="highest-number">-</span></p>
-                    <p><strong>Menor número:</strong> <span id="lowest-number">-</span></p>
+                    <p class="mb-2"><strong>Cliente (maior):</strong> <span id="highest-client">-</span></p>
+                    <p class="mb-2"><strong>Pedido (maior):</strong> <span id="highest-order">-</span></p>
+                    <p class="mb-2"><strong>Menor número:</strong> <span id="lowest-number">-</span></p>
+                    <p class="mb-2"><strong>Cliente (menor):</strong> <span id="lowest-client">-</span></p>
+                    <p><strong>Pedido (menor):</strong> <span id="lowest-order">-</span></p>
                 </div>
             </div>
         </div>
@@ -867,18 +871,41 @@ $stat_arr = ['Pending Orders', 'Packed Orders', 'Our for Delivery', 'Completed O
         if (resp.status == 'success') {
           $('#raffle-name').text(resp.raffle_name);
           $('#highest-number').text(resp.highest_number);
+          $('#highest-client').text(resp.highest_client);
+          $('#highest-order').text(resp.highest_order);
           $('#lowest-number').text(resp.lowest_number);
+          $('#lowest-client').text(resp.lowest_client);
+          $('#lowest-order').text(resp.lowest_order);
+          
+          // Mostrar o resultado
+          $('#number-minmax-result div').removeClass('hidden');
         } else {
           $('#raffle-name').text(resp.raffle_name);
           $('#highest-number').text('-');
+          $('#highest-client').text('-');
+          $('#highest-order').text('-');
           $('#lowest-number').text('-');
+          $('#lowest-client').text('-');
+          $('#lowest-order').text('-');
+          
+          // Esconder o resultado
+          $('#number-minmax-result div').addClass('hidden');
+          
           alert('Nenhum número encontrado para este sorteio.');
         }
       },
       error: function(err) {
         $('#raffle-name').text('-');
         $('#highest-number').text('-');
+        $('#highest-client').text('-');
+        $('#highest-order').text('-');
         $('#lowest-number').text('-');
+        $('#lowest-client').text('-');
+        $('#lowest-order').text('-');
+        
+        // Esconder o resultado
+        $('#number-minmax-result div').addClass('hidden');
+        
         alert('Ocorreu um erro ao analisar os números.');
       }
     });
