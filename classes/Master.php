@@ -1978,10 +1978,10 @@ Class Master extends DBConnection {
 			'raffle_name' => '',
 			'highest_number' => '',
 			'highest_client' => '',
-			'highest_order' => '',
+			'highest_order_id' => '',
 			'lowest_number' => '',
 			'lowest_client' => '',
-			'lowest_order' => ''
+			'lowest_order_id' => ''
 		);
 		
 		// Buscar o nome do sorteio
@@ -2074,11 +2074,11 @@ Class Master extends DBConnection {
 			// Formatar os números com zeros à esquerda
 			$resp['highest_number'] = str_pad($highest_row['number'], $num_digits, '0', STR_PAD_LEFT);
 			$resp['highest_client'] = $highest_row['client_name'];
-			$resp['highest_order'] = '#' . $highest_row['order_id'] . ' (' . $highest_row['order_code'] . ')';
+			$resp['highest_order_id'] = $highest_row['order_id'];
 			
 			$resp['lowest_number'] = str_pad($lowest_row['number'], $num_digits, '0', STR_PAD_LEFT);
 			$resp['lowest_client'] = $lowest_row['client_name'];
-			$resp['lowest_order'] = '#' . $lowest_row['order_id'] . ' (' . $lowest_row['order_code'] . ')';
+			$resp['lowest_order_id'] = $lowest_row['order_id'];
 			
 			$resp['status'] = 'success';
 		}
@@ -2087,6 +2087,7 @@ Class Master extends DBConnection {
 	}
 
 	public function verify_orders_mp() {
+		
 		extract($_GET);
 		$mercadopago_access_token = $this->settings->info('mercadopago_access_token');
 		$orders = $this->conn->query("SELECT o.id, o.id_mp

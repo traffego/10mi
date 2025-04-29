@@ -423,13 +423,23 @@ tbody {
 
             <div class="mt-4 text-gray-700 dark:text-gray-200" id="number-minmax-result">
                 <div class="p-4 bg-gray-50 dark:bg-gray-700 rounded-lg hidden">
-                    <p class="mb-2"><strong>Sorteio:</strong> <span id="raffle-name">-</span></p>
-                    <p class="mb-2"><strong>Maior número:</strong> <span id="highest-number">-</span></p>
-                    <p class="mb-2"><strong>Cliente (maior):</strong> <span id="highest-client">-</span></p>
-                    <p class="mb-2"><strong>Pedido (maior):</strong> <span id="highest-order">-</span></p>
-                    <p class="mb-2"><strong>Menor número:</strong> <span id="lowest-number">-</span></p>
-                    <p class="mb-2"><strong>Cliente (menor):</strong> <span id="lowest-client">-</span></p>
-                    <p><strong>Pedido (menor):</strong> <span id="lowest-order">-</span></p>
+                    <p class="mb-3"><strong>Sorteio:</strong> <span id="raffle-name">-</span></p>
+                    
+                    <div class="border-l-4 border-green-500 pl-3 py-1 mb-3">
+                        <p class="text-lg font-semibold mb-1"><span id="highest-number">-</span> <small class="text-xs text-gray-500">(maior)</small></p>
+                        <p class="text-sm text-gray-600 dark:text-gray-400">
+                            <span id="highest-client">-</span> • 
+                            <a href="./?page=orders/view_order&id=" id="highest-order-link" class="text-blue-500 hover:underline">Pedido #<span id="highest-order">-</span></a>
+                        </p>
+                    </div>
+                    
+                    <div class="border-l-4 border-blue-500 pl-3 py-1">
+                        <p class="text-lg font-semibold mb-1"><span id="lowest-number">-</span> <small class="text-xs text-gray-500">(menor)</small></p>
+                        <p class="text-sm text-gray-600 dark:text-gray-400">
+                            <span id="lowest-client">-</span> • 
+                            <a href="./?page=orders/view_order&id=" id="lowest-order-link" class="text-blue-500 hover:underline">Pedido #<span id="lowest-order">-</span></a>
+                        </p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -869,23 +879,34 @@ $stat_arr = ['Pending Orders', 'Packed Orders', 'Our for Delivery', 'Completed O
       dataType: 'json',
       success: function(resp) {
         if (resp.status == 'success') {
+          // Atualizar os dados exibidos
           $('#raffle-name').text(resp.raffle_name);
           $('#highest-number').text(resp.highest_number);
-          $('#highest-client').text(resp.highest_client);
-          $('#highest-order').text(resp.highest_order);
           $('#lowest-number').text(resp.lowest_number);
+          
+          // Informações do cliente de forma mais discreta
+          $('#highest-client').text(resp.highest_client);
           $('#lowest-client').text(resp.lowest_client);
-          $('#lowest-order').text(resp.lowest_order);
+          
+          // Configurar os links dos pedidos
+          const highestOrderId = resp.highest_order_id;
+          const lowestOrderId = resp.lowest_order_id;
+          
+          $('#highest-order').text(highestOrderId);
+          $('#lowest-order').text(lowestOrderId);
+          
+          $('#highest-order-link').attr('href', './?page=orders/view_order&id=' + highestOrderId);
+          $('#lowest-order-link').attr('href', './?page=orders/view_order&id=' + lowestOrderId);
           
           // Mostrar o resultado
           $('#number-minmax-result div').removeClass('hidden');
         } else {
-          $('#raffle-name').text(resp.raffle_name);
+          $('#raffle-name').text(resp.raffle_name || '-');
           $('#highest-number').text('-');
-          $('#highest-client').text('-');
-          $('#highest-order').text('-');
           $('#lowest-number').text('-');
+          $('#highest-client').text('-');
           $('#lowest-client').text('-');
+          $('#highest-order').text('-');
           $('#lowest-order').text('-');
           
           // Esconder o resultado
@@ -897,10 +918,10 @@ $stat_arr = ['Pending Orders', 'Packed Orders', 'Our for Delivery', 'Completed O
       error: function(err) {
         $('#raffle-name').text('-');
         $('#highest-number').text('-');
-        $('#highest-client').text('-');
-        $('#highest-order').text('-');
         $('#lowest-number').text('-');
+        $('#highest-client').text('-');
         $('#lowest-client').text('-');
+        $('#highest-order').text('-');
         $('#lowest-order').text('-');
         
         // Esconder o resultado
