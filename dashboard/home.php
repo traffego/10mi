@@ -10,36 +10,8 @@ if(isset($_SERVER['HTTP_USER_AGENT'])) {
 }
 ?>
 
-<script>
-// Apply dark mode immediately before Alpine.js initializes
-(function() {
-    // Forçar modo escuro diretamente no HTML e Body
-    document.documentElement.classList.add('theme-dark');
-    document.body.classList.add('dark');
-    document.documentElement.style.backgroundColor = '#1a1c23';
-    document.body.style.backgroundColor = '#1a1c23';
-    
-    // Definir tema escuro no localStorage
-    if (localStorage.getItem('dark') === null) {
-        localStorage.setItem('dark', 'true');
-    }
-})();
-
-// Ensure dark mode is set on page load
-document.addEventListener('DOMContentLoaded', function() {
-    // Only apply dark mode if not explicitly set to false
-    if (localStorage.getItem('dark') !== 'false') {
-        document.documentElement.classList.add('theme-dark');
-        document.body.classList.add('dark');
-    }
-});
-</script>
 
 <style>
-/* Prevent flash of unstyled content */
-[x-cloak] {
-  display: none !important;
-}
 
 .enable_raffle_mode_class_phone_blur {
   filter: blur(4px);

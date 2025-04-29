@@ -1,12 +1,15 @@
 function data() {
   function getThemeFromLocalStorage() {
     // if user already changed the theme, use it
-    if (window.localStorage.getItem('dark') !== null) {
+    if (window.localStorage.getItem('dark')) {
       return JSON.parse(window.localStorage.getItem('dark'))
     }
 
-    // Default to dark mode
-    return true
+    // else return their preferences
+    return (
+      !!window.matchMedia &&
+      window.matchMedia('(prefers-color-scheme: dark)').matches
+    )
   }
 
   function setThemeToLocalStorage(value) {
@@ -15,31 +18,9 @@ function data() {
 
   return {
     dark: getThemeFromLocalStorage(),
-    initTheme() {
-      // Set dark theme in localStorage if it's not already set
-      if (localStorage.getItem('dark') === null) {
-        localStorage.setItem('dark', 'true');
-        this.dark = true;
-      }
-      
-      // Forçar aplicação do tema escuro se estiver ativado
-      if (this.dark) {
-        document.documentElement.classList.add('theme-dark');
-        document.body.classList.add('dark');
-      }
-    },
     toggleTheme() {
       this.dark = !this.dark
       setThemeToLocalStorage(this.dark)
-      
-      // Atualizar classes diretamente
-      if (this.dark) {
-        document.documentElement.classList.add('theme-dark')
-        document.body.classList.add('dark')
-      } else {
-        document.documentElement.classList.remove('theme-dark')
-        document.body.classList.remove('dark')
-      }
     },
     isSideMenuOpen: false,
     toggleSideMenu() {
