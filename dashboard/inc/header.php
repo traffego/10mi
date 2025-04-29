@@ -330,7 +330,7 @@ require_once('sess_auth.php');
   </style>
 </head>
 <body :class="{ 'dark': dark }">
-  <div x-cloak class="flex flex-col h-screen bg-gray-50 dark:bg-gray-900">
+  <div class="flex flex-col h-screen bg-gray-50 dark:bg-gray-900">
     <!-- Main Navbar -->
     <header class="z-10 py-4 bg-white shadow-md dark:bg-gray-800">
       <div class="container flex flex-wrap items-center justify-between px-6 mx-auto">

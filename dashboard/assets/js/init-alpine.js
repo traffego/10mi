@@ -21,10 +21,25 @@ function data() {
         localStorage.setItem('dark', 'true');
         this.dark = true;
       }
+      
+      // Forçar aplicação do tema escuro se estiver ativado
+      if (this.dark) {
+        document.documentElement.classList.add('theme-dark');
+        document.body.classList.add('dark');
+      }
     },
     toggleTheme() {
       this.dark = !this.dark
       setThemeToLocalStorage(this.dark)
+      
+      // Atualizar classes diretamente
+      if (this.dark) {
+        document.documentElement.classList.add('theme-dark')
+        document.body.classList.add('dark')
+      } else {
+        document.documentElement.classList.remove('theme-dark')
+        document.body.classList.remove('dark')
+      }
     },
     isSideMenuOpen: false,
     toggleSideMenu() {
