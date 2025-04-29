@@ -481,6 +481,32 @@ html[data-theme="dark"] footer .text-gray-500,
   }
 }
 
+/* Button consistency in dark mode */
+.dark .bg-purple-600,
+.dark .bg-green-600,
+.dark .bg-blue-600,
+.dark button.bg-purple-600,
+.dark button.bg-green-600,
+.dark button.bg-blue-600 {
+  background-color: var(--color-purple-600, #805ad5) !important;
+  color: white !important;
+}
+
+.dark .bg-purple-600:hover,
+.dark .bg-green-600:hover,
+.dark .bg-blue-600:hover,
+.dark button.bg-purple-600:hover,
+.dark button.bg-green-600:hover,
+.dark button.bg-blue-600:hover {
+  background-color: var(--color-purple-700, #6b46c1) !important;
+}
+
+.dark .active\:bg-purple-600:active,
+.dark .active\:bg-green-600:active,
+.dark .active\:bg-blue-600:active {
+  background-color: var(--color-purple-600, #805ad5) !important;
+}
+
 </style>
 
 <script>
