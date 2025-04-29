@@ -367,7 +367,7 @@ tbody {
                             </select>
                         </div>
                         <div class="w-1/2 pl-2">
-                            <p class="mb-2 text-sm font-medium text-gray-600 dark:text-gray-400">Número / bicho sorteado</p>
+                            <p class="mb-2 text-sm font-medium text-gray-600 dark:text-gray-400">Número / bicho</p>
                             <input type="text" name="number" class="block w-full mt-1 text-sm dark:border-gray-600 dark:bg-gray-700 focus:border-purple-400 focus:outline-none focus:shadow-outline-purple dark:text-gray-300 dark:focus:shadow-outline-gray form-input" placeholder="ex: 15 / Leão">
                         </div>
                     </div>
