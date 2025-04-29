@@ -1970,7 +1970,7 @@ Class Master extends DBConnection {
 		return json_encode($resp);
 	}
 
-	function analyze_raffle_numbers() {
+	function highest_and_lowest_numbers() {
 		extract($_POST);
 		
 		$resp = array(
@@ -2493,8 +2493,8 @@ switch ($action) {
 	case 'search_raffle_winner':
 		echo $Master->search_raffle_winner();
 		break;
-	case 'analyze_raffle_numbers':
-		echo $Master->analyze_raffle_numbers();
+	case 'highest_and_lowest_numbers':
+		echo $Master->highest_and_lowest_numbers();
 		break;
 
 	default:

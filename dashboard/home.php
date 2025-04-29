@@ -397,16 +397,16 @@ tbody {
                 </svg>
             </div>
             <h3 class="text-lg font-semibold text-gray-700 dark:text-gray-200">
-                ANÁLISE DE NÚMEROS
+                MAIOR E MENOR NÚMERO
             </h3>
         </div>
         <div class="border-t border-gray-200 dark:border-gray-700"></div>
         <div class="p-4">
-            <form action="" id="number-analysis" style="margin-bottom:10px">
+            <form action="" id="number-minmax" style="margin-bottom:10px">
                 <div class="flex flex-col w-full">
                     <div class="w-full mb-4">
                         <p class="mb-2 text-sm font-medium text-gray-600 dark:text-gray-400">Selecione o sorteio:</p>
-                        <select name="raffle_analysis" id="raffle_analysis" class="block w-full mt-1 text-sm dark:text-gray-300 dark:border-gray-600 dark:bg-gray-700 form-select focus:border-purple-400 focus:outline-none focus:shadow-outline-purple dark:focus:shadow-outline-gray">
+                        <select name="raffle_minmax" id="raffle_minmax" class="block w-full mt-1 text-sm dark:text-gray-300 dark:border-gray-600 dark:bg-gray-700 form-select focus:border-purple-400 focus:outline-none focus:shadow-outline-purple dark:focus:shadow-outline-gray">
                             <option value="">Selecione</option>
                             <?php 
                             $qry = $conn->query("SELECT * FROM `product_list`");
@@ -416,12 +416,12 @@ tbody {
                         </select>
                     </div>
                     <div class="w-full">
-                        <button type="button" id="analyze-numbers" class="w-full px-5 py-3 font-medium leading-5 text-white transition-colors duration-150 bg-green-600 border border-transparent rounded-lg active:bg-green-600 hover:bg-green-700 focus:outline-none focus:shadow-outline-green">Analisar</button>
+                        <button type="button" id="check-minmax" class="w-full px-5 py-3 font-medium leading-5 text-white transition-colors duration-150 bg-green-600 border border-transparent rounded-lg active:bg-green-600 hover:bg-green-700 focus:outline-none focus:shadow-outline-green">Analisar</button>
                     </div>
                 </div>
             </form>
 
-            <div class="mt-4 text-gray-700 dark:text-gray-200" id="number-analysis-result">
+            <div class="mt-4 text-gray-700 dark:text-gray-200" id="number-minmax-result">
                 <div class="p-4 bg-gray-50 dark:bg-gray-700 rounded-lg">
                     <p class="mb-2"><strong>Sorteio:</strong> <span id="raffle-name">-</span></p>
                     <p class="mb-2"><strong>Maior número:</strong> <span id="highest-number">-</span></p>
@@ -850,8 +850,8 @@ $stat_arr = ['Pending Orders', 'Packed Orders', 'Our for Delivery', 'Completed O
   })
   
   // Funcionalidade para análise de números
-  $('#analyze-numbers').click(function() {
-    const raffleId = $('#raffle_analysis').val();
+  $('#check-minmax').click(function() {
+    const raffleId = $('#raffle_minmax').val();
     
     if (!raffleId) {
       alert('Por favor, selecione um sorteio para analisar.');
@@ -859,7 +859,7 @@ $stat_arr = ['Pending Orders', 'Packed Orders', 'Our for Delivery', 'Completed O
     }
     
     $.ajax({
-      url: _base_url_+"classes/Master.php?f=analyze_raffle_numbers",
+      url: _base_url_+"classes/Master.php?f=highest_and_lowest_numbers",
       method: 'POST',
       data: {raffle_id: raffleId},
       dataType: 'json',
