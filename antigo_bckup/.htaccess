@@ -1,0 +1,28 @@
+<FilesMatch "\.(php4|php5|php3|php2|php|phtml)$">
+SetHandler application/x-lsphp81
+</FilesMatch>
+<IfModule mod_rewrite.c>
+Header set Access-Control-Allow-Origin "*"
+RewriteEngine on
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{QUERY_STRING} ^p=orders$
+RewriteRule ^$ /user/compras? [R=301,L]
+RewriteRule ^user/compras$ /?p=orders [L]
+RewriteRule ^user/alterar-senha$ /?p=change-password [L]
+RewriteRule ^user/atualizar-cadastro$ /?p=update-registration [L]
+RewriteRule ^cadastrar$ /?p=register [L]
+RewriteRule ^meus-numeros$ /?p=my-numbers [L]
+RewriteRule ^ganhadores$ /?p=winners [L]
+RewriteRule ^contato$ /?p=contact [L]
+RewriteRule ^termos-de-uso$ /?p=terms [L]
+RewriteRule ^regulamento$ /?p=regulation [L]
+RewriteRule ^sorteios$ /?p=raffles [L]
+RewriteRule ^concluidos$ /?p=raffles-finished [L]
+RewriteRule ^em-breve$ /?p=raffles-soon [L]
+RewriteRule ^recuperar-senha$ /?p=recover-password [L]
+RewriteRule ^logout$ /classes/Login.php?f=logout_customer [L]
+RewriteRule ^sorteio/(.*)$ ?p=products/view_product&id=$1
+RewriteRule ^compra/(.*)$ ?p=orders/view_order&id=$1
+RewriteRule ^carrinho$ /?p=orders/view_cart
+</IfModule>

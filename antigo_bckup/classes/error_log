@@ -1,0 +1,1936 @@
+[10-Jun-2024 13:35:53 America/Sao_Paulo] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function formatPhoneNumber(), 1 passed in /home/platafo5/public_html/classes/Master.php on line 2093 and exactly 2 expected in /home/platafo5/public_html/config.php:113
+Stack trace:
+#0 /home/platafo5/public_html/classes/Master.php(2093): formatPhoneNumber()
+#1 /home/platafo5/public_html/classes/Master.php(2578): Master->search_raffle_winner()
+#2 {main}
+  thrown in /home/platafo5/public_html/config.php on line 113
+[10-Jun-2024 15:06:34 America/Sao_Paulo] PHP Warning:  Undefined variable $_settings in /home/platafo5/public_html/config.php on line 10
+[10-Jun-2024 15:06:34 America/Sao_Paulo] PHP Fatal error:  Uncaught Error: Call to a member function info() on null in /home/platafo5/public_html/config.php:10
+Stack trace:
+#0 /home/platafo5/public_html/classes/SystemSettings.php(3): require_once()
+#1 {main}
+  thrown in /home/platafo5/public_html/config.php on line 10
+[10-Jun-2024 15:06:43 America/Sao_Paulo] PHP Warning:  Undefined variable $_settings in /home/platafo5/public_html/config.php on line 10
+[10-Jun-2024 15:06:43 America/Sao_Paulo] PHP Fatal error:  Uncaught Error: Call to a member function info() on null in /home/platafo5/public_html/config.php:10
+Stack trace:
+#0 /home/platafo5/public_html/classes/SystemSettings.php(3): require_once()
+#1 {main}
+  thrown in /home/platafo5/public_html/config.php on line 10
+[10-Jun-2024 15:07:52 America/Sao_Paulo] PHP Warning:  Undefined variable $_settings in /home/platafo5/public_html/config.php on line 10
+[10-Jun-2024 15:07:52 America/Sao_Paulo] PHP Fatal error:  Uncaught Error: Call to a member function info() on null in /home/platafo5/public_html/config.php:10
+Stack trace:
+#0 /home/platafo5/public_html/classes/SystemSettings.php(3): require_once()
+#1 {main}
+  thrown in /home/platafo5/public_html/config.php on line 10
+[10-Jun-2024 15:07:54 America/Sao_Paulo] PHP Warning:  Undefined variable $_settings in /home/platafo5/public_html/config.php on line 10
+[10-Jun-2024 15:07:54 America/Sao_Paulo] PHP Fatal error:  Uncaught Error: Call to a member function info() on null in /home/platafo5/public_html/config.php:10
+Stack trace:
+#0 /home/platafo5/public_html/classes/SystemSettings.php(3): require_once()
+#1 {main}
+  thrown in /home/platafo5/public_html/config.php on line 10
+[10-Jun-2024 15:08:00 America/Sao_Paulo] PHP Warning:  Undefined variable $_settings in /home/platafo5/public_html/config.php on line 10
+[10-Jun-2024 15:08:00 America/Sao_Paulo] PHP Fatal error:  Uncaught Error: Call to a member function info() on null in /home/platafo5/public_html/config.php:10
+Stack trace:
+#0 /home/platafo5/public_html/classes/SystemSettings.php(3): require_once()
+#1 {main}
+  thrown in /home/platafo5/public_html/config.php on line 10
+[10-Jun-2024 15:08:01 America/Sao_Paulo] PHP Warning:  Undefined variable $_settings in /home/platafo5/public_html/config.php on line 10
+[10-Jun-2024 15:08:01 America/Sao_Paulo] PHP Fatal error:  Uncaught Error: Call to a member function info() on null in /home/platafo5/public_html/config.php:10
+Stack trace:
+#0 /home/platafo5/public_html/classes/SystemSettings.php(3): require_once()
+#1 {main}
+  thrown in /home/platafo5/public_html/config.php on line 10
+[10-Jun-2024 15:08:01 America/Sao_Paulo] PHP Warning:  Undefined variable $_settings in /home/platafo5/public_html/config.php on line 10
+[10-Jun-2024 15:08:01 America/Sao_Paulo] PHP Fatal error:  Uncaught Error: Call to a member function info() on null in /home/platafo5/public_html/config.php:10
+Stack trace:
+#0 /home/platafo5/public_html/classes/SystemSettings.php(3): require_once()
+#1 {main}
+  thrown in /home/platafo5/public_html/config.php on line 10
+[10-Jun-2024 15:08:02 America/Sao_Paulo] PHP Warning:  Undefined variable $_settings in /home/platafo5/public_html/config.php on line 10
+[10-Jun-2024 15:08:02 America/Sao_Paulo] PHP Fatal error:  Uncaught Error: Call to a member function info() on null in /home/platafo5/public_html/config.php:10
+Stack trace:
+#0 /home/platafo5/public_html/classes/SystemSettings.php(3): require_once()
+#1 {main}
+  thrown in /home/platafo5/public_html/config.php on line 10
+[10-Jun-2024 15:08:29 America/Sao_Paulo] PHP Warning:  Undefined variable $_settings in /home/platafo5/public_html/config.php on line 10
+[10-Jun-2024 15:08:29 America/Sao_Paulo] PHP Fatal error:  Uncaught Error: Call to a member function info() on null in /home/platafo5/public_html/config.php:10
+Stack trace:
+#0 /home/platafo5/public_html/classes/SystemSettings.php(3): require_once()
+#1 {main}
+  thrown in /home/platafo5/public_html/config.php on line 10
+[10-Jun-2024 15:08:37 America/Sao_Paulo] PHP Warning:  Undefined variable $_settings in /home/platafo5/public_html/config.php on line 10
+[10-Jun-2024 15:08:37 America/Sao_Paulo] PHP Fatal error:  Uncaught Error: Call to a member function info() on null in /home/platafo5/public_html/config.php:10
+Stack trace:
+#0 /home/platafo5/public_html/classes/SystemSettings.php(3): require_once()
+#1 {main}
+  thrown in /home/platafo5/public_html/config.php on line 10
+[10-Jun-2024 15:08:38 America/Sao_Paulo] PHP Warning:  Undefined variable $_settings in /home/platafo5/public_html/config.php on line 10
+[10-Jun-2024 15:08:38 America/Sao_Paulo] PHP Fatal error:  Uncaught Error: Call to a member function info() on null in /home/platafo5/public_html/config.php:10
+Stack trace:
+#0 /home/platafo5/public_html/classes/SystemSettings.php(3): require_once()
+#1 {main}
+  thrown in /home/platafo5/public_html/config.php on line 10
+[10-Jun-2024 15:10:39 America/Sao_Paulo] PHP Warning:  Undefined variable $_settings in /home/platafo5/public_html/config.php on line 10
+[10-Jun-2024 15:10:39 America/Sao_Paulo] PHP Fatal error:  Uncaught Error: Call to a member function info() on null in /home/platafo5/public_html/config.php:10
+Stack trace:
+#0 /home/platafo5/public_html/classes/SystemSettings.php(3): require_once()
+#1 {main}
+  thrown in /home/platafo5/public_html/config.php on line 10
+[10-Jun-2024 15:11:47 America/Sao_Paulo] PHP Warning:  Undefined variable $_settings in /home/platafo5/public_html/config.php on line 10
+[10-Jun-2024 15:11:47 America/Sao_Paulo] PHP Fatal error:  Uncaught Error: Call to a member function info() on null in /home/platafo5/public_html/config.php:10
+Stack trace:
+#0 /home/platafo5/public_html/classes/SystemSettings.php(3): require_once()
+#1 {main}
+  thrown in /home/platafo5/public_html/config.php on line 10
+[10-Jun-2024 15:11:48 America/Sao_Paulo] PHP Warning:  Undefined variable $_settings in /home/platafo5/public_html/config.php on line 10
+[10-Jun-2024 15:11:48 America/Sao_Paulo] PHP Fatal error:  Uncaught Error: Call to a member function info() on null in /home/platafo5/public_html/config.php:10
+Stack trace:
+#0 /home/platafo5/public_html/classes/SystemSettings.php(3): require_once()
+#1 {main}
+  thrown in /home/platafo5/public_html/config.php on line 10
+[10-Jun-2024 15:11:48 America/Sao_Paulo] PHP Warning:  Undefined variable $_settings in /home/platafo5/public_html/config.php on line 10
+[10-Jun-2024 15:11:48 America/Sao_Paulo] PHP Fatal error:  Uncaught Error: Call to a member function info() on null in /home/platafo5/public_html/config.php:10
+Stack trace:
+#0 /home/platafo5/public_html/classes/SystemSettings.php(3): require_once()
+#1 {main}
+  thrown in /home/platafo5/public_html/config.php on line 10
+[10-Jun-2024 15:11:48 America/Sao_Paulo] PHP Warning:  Undefined variable $_settings in /home/platafo5/public_html/config.php on line 10
+[10-Jun-2024 15:11:48 America/Sao_Paulo] PHP Fatal error:  Uncaught Error: Call to a member function info() on null in /home/platafo5/public_html/config.php:10
+Stack trace:
+#0 /home/platafo5/public_html/classes/SystemSettings.php(3): require_once()
+#1 {main}
+  thrown in /home/platafo5/public_html/config.php on line 10
+[10-Jun-2024 15:11:48 America/Sao_Paulo] PHP Warning:  Undefined variable $_settings in /home/platafo5/public_html/config.php on line 10
+[10-Jun-2024 15:11:48 America/Sao_Paulo] PHP Fatal error:  Uncaught Error: Call to a member function info() on null in /home/platafo5/public_html/config.php:10
+Stack trace:
+#0 /home/platafo5/public_html/classes/SystemSettings.php(3): require_once()
+#1 {main}
+  thrown in /home/platafo5/public_html/config.php on line 10
+[10-Jun-2024 15:12:22 America/Sao_Paulo] PHP Warning:  Undefined variable $_settings in /home/platafo5/public_html/config.php on line 12
+[10-Jun-2024 15:12:22 America/Sao_Paulo] PHP Fatal error:  Uncaught Error: Call to a member function info() on null in /home/platafo5/public_html/config.php:12
+Stack trace:
+#0 /home/platafo5/public_html/classes/SystemSettings.php(3): require_once()
+#1 {main}
+  thrown in /home/platafo5/public_html/config.php on line 12
+[10-Jun-2024 15:12:23 America/Sao_Paulo] PHP Warning:  Undefined variable $_settings in /home/platafo5/public_html/config.php on line 12
+[10-Jun-2024 15:12:23 America/Sao_Paulo] PHP Fatal error:  Uncaught Error: Call to a member function info() on null in /home/platafo5/public_html/config.php:12
+Stack trace:
+#0 /home/platafo5/public_html/classes/SystemSettings.php(3): require_once()
+#1 {main}
+  thrown in /home/platafo5/public_html/config.php on line 12
+[10-Jun-2024 15:12:23 America/Sao_Paulo] PHP Warning:  Undefined variable $_settings in /home/platafo5/public_html/config.php on line 12
+[10-Jun-2024 15:12:23 America/Sao_Paulo] PHP Fatal error:  Uncaught Error: Call to a member function info() on null in /home/platafo5/public_html/config.php:12
+Stack trace:
+#0 /home/platafo5/public_html/classes/SystemSettings.php(3): require_once()
+#1 {main}
+  thrown in /home/platafo5/public_html/config.php on line 12
+[10-Jun-2024 15:17:25 America/Sao_Paulo] PHP Warning:  Undefined variable $_settings in /home/platafo5/public_html/config.php on line 123
+[10-Jun-2024 15:17:25 America/Sao_Paulo] PHP Fatal error:  Uncaught Error: Call to a member function info() on null in /home/platafo5/public_html/config.php:123
+Stack trace:
+#0 /home/platafo5/public_html/classes/SystemSettings.php(3): require_once()
+#1 {main}
+  thrown in /home/platafo5/public_html/config.php on line 123
+[10-Jun-2024 15:17:25 America/Sao_Paulo] PHP Warning:  Undefined variable $_settings in /home/platafo5/public_html/config.php on line 123
+[10-Jun-2024 15:17:25 America/Sao_Paulo] PHP Fatal error:  Uncaught Error: Call to a member function info() on null in /home/platafo5/public_html/config.php:123
+Stack trace:
+#0 /home/platafo5/public_html/classes/SystemSettings.php(3): require_once()
+#1 {main}
+  thrown in /home/platafo5/public_html/config.php on line 123
+[10-Jun-2024 15:17:25 America/Sao_Paulo] PHP Warning:  Undefined variable $_settings in /home/platafo5/public_html/config.php on line 123
+[10-Jun-2024 15:17:25 America/Sao_Paulo] PHP Fatal error:  Uncaught Error: Call to a member function info() on null in /home/platafo5/public_html/config.php:123
+Stack trace:
+#0 /home/platafo5/public_html/classes/SystemSettings.php(3): require_once()
+#1 {main}
+  thrown in /home/platafo5/public_html/config.php on line 123
+[10-Jun-2024 15:18:11 America/Sao_Paulo] PHP Warning:  Undefined variable $_settings in /home/platafo5/public_html/rafflemode.php on line 4
+[10-Jun-2024 15:18:11 America/Sao_Paulo] PHP Fatal error:  Uncaught Error: Call to a member function info() on null in /home/platafo5/public_html/rafflemode.php:4
+Stack trace:
+#0 /home/platafo5/public_html/config.php(10): require_once()
+#1 /home/platafo5/public_html/classes/SystemSettings.php(3): require_once('/home/platafo5/...')
+#2 {main}
+  thrown in /home/platafo5/public_html/rafflemode.php on line 4
+[10-Jun-2024 15:18:11 America/Sao_Paulo] PHP Warning:  Undefined variable $_settings in /home/platafo5/public_html/rafflemode.php on line 4
+[10-Jun-2024 15:18:11 America/Sao_Paulo] PHP Fatal error:  Uncaught Error: Call to a member function info() on null in /home/platafo5/public_html/rafflemode.php:4
+Stack trace:
+#0 /home/platafo5/public_html/config.php(10): require_once()
+#1 /home/platafo5/public_html/classes/SystemSettings.php(3): require_once('/home/platafo5/...')
+#2 {main}
+  thrown in /home/platafo5/public_html/rafflemode.php on line 4
+[10-Jun-2024 15:18:11 America/Sao_Paulo] PHP Warning:  Undefined variable $_settings in /home/platafo5/public_html/rafflemode.php on line 4
+[10-Jun-2024 15:18:11 America/Sao_Paulo] PHP Fatal error:  Uncaught Error: Call to a member function info() on null in /home/platafo5/public_html/rafflemode.php:4
+Stack trace:
+#0 /home/platafo5/public_html/config.php(10): require_once()
+#1 /home/platafo5/public_html/classes/SystemSettings.php(3): require_once('/home/platafo5/...')
+#2 {main}
+  thrown in /home/platafo5/public_html/rafflemode.php on line 4
+[10-Jun-2024 21:25:04 America/Sao_Paulo] PHP Parse error:  syntax error, unexpected token "<", expecting end of file in /home/platafo5/public_html/config.php on line 598
+[10-Jun-2024 21:37:01 America/Sao_Paulo] PHP Warning:  Trying to access array offset on value of type null in /home/platafo5/public_html/config.php on line 734
+[10-Jun-2024 21:37:01 America/Sao_Paulo] PHP Warning:  Trying to access array offset on value of type null in /home/platafo5/public_html/config.php on line 735
+[10-Jun-2024 21:40:13 America/Sao_Paulo] PHP Fatal error:  Uncaught Error: Call to undefined function leowp_gn_access_token() in /home/platafo5/public_html/config.php:637
+Stack trace:
+#0 /home/platafo5/public_html/classes/Master.php(851): gerencianet_generate_pix()
+#1 /home/platafo5/public_html/classes/Master.php(2527): Master->place_order()
+#2 {main}
+  thrown in /home/platafo5/public_html/config.php on line 637
+[10-Jun-2024 21:40:13 America/Sao_Paulo] PHP Fatal error:  Uncaught Error: Call to undefined function leowp_gn_access_token() in /home/platafo5/public_html/config.php:637
+Stack trace:
+#0 /home/platafo5/public_html/classes/Master.php(851): gerencianet_generate_pix()
+#1 /home/platafo5/public_html/classes/Master.php(2527): Master->place_order()
+#2 {main}
+  thrown in /home/platafo5/public_html/config.php on line 637
+[10-Jun-2024 21:40:13 America/Sao_Paulo] PHP Fatal error:  Uncaught Error: Call to undefined function leowp_gn_access_token() in /home/platafo5/public_html/config.php:637
+Stack trace:
+#0 /home/platafo5/public_html/classes/Master.php(851): gerencianet_generate_pix()
+#1 /home/platafo5/public_html/classes/Master.php(2527): Master->place_order()
+#2 {main}
+  thrown in /home/platafo5/public_html/config.php on line 637
+[10-Jun-2024 21:40:13 America/Sao_Paulo] PHP Fatal error:  Uncaught Error: Call to undefined function leowp_gn_access_token() in /home/platafo5/public_html/config.php:637
+Stack trace:
+#0 /home/platafo5/public_html/classes/Master.php(851): gerencianet_generate_pix()
+#1 /home/platafo5/public_html/classes/Master.php(2527): Master->place_order()
+#2 {main}
+  thrown in /home/platafo5/public_html/config.php on line 637
+[10-Jun-2024 21:40:13 America/Sao_Paulo] PHP Fatal error:  Uncaught Error: Call to undefined function leowp_gn_access_token() in /home/platafo5/public_html/config.php:637
+Stack trace:
+#0 /home/platafo5/public_html/classes/Master.php(851): gerencianet_generate_pix()
+#1 /home/platafo5/public_html/classes/Master.php(2527): Master->place_order()
+#2 {main}
+  thrown in /home/platafo5/public_html/config.php on line 637
+[10-Jun-2024 21:40:13 America/Sao_Paulo] PHP Fatal error:  Uncaught Error: Call to undefined function leowp_gn_access_token() in /home/platafo5/public_html/config.php:637
+Stack trace:
+#0 /home/platafo5/public_html/classes/Master.php(851): gerencianet_generate_pix()
+#1 /home/platafo5/public_html/classes/Master.php(2527): Master->place_order()
+#2 {main}
+  thrown in /home/platafo5/public_html/config.php on line 637
+[10-Jun-2024 21:40:13 America/Sao_Paulo] PHP Fatal error:  Uncaught Error: Call to undefined function leowp_gn_access_token() in /home/platafo5/public_html/config.php:637
+Stack trace:
+#0 /home/platafo5/public_html/classes/Master.php(851): gerencianet_generate_pix()
+#1 /home/platafo5/public_html/classes/Master.php(2527): Master->place_order()
+#2 {main}
+  thrown in /home/platafo5/public_html/config.php on line 637
+[10-Jun-2024 21:40:13 America/Sao_Paulo] PHP Fatal error:  Uncaught Error: Call to undefined function leowp_gn_access_token() in /home/platafo5/public_html/config.php:637
+Stack trace:
+#0 /home/platafo5/public_html/classes/Master.php(851): gerencianet_generate_pix()
+#1 /home/platafo5/public_html/classes/Master.php(2527): Master->place_order()
+#2 {main}
+  thrown in /home/platafo5/public_html/config.php on line 637
+[10-Jun-2024 21:40:13 America/Sao_Paulo] PHP Fatal error:  Uncaught Error: Call to undefined function leowp_gn_access_token() in /home/platafo5/public_html/config.php:637
+Stack trace:
+#0 /home/platafo5/public_html/classes/Master.php(851): gerencianet_generate_pix()
+#1 /home/platafo5/public_html/classes/Master.php(2527): Master->place_order()
+#2 {main}
+  thrown in /home/platafo5/public_html/config.php on line 637
+[10-Jun-2024 21:40:13 America/Sao_Paulo] PHP Fatal error:  Uncaught Error: Call to undefined function leowp_gn_access_token() in /home/platafo5/public_html/config.php:637
+Stack trace:
+#0 /home/platafo5/public_html/classes/Master.php(851): gerencianet_generate_pix()
+#1 /home/platafo5/public_html/classes/Master.php(2527): Master->place_order()
+#2 {main}
+  thrown in /home/platafo5/public_html/config.php on line 637
+[10-Jun-2024 21:40:13 America/Sao_Paulo] PHP Fatal error:  Uncaught Error: Call to undefined function leowp_gn_access_token() in /home/platafo5/public_html/config.php:637
+Stack trace:
+#0 /home/platafo5/public_html/classes/Master.php(851): gerencianet_generate_pix()
+#1 /home/platafo5/public_html/classes/Master.php(2527): Master->place_order()
+#2 {main}
+  thrown in /home/platafo5/public_html/config.php on line 637
+[10-Jun-2024 21:40:13 America/Sao_Paulo] PHP Fatal error:  Uncaught Error: Call to undefined function leowp_gn_access_token() in /home/platafo5/public_html/config.php:637
+Stack trace:
+#0 /home/platafo5/public_html/classes/Master.php(851): gerencianet_generate_pix()
+#1 /home/platafo5/public_html/classes/Master.php(2527): Master->place_order()
+#2 {main}
+  thrown in /home/platafo5/public_html/config.php on line 637
+[10-Jun-2024 21:40:13 America/Sao_Paulo] PHP Fatal error:  Uncaught Error: Call to undefined function leowp_gn_access_token() in /home/platafo5/public_html/config.php:637
+Stack trace:
+#0 /home/platafo5/public_html/classes/Master.php(851): gerencianet_generate_pix()
+#1 /home/platafo5/public_html/classes/Master.php(2527): Master->place_order()
+#2 {main}
+  thrown in /home/platafo5/public_html/config.php on line 637
+[10-Jun-2024 21:40:13 America/Sao_Paulo] PHP Fatal error:  Uncaught Error: Call to undefined function leowp_gn_access_token() in /home/platafo5/public_html/config.php:637
+Stack trace:
+#0 /home/platafo5/public_html/classes/Master.php(851): gerencianet_generate_pix()
+#1 /home/platafo5/public_html/classes/Master.php(2527): Master->place_order()
+#2 {main}
+  thrown in /home/platafo5/public_html/config.php on line 637
+[10-Jun-2024 21:40:14 America/Sao_Paulo] PHP Fatal error:  Uncaught Error: Call to undefined function leowp_gn_access_token() in /home/platafo5/public_html/config.php:637
+Stack trace:
+#0 /home/platafo5/public_html/classes/Master.php(851): gerencianet_generate_pix()
+#1 /home/platafo5/public_html/classes/Master.php(2527): Master->place_order()
+#2 {main}
+  thrown in /home/platafo5/public_html/config.php on line 637
+[10-Jun-2024 21:40:14 America/Sao_Paulo] PHP Fatal error:  Uncaught Error: Call to undefined function leowp_gn_access_token() in /home/platafo5/public_html/config.php:637
+Stack trace:
+#0 /home/platafo5/public_html/classes/Master.php(851): gerencianet_generate_pix()
+#1 /home/platafo5/public_html/classes/Master.php(2527): Master->place_order()
+#2 {main}
+  thrown in /home/platafo5/public_html/config.php on line 637
+[10-Jun-2024 21:40:14 America/Sao_Paulo] PHP Fatal error:  Uncaught Error: Call to undefined function leowp_gn_access_token() in /home/platafo5/public_html/config.php:637
+Stack trace:
+#0 /home/platafo5/public_html/classes/Master.php(851): gerencianet_generate_pix()
+#1 /home/platafo5/public_html/classes/Master.php(2527): Master->place_order()
+#2 {main}
+  thrown in /home/platafo5/public_html/config.php on line 637
+[10-Jun-2024 21:40:14 America/Sao_Paulo] PHP Fatal error:  Uncaught Error: Call to undefined function leowp_gn_access_token() in /home/platafo5/public_html/config.php:637
+Stack trace:
+#0 /home/platafo5/public_html/classes/Master.php(851): gerencianet_generate_pix()
+#1 /home/platafo5/public_html/classes/Master.php(2527): Master->place_order()
+#2 {main}
+  thrown in /home/platafo5/public_html/config.php on line 637
+[10-Jun-2024 21:40:14 America/Sao_Paulo] PHP Fatal error:  Uncaught Error: Call to undefined function leowp_gn_access_token() in /home/platafo5/public_html/config.php:637
+Stack trace:
+#0 /home/platafo5/public_html/classes/Master.php(851): gerencianet_generate_pix()
+#1 /home/platafo5/public_html/classes/Master.php(2527): Master->place_order()
+#2 {main}
+  thrown in /home/platafo5/public_html/config.php on line 637
+[10-Jun-2024 21:40:14 America/Sao_Paulo] PHP Fatal error:  Uncaught Error: Call to undefined function leowp_gn_access_token() in /home/platafo5/public_html/config.php:637
+Stack trace:
+#0 /home/platafo5/public_html/classes/Master.php(851): gerencianet_generate_pix()
+#1 /home/platafo5/public_html/classes/Master.php(2527): Master->place_order()
+#2 {main}
+  thrown in /home/platafo5/public_html/config.php on line 637
+[10-Jun-2024 21:40:14 America/Sao_Paulo] PHP Fatal error:  Uncaught Error: Call to undefined function leowp_gn_access_token() in /home/platafo5/public_html/config.php:637
+Stack trace:
+#0 /home/platafo5/public_html/classes/Master.php(851): gerencianet_generate_pix()
+#1 /home/platafo5/public_html/classes/Master.php(2527): Master->place_order()
+#2 {main}
+  thrown in /home/platafo5/public_html/config.php on line 637
+[10-Jun-2024 21:40:14 America/Sao_Paulo] PHP Fatal error:  Uncaught Error: Call to undefined function leowp_gn_access_token() in /home/platafo5/public_html/config.php:637
+Stack trace:
+#0 /home/platafo5/public_html/classes/Master.php(851): gerencianet_generate_pix()
+#1 /home/platafo5/public_html/classes/Master.php(2527): Master->place_order()
+#2 {main}
+  thrown in /home/platafo5/public_html/config.php on line 637
+[10-Jun-2024 21:40:14 America/Sao_Paulo] PHP Fatal error:  Uncaught Error: Call to undefined function leowp_gn_access_token() in /home/platafo5/public_html/config.php:637
+Stack trace:
+#0 /home/platafo5/public_html/classes/Master.php(851): gerencianet_generate_pix()
+#1 /home/platafo5/public_html/classes/Master.php(2527): Master->place_order()
+#2 {main}
+  thrown in /home/platafo5/public_html/config.php on line 637
+[10-Jun-2024 21:40:14 America/Sao_Paulo] PHP Fatal error:  Uncaught Error: Call to undefined function leowp_gn_access_token() in /home/platafo5/public_html/config.php:637
+Stack trace:
+#0 /home/platafo5/public_html/classes/Master.php(851): gerencianet_generate_pix()
+#1 /home/platafo5/public_html/classes/Master.php(2527): Master->place_order()
+#2 {main}
+  thrown in /home/platafo5/public_html/config.php on line 637
+[10-Jun-2024 21:40:14 America/Sao_Paulo] PHP Fatal error:  Uncaught Error: Call to undefined function leowp_gn_access_token() in /home/platafo5/public_html/config.php:637
+Stack trace:
+#0 /home/platafo5/public_html/classes/Master.php(851): gerencianet_generate_pix()
+#1 /home/platafo5/public_html/classes/Master.php(2527): Master->place_order()
+#2 {main}
+  thrown in /home/platafo5/public_html/config.php on line 637
+[10-Jun-2024 21:40:14 America/Sao_Paulo] PHP Fatal error:  Uncaught Error: Call to undefined function leowp_gn_access_token() in /home/platafo5/public_html/config.php:637
+Stack trace:
+#0 /home/platafo5/public_html/classes/Master.php(851): gerencianet_generate_pix()
+#1 /home/platafo5/public_html/classes/Master.php(2527): Master->place_order()
+#2 {main}
+  thrown in /home/platafo5/public_html/config.php on line 637
+[10-Jun-2024 21:40:14 America/Sao_Paulo] PHP Fatal error:  Uncaught Error: Call to undefined function leowp_gn_access_token() in /home/platafo5/public_html/config.php:637
+Stack trace:
+#0 /home/platafo5/public_html/classes/Master.php(851): gerencianet_generate_pix()
+#1 /home/platafo5/public_html/classes/Master.php(2527): Master->place_order()
+#2 {main}
+  thrown in /home/platafo5/public_html/config.php on line 637
+[10-Jun-2024 21:40:15 America/Sao_Paulo] PHP Fatal error:  Uncaught Error: Call to undefined function leowp_gn_access_token() in /home/platafo5/public_html/config.php:637
+Stack trace:
+#0 /home/platafo5/public_html/classes/Master.php(851): gerencianet_generate_pix()
+#1 /home/platafo5/public_html/classes/Master.php(2527): Master->place_order()
+#2 {main}
+  thrown in /home/platafo5/public_html/config.php on line 637
+[10-Jun-2024 21:40:15 America/Sao_Paulo] PHP Fatal error:  Uncaught Error: Call to undefined function leowp_gn_access_token() in /home/platafo5/public_html/config.php:637
+Stack trace:
+#0 /home/platafo5/public_html/classes/Master.php(851): gerencianet_generate_pix()
+#1 /home/platafo5/public_html/classes/Master.php(2527): Master->place_order()
+#2 {main}
+  thrown in /home/platafo5/public_html/config.php on line 637
+[10-Jun-2024 21:40:15 America/Sao_Paulo] PHP Fatal error:  Uncaught Error: Call to undefined function leowp_gn_access_token() in /home/platafo5/public_html/config.php:637
+Stack trace:
+#0 /home/platafo5/public_html/classes/Master.php(851): gerencianet_generate_pix()
+#1 /home/platafo5/public_html/classes/Master.php(2527): Master->place_order()
+#2 {main}
+  thrown in /home/platafo5/public_html/config.php on line 637
+[10-Jun-2024 21:40:15 America/Sao_Paulo] PHP Fatal error:  Uncaught Error: Call to undefined function leowp_gn_access_token() in /home/platafo5/public_html/config.php:637
+Stack trace:
+#0 /home/platafo5/public_html/classes/Master.php(851): gerencianet_generate_pix()
+#1 /home/platafo5/public_html/classes/Master.php(2527): Master->place_order()
+#2 {main}
+  thrown in /home/platafo5/public_html/config.php on line 637
+[10-Jun-2024 21:40:15 America/Sao_Paulo] PHP Fatal error:  Uncaught Error: Call to undefined function leowp_gn_access_token() in /home/platafo5/public_html/config.php:637
+Stack trace:
+#0 /home/platafo5/public_html/classes/Master.php(851): gerencianet_generate_pix()
+#1 /home/platafo5/public_html/classes/Master.php(2527): Master->place_order()
+#2 {main}
+  thrown in /home/platafo5/public_html/config.php on line 637
+[10-Jun-2024 21:40:15 America/Sao_Paulo] PHP Fatal error:  Uncaught Error: Call to undefined function leowp_gn_access_token() in /home/platafo5/public_html/config.php:637
+Stack trace:
+#0 /home/platafo5/public_html/classes/Master.php(851): gerencianet_generate_pix()
+#1 /home/platafo5/public_html/classes/Master.php(2527): Master->place_order()
+#2 {main}
+  thrown in /home/platafo5/public_html/config.php on line 637
+[10-Jun-2024 21:40:15 America/Sao_Paulo] PHP Fatal error:  Uncaught Error: Call to undefined function leowp_gn_access_token() in /home/platafo5/public_html/config.php:637
+Stack trace:
+#0 /home/platafo5/public_html/classes/Master.php(851): gerencianet_generate_pix()
+#1 /home/platafo5/public_html/classes/Master.php(2527): Master->place_order()
+#2 {main}
+  thrown in /home/platafo5/public_html/config.php on line 637
+[10-Jun-2024 21:40:15 America/Sao_Paulo] PHP Fatal error:  Uncaught Error: Call to undefined function leowp_gn_access_token() in /home/platafo5/public_html/config.php:637
+Stack trace:
+#0 /home/platafo5/public_html/classes/Master.php(851): gerencianet_generate_pix()
+#1 /home/platafo5/public_html/classes/Master.php(2527): Master->place_order()
+#2 {main}
+  thrown in /home/platafo5/public_html/config.php on line 637
+[10-Jun-2024 21:40:15 America/Sao_Paulo] PHP Fatal error:  Uncaught Error: Call to undefined function leowp_gn_access_token() in /home/platafo5/public_html/config.php:637
+Stack trace:
+#0 /home/platafo5/public_html/classes/Master.php(851): gerencianet_generate_pix()
+#1 /home/platafo5/public_html/classes/Master.php(2527): Master->place_order()
+#2 {main}
+  thrown in /home/platafo5/public_html/config.php on line 637
+[10-Jun-2024 21:40:15 America/Sao_Paulo] PHP Fatal error:  Uncaught Error: Call to undefined function leowp_gn_access_token() in /home/platafo5/public_html/config.php:637
+Stack trace:
+#0 /home/platafo5/public_html/classes/Master.php(851): gerencianet_generate_pix()
+#1 /home/platafo5/public_html/classes/Master.php(2527): Master->place_order()
+#2 {main}
+  thrown in /home/platafo5/public_html/config.php on line 637
+[10-Jun-2024 21:40:15 America/Sao_Paulo] PHP Fatal error:  Uncaught Error: Call to undefined function leowp_gn_access_token() in /home/platafo5/public_html/config.php:637
+Stack trace:
+#0 /home/platafo5/public_html/classes/Master.php(851): gerencianet_generate_pix()
+#1 /home/platafo5/public_html/classes/Master.php(2527): Master->place_order()
+#2 {main}
+  thrown in /home/platafo5/public_html/config.php on line 637
+[10-Jun-2024 21:40:15 America/Sao_Paulo] PHP Fatal error:  Uncaught Error: Call to undefined function leowp_gn_access_token() in /home/platafo5/public_html/config.php:637
+Stack trace:
+#0 /home/platafo5/public_html/classes/Master.php(851): gerencianet_generate_pix()
+#1 /home/platafo5/public_html/classes/Master.php(2527): Master->place_order()
+#2 {main}
+  thrown in /home/platafo5/public_html/config.php on line 637
+[10-Jun-2024 21:40:15 America/Sao_Paulo] PHP Fatal error:  Uncaught Error: Call to undefined function leowp_gn_access_token() in /home/platafo5/public_html/config.php:637
+Stack trace:
+#0 /home/platafo5/public_html/classes/Master.php(851): gerencianet_generate_pix()
+#1 /home/platafo5/public_html/classes/Master.php(2527): Master->place_order()
+#2 {main}
+  thrown in /home/platafo5/public_html/config.php on line 637
+[10-Jun-2024 21:40:16 America/Sao_Paulo] PHP Fatal error:  Uncaught Error: Call to undefined function leowp_gn_access_token() in /home/platafo5/public_html/config.php:637
+Stack trace:
+#0 /home/platafo5/public_html/classes/Master.php(851): gerencianet_generate_pix()
+#1 /home/platafo5/public_html/classes/Master.php(2527): Master->place_order()
+#2 {main}
+  thrown in /home/platafo5/public_html/config.php on line 637
+[10-Jun-2024 21:40:16 America/Sao_Paulo] PHP Fatal error:  Uncaught Error: Call to undefined function leowp_gn_access_token() in /home/platafo5/public_html/config.php:637
+Stack trace:
+#0 /home/platafo5/public_html/classes/Master.php(851): gerencianet_generate_pix()
+#1 /home/platafo5/public_html/classes/Master.php(2527): Master->place_order()
+#2 {main}
+  thrown in /home/platafo5/public_html/config.php on line 637
+[10-Jun-2024 21:40:16 America/Sao_Paulo] PHP Fatal error:  Uncaught Error: Call to undefined function leowp_gn_access_token() in /home/platafo5/public_html/config.php:637
+Stack trace:
+#0 /home/platafo5/public_html/classes/Master.php(851): gerencianet_generate_pix()
+#1 /home/platafo5/public_html/classes/Master.php(2527): Master->place_order()
+#2 {main}
+  thrown in /home/platafo5/public_html/config.php on line 637
+[10-Jun-2024 21:40:16 America/Sao_Paulo] PHP Fatal error:  Uncaught Error: Call to undefined function leowp_gn_access_token() in /home/platafo5/public_html/config.php:637
+Stack trace:
+#0 /home/platafo5/public_html/classes/Master.php(851): gerencianet_generate_pix()
+#1 /home/platafo5/public_html/classes/Master.php(2527): Master->place_order()
+#2 {main}
+  thrown in /home/platafo5/public_html/config.php on line 637
+[10-Jun-2024 21:40:16 America/Sao_Paulo] PHP Fatal error:  Uncaught Error: Call to undefined function leowp_gn_access_token() in /home/platafo5/public_html/config.php:637
+Stack trace:
+#0 /home/platafo5/public_html/classes/Master.php(851): gerencianet_generate_pix()
+#1 /home/platafo5/public_html/classes/Master.php(2527): Master->place_order()
+#2 {main}
+  thrown in /home/platafo5/public_html/config.php on line 637
+[10-Jun-2024 21:40:16 America/Sao_Paulo] PHP Fatal error:  Uncaught Error: Call to undefined function leowp_gn_access_token() in /home/platafo5/public_html/config.php:637
+Stack trace:
+#0 /home/platafo5/public_html/classes/Master.php(851): gerencianet_generate_pix()
+#1 /home/platafo5/public_html/classes/Master.php(2527): Master->place_order()
+#2 {main}
+  thrown in /home/platafo5/public_html/config.php on line 637
+[10-Jun-2024 21:40:16 America/Sao_Paulo] PHP Fatal error:  Uncaught Error: Call to undefined function leowp_gn_access_token() in /home/platafo5/public_html/config.php:637
+Stack trace:
+#0 /home/platafo5/public_html/classes/Master.php(851): gerencianet_generate_pix()
+#1 /home/platafo5/public_html/classes/Master.php(2527): Master->place_order()
+#2 {main}
+  thrown in /home/platafo5/public_html/config.php on line 637
+[10-Jun-2024 21:40:16 America/Sao_Paulo] PHP Fatal error:  Uncaught Error: Call to undefined function leowp_gn_access_token() in /home/platafo5/public_html/config.php:637
+Stack trace:
+#0 /home/platafo5/public_html/classes/Master.php(851): gerencianet_generate_pix()
+#1 /home/platafo5/public_html/classes/Master.php(2527): Master->place_order()
+#2 {main}
+  thrown in /home/platafo5/public_html/config.php on line 637
+[10-Jun-2024 21:40:16 America/Sao_Paulo] PHP Fatal error:  Uncaught Error: Call to undefined function leowp_gn_access_token() in /home/platafo5/public_html/config.php:637
+Stack trace:
+#0 /home/platafo5/public_html/classes/Master.php(851): gerencianet_generate_pix()
+#1 /home/platafo5/public_html/classes/Master.php(2527): Master->place_order()
+#2 {main}
+  thrown in /home/platafo5/public_html/config.php on line 637
+[10-Jun-2024 21:40:16 America/Sao_Paulo] PHP Fatal error:  Uncaught Error: Call to undefined function leowp_gn_access_token() in /home/platafo5/public_html/config.php:637
+Stack trace:
+#0 /home/platafo5/public_html/classes/Master.php(851): gerencianet_generate_pix()
+#1 /home/platafo5/public_html/classes/Master.php(2527): Master->place_order()
+#2 {main}
+  thrown in /home/platafo5/public_html/config.php on line 637
+[10-Jun-2024 21:40:16 America/Sao_Paulo] PHP Fatal error:  Uncaught Error: Call to undefined function leowp_gn_access_token() in /home/platafo5/public_html/config.php:637
+Stack trace:
+#0 /home/platafo5/public_html/classes/Master.php(851): gerencianet_generate_pix()
+#1 /home/platafo5/public_html/classes/Master.php(2527): Master->place_order()
+#2 {main}
+  thrown in /home/platafo5/public_html/config.php on line 637
+[10-Jun-2024 21:40:16 America/Sao_Paulo] PHP Fatal error:  Uncaught Error: Call to undefined function leowp_gn_access_token() in /home/platafo5/public_html/config.php:637
+Stack trace:
+#0 /home/platafo5/public_html/classes/Master.php(851): gerencianet_generate_pix()
+#1 /home/platafo5/public_html/classes/Master.php(2527): Master->place_order()
+#2 {main}
+  thrown in /home/platafo5/public_html/config.php on line 637
+[10-Jun-2024 21:40:16 America/Sao_Paulo] PHP Fatal error:  Uncaught Error: Call to undefined function leowp_gn_access_token() in /home/platafo5/public_html/config.php:637
+Stack trace:
+#0 /home/platafo5/public_html/classes/Master.php(851): gerencianet_generate_pix()
+#1 /home/platafo5/public_html/classes/Master.php(2527): Master->place_order()
+#2 {main}
+  thrown in /home/platafo5/public_html/config.php on line 637
+[10-Jun-2024 21:40:16 America/Sao_Paulo] PHP Fatal error:  Uncaught Error: Call to undefined function leowp_gn_access_token() in /home/platafo5/public_html/config.php:637
+Stack trace:
+#0 /home/platafo5/public_html/classes/Master.php(851): gerencianet_generate_pix()
+#1 /home/platafo5/public_html/classes/Master.php(2527): Master->place_order()
+#2 {main}
+  thrown in /home/platafo5/public_html/config.php on line 637
+[10-Jun-2024 21:40:17 America/Sao_Paulo] PHP Fatal error:  Uncaught Error: Call to undefined function leowp_gn_access_token() in /home/platafo5/public_html/config.php:637
+Stack trace:
+#0 /home/platafo5/public_html/classes/Master.php(851): gerencianet_generate_pix()
+#1 /home/platafo5/public_html/classes/Master.php(2527): Master->place_order()
+#2 {main}
+  thrown in /home/platafo5/public_html/config.php on line 637
+[10-Jun-2024 21:40:17 America/Sao_Paulo] PHP Fatal error:  Uncaught Error: Call to undefined function leowp_gn_access_token() in /home/platafo5/public_html/config.php:637
+Stack trace:
+#0 /home/platafo5/public_html/classes/Master.php(851): gerencianet_generate_pix()
+#1 /home/platafo5/public_html/classes/Master.php(2527): Master->place_order()
+#2 {main}
+  thrown in /home/platafo5/public_html/config.php on line 637
+[10-Jun-2024 21:40:17 America/Sao_Paulo] PHP Fatal error:  Uncaught Error: Call to undefined function leowp_gn_access_token() in /home/platafo5/public_html/config.php:637
+Stack trace:
+#0 /home/platafo5/public_html/classes/Master.php(851): gerencianet_generate_pix()
+#1 /home/platafo5/public_html/classes/Master.php(2527): Master->place_order()
+#2 {main}
+  thrown in /home/platafo5/public_html/config.php on line 637
+[10-Jun-2024 21:40:17 America/Sao_Paulo] PHP Fatal error:  Uncaught Error: Call to undefined function leowp_gn_access_token() in /home/platafo5/public_html/config.php:637
+Stack trace:
+#0 /home/platafo5/public_html/classes/Master.php(851): gerencianet_generate_pix()
+#1 /home/platafo5/public_html/classes/Master.php(2527): Master->place_order()
+#2 {main}
+  thrown in /home/platafo5/public_html/config.php on line 637
+[10-Jun-2024 21:40:17 America/Sao_Paulo] PHP Fatal error:  Uncaught Error: Call to undefined function leowp_gn_access_token() in /home/platafo5/public_html/config.php:637
+Stack trace:
+#0 /home/platafo5/public_html/classes/Master.php(851): gerencianet_generate_pix()
+#1 /home/platafo5/public_html/classes/Master.php(2527): Master->place_order()
+#2 {main}
+  thrown in /home/platafo5/public_html/config.php on line 637
+[10-Jun-2024 21:40:17 America/Sao_Paulo] PHP Fatal error:  Uncaught Error: Call to undefined function leowp_gn_access_token() in /home/platafo5/public_html/config.php:637
+Stack trace:
+#0 /home/platafo5/public_html/classes/Master.php(851): gerencianet_generate_pix()
+#1 /home/platafo5/public_html/classes/Master.php(2527): Master->place_order()
+#2 {main}
+  thrown in /home/platafo5/public_html/config.php on line 637
+[10-Jun-2024 21:40:17 America/Sao_Paulo] PHP Fatal error:  Uncaught Error: Call to undefined function leowp_gn_access_token() in /home/platafo5/public_html/config.php:637
+Stack trace:
+#0 /home/platafo5/public_html/classes/Master.php(851): gerencianet_generate_pix()
+#1 /home/platafo5/public_html/classes/Master.php(2527): Master->place_order()
+#2 {main}
+  thrown in /home/platafo5/public_html/config.php on line 637
+[10-Jun-2024 21:40:17 America/Sao_Paulo] PHP Fatal error:  Uncaught Error: Call to undefined function leowp_gn_access_token() in /home/platafo5/public_html/config.php:637
+Stack trace:
+#0 /home/platafo5/public_html/classes/Master.php(851): gerencianet_generate_pix()
+#1 /home/platafo5/public_html/classes/Master.php(2527): Master->place_order()
+#2 {main}
+  thrown in /home/platafo5/public_html/config.php on line 637
+[10-Jun-2024 21:40:17 America/Sao_Paulo] PHP Fatal error:  Uncaught Error: Call to undefined function leowp_gn_access_token() in /home/platafo5/public_html/config.php:637
+Stack trace:
+#0 /home/platafo5/public_html/classes/Master.php(851): gerencianet_generate_pix()
+#1 /home/platafo5/public_html/classes/Master.php(2527): Master->place_order()
+#2 {main}
+  thrown in /home/platafo5/public_html/config.php on line 637
+[10-Jun-2024 21:40:17 America/Sao_Paulo] PHP Fatal error:  Uncaught Error: Call to undefined function leowp_gn_access_token() in /home/platafo5/public_html/config.php:637
+Stack trace:
+#0 /home/platafo5/public_html/classes/Master.php(851): gerencianet_generate_pix()
+#1 /home/platafo5/public_html/classes/Master.php(2527): Master->place_order()
+#2 {main}
+  thrown in /home/platafo5/public_html/config.php on line 637
+[10-Jun-2024 21:40:17 America/Sao_Paulo] PHP Fatal error:  Uncaught Error: Call to undefined function leowp_gn_access_token() in /home/platafo5/public_html/config.php:637
+Stack trace:
+#0 /home/platafo5/public_html/classes/Master.php(851): gerencianet_generate_pix()
+#1 /home/platafo5/public_html/classes/Master.php(2527): Master->place_order()
+#2 {main}
+  thrown in /home/platafo5/public_html/config.php on line 637
+[10-Jun-2024 21:40:17 America/Sao_Paulo] PHP Fatal error:  Uncaught Error: Call to undefined function leowp_gn_access_token() in /home/platafo5/public_html/config.php:637
+Stack trace:
+#0 /home/platafo5/public_html/classes/Master.php(851): gerencianet_generate_pix()
+#1 /home/platafo5/public_html/classes/Master.php(2527): Master->place_order()
+#2 {main}
+  thrown in /home/platafo5/public_html/config.php on line 637
+[10-Jun-2024 21:40:17 America/Sao_Paulo] PHP Fatal error:  Uncaught Error: Call to undefined function leowp_gn_access_token() in /home/platafo5/public_html/config.php:637
+Stack trace:
+#0 /home/platafo5/public_html/classes/Master.php(851): gerencianet_generate_pix()
+#1 /home/platafo5/public_html/classes/Master.php(2527): Master->place_order()
+#2 {main}
+  thrown in /home/platafo5/public_html/config.php on line 637
+[10-Jun-2024 21:40:17 America/Sao_Paulo] PHP Fatal error:  Uncaught Error: Call to undefined function leowp_gn_access_token() in /home/platafo5/public_html/config.php:637
+Stack trace:
+#0 /home/platafo5/public_html/classes/Master.php(851): gerencianet_generate_pix()
+#1 /home/platafo5/public_html/classes/Master.php(2527): Master->place_order()
+#2 {main}
+  thrown in /home/platafo5/public_html/config.php on line 637
+[10-Jun-2024 21:40:17 America/Sao_Paulo] PHP Fatal error:  Uncaught Error: Call to undefined function leowp_gn_access_token() in /home/platafo5/public_html/config.php:637
+Stack trace:
+#0 /home/platafo5/public_html/classes/Master.php(851): gerencianet_generate_pix()
+#1 /home/platafo5/public_html/classes/Master.php(2527): Master->place_order()
+#2 {main}
+  thrown in /home/platafo5/public_html/config.php on line 637
+[10-Jun-2024 21:40:17 America/Sao_Paulo] PHP Fatal error:  Uncaught Error: Call to undefined function leowp_gn_access_token() in /home/platafo5/public_html/config.php:637
+Stack trace:
+#0 /home/platafo5/public_html/classes/Master.php(851): gerencianet_generate_pix()
+#1 /home/platafo5/public_html/classes/Master.php(2527): Master->place_order()
+#2 {main}
+  thrown in /home/platafo5/public_html/config.php on line 637
+[10-Jun-2024 21:40:18 America/Sao_Paulo] PHP Fatal error:  Uncaught Error: Call to undefined function leowp_gn_access_token() in /home/platafo5/public_html/config.php:637
+Stack trace:
+#0 /home/platafo5/public_html/classes/Master.php(851): gerencianet_generate_pix()
+#1 /home/platafo5/public_html/classes/Master.php(2527): Master->place_order()
+#2 {main}
+  thrown in /home/platafo5/public_html/config.php on line 637
+[10-Jun-2024 21:40:18 America/Sao_Paulo] PHP Fatal error:  Uncaught Error: Call to undefined function leowp_gn_access_token() in /home/platafo5/public_html/config.php:637
+Stack trace:
+#0 /home/platafo5/public_html/classes/Master.php(851): gerencianet_generate_pix()
+#1 /home/platafo5/public_html/classes/Master.php(2527): Master->place_order()
+#2 {main}
+  thrown in /home/platafo5/public_html/config.php on line 637
+[10-Jun-2024 21:40:18 America/Sao_Paulo] PHP Fatal error:  Uncaught Error: Call to undefined function leowp_gn_access_token() in /home/platafo5/public_html/config.php:637
+Stack trace:
+#0 /home/platafo5/public_html/classes/Master.php(851): gerencianet_generate_pix()
+#1 /home/platafo5/public_html/classes/Master.php(2527): Master->place_order()
+#2 {main}
+  thrown in /home/platafo5/public_html/config.php on line 637
+[10-Jun-2024 21:40:18 America/Sao_Paulo] PHP Fatal error:  Uncaught Error: Call to undefined function leowp_gn_access_token() in /home/platafo5/public_html/config.php:637
+Stack trace:
+#0 /home/platafo5/public_html/classes/Master.php(851): gerencianet_generate_pix()
+#1 /home/platafo5/public_html/classes/Master.php(2527): Master->place_order()
+#2 {main}
+  thrown in /home/platafo5/public_html/config.php on line 637
+[10-Jun-2024 21:40:18 America/Sao_Paulo] PHP Fatal error:  Uncaught Error: Call to undefined function leowp_gn_access_token() in /home/platafo5/public_html/config.php:637
+Stack trace:
+#0 /home/platafo5/public_html/classes/Master.php(851): gerencianet_generate_pix()
+#1 /home/platafo5/public_html/classes/Master.php(2527): Master->place_order()
+#2 {main}
+  thrown in /home/platafo5/public_html/config.php on line 637
+[10-Jun-2024 21:40:18 America/Sao_Paulo] PHP Fatal error:  Uncaught Error: Call to undefined function leowp_gn_access_token() in /home/platafo5/public_html/config.php:637
+Stack trace:
+#0 /home/platafo5/public_html/classes/Master.php(851): gerencianet_generate_pix()
+#1 /home/platafo5/public_html/classes/Master.php(2527): Master->place_order()
+#2 {main}
+  thrown in /home/platafo5/public_html/config.php on line 637
+[10-Jun-2024 21:40:18 America/Sao_Paulo] PHP Fatal error:  Uncaught Error: Call to undefined function leowp_gn_access_token() in /home/platafo5/public_html/config.php:637
+Stack trace:
+#0 /home/platafo5/public_html/classes/Master.php(851): gerencianet_generate_pix()
+#1 /home/platafo5/public_html/classes/Master.php(2527): Master->place_order()
+#2 {main}
+  thrown in /home/platafo5/public_html/config.php on line 637
+[10-Jun-2024 21:40:18 America/Sao_Paulo] PHP Fatal error:  Uncaught Error: Call to undefined function leowp_gn_access_token() in /home/platafo5/public_html/config.php:637
+Stack trace:
+#0 /home/platafo5/public_html/classes/Master.php(851): gerencianet_generate_pix()
+#1 /home/platafo5/public_html/classes/Master.php(2527): Master->place_order()
+#2 {main}
+  thrown in /home/platafo5/public_html/config.php on line 637
+[10-Jun-2024 21:40:18 America/Sao_Paulo] PHP Fatal error:  Uncaught Error: Call to undefined function leowp_gn_access_token() in /home/platafo5/public_html/config.php:637
+Stack trace:
+#0 /home/platafo5/public_html/classes/Master.php(851): gerencianet_generate_pix()
+#1 /home/platafo5/public_html/classes/Master.php(2527): Master->place_order()
+#2 {main}
+  thrown in /home/platafo5/public_html/config.php on line 637
+[10-Jun-2024 21:40:18 America/Sao_Paulo] PHP Fatal error:  Uncaught Error: Call to undefined function leowp_gn_access_token() in /home/platafo5/public_html/config.php:637
+Stack trace:
+#0 /home/platafo5/public_html/classes/Master.php(851): gerencianet_generate_pix()
+#1 /home/platafo5/public_html/classes/Master.php(2527): Master->place_order()
+#2 {main}
+  thrown in /home/platafo5/public_html/config.php on line 637
+[10-Jun-2024 21:40:18 America/Sao_Paulo] PHP Fatal error:  Uncaught Error: Call to undefined function leowp_gn_access_token() in /home/platafo5/public_html/config.php:637
+Stack trace:
+#0 /home/platafo5/public_html/classes/Master.php(851): gerencianet_generate_pix()
+#1 /home/platafo5/public_html/classes/Master.php(2527): Master->place_order()
+#2 {main}
+  thrown in /home/platafo5/public_html/config.php on line 637
+[10-Jun-2024 21:40:18 America/Sao_Paulo] PHP Fatal error:  Uncaught Error: Call to undefined function leowp_gn_access_token() in /home/platafo5/public_html/config.php:637
+Stack trace:
+#0 /home/platafo5/public_html/classes/Master.php(851): gerencianet_generate_pix()
+#1 /home/platafo5/public_html/classes/Master.php(2527): Master->place_order()
+#2 {main}
+  thrown in /home/platafo5/public_html/config.php on line 637
+[10-Jun-2024 21:40:18 America/Sao_Paulo] PHP Fatal error:  Uncaught Error: Call to undefined function leowp_gn_access_token() in /home/platafo5/public_html/config.php:637
+Stack trace:
+#0 /home/platafo5/public_html/classes/Master.php(851): gerencianet_generate_pix()
+#1 /home/platafo5/public_html/classes/Master.php(2527): Master->place_order()
+#2 {main}
+  thrown in /home/platafo5/public_html/config.php on line 637
+[10-Jun-2024 21:40:18 America/Sao_Paulo] PHP Fatal error:  Uncaught Error: Call to undefined function leowp_gn_access_token() in /home/platafo5/public_html/config.php:637
+Stack trace:
+#0 /home/platafo5/public_html/classes/Master.php(851): gerencianet_generate_pix()
+#1 /home/platafo5/public_html/classes/Master.php(2527): Master->place_order()
+#2 {main}
+  thrown in /home/platafo5/public_html/config.php on line 637
+[10-Jun-2024 21:40:18 America/Sao_Paulo] PHP Fatal error:  Uncaught Error: Call to undefined function leowp_gn_access_token() in /home/platafo5/public_html/config.php:637
+Stack trace:
+#0 /home/platafo5/public_html/classes/Master.php(851): gerencianet_generate_pix()
+#1 /home/platafo5/public_html/classes/Master.php(2527): Master->place_order()
+#2 {main}
+  thrown in /home/platafo5/public_html/config.php on line 637
+[10-Jun-2024 21:40:19 America/Sao_Paulo] PHP Fatal error:  Uncaught Error: Call to undefined function leowp_gn_access_token() in /home/platafo5/public_html/config.php:637
+Stack trace:
+#0 /home/platafo5/public_html/classes/Master.php(851): gerencianet_generate_pix()
+#1 /home/platafo5/public_html/classes/Master.php(2527): Master->place_order()
+#2 {main}
+  thrown in /home/platafo5/public_html/config.php on line 637
+[10-Jun-2024 21:40:19 America/Sao_Paulo] PHP Fatal error:  Uncaught Error: Call to undefined function leowp_gn_access_token() in /home/platafo5/public_html/config.php:637
+Stack trace:
+#0 /home/platafo5/public_html/classes/Master.php(851): gerencianet_generate_pix()
+#1 /home/platafo5/public_html/classes/Master.php(2527): Master->place_order()
+#2 {main}
+  thrown in /home/platafo5/public_html/config.php on line 637
+[10-Jun-2024 21:40:19 America/Sao_Paulo] PHP Fatal error:  Uncaught Error: Call to undefined function leowp_gn_access_token() in /home/platafo5/public_html/config.php:637
+Stack trace:
+#0 /home/platafo5/public_html/classes/Master.php(851): gerencianet_generate_pix()
+#1 /home/platafo5/public_html/classes/Master.php(2527): Master->place_order()
+#2 {main}
+  thrown in /home/platafo5/public_html/config.php on line 637
+[10-Jun-2024 21:40:19 America/Sao_Paulo] PHP Fatal error:  Uncaught Error: Call to undefined function leowp_gn_access_token() in /home/platafo5/public_html/config.php:637
+Stack trace:
+#0 /home/platafo5/public_html/classes/Master.php(851): gerencianet_generate_pix()
+#1 /home/platafo5/public_html/classes/Master.php(2527): Master->place_order()
+#2 {main}
+  thrown in /home/platafo5/public_html/config.php on line 637
+[10-Jun-2024 21:40:19 America/Sao_Paulo] PHP Fatal error:  Uncaught Error: Call to undefined function leowp_gn_access_token() in /home/platafo5/public_html/config.php:637
+Stack trace:
+#0 /home/platafo5/public_html/classes/Master.php(851): gerencianet_generate_pix()
+#1 /home/platafo5/public_html/classes/Master.php(2527): Master->place_order()
+#2 {main}
+  thrown in /home/platafo5/public_html/config.php on line 637
+[10-Jun-2024 21:40:19 America/Sao_Paulo] PHP Fatal error:  Uncaught Error: Call to undefined function leowp_gn_access_token() in /home/platafo5/public_html/config.php:637
+Stack trace:
+#0 /home/platafo5/public_html/classes/Master.php(851): gerencianet_generate_pix()
+#1 /home/platafo5/public_html/classes/Master.php(2527): Master->place_order()
+#2 {main}
+  thrown in /home/platafo5/public_html/config.php on line 637
+[10-Jun-2024 21:40:19 America/Sao_Paulo] PHP Fatal error:  Uncaught Error: Call to undefined function leowp_gn_access_token() in /home/platafo5/public_html/config.php:637
+Stack trace:
+#0 /home/platafo5/public_html/classes/Master.php(851): gerencianet_generate_pix()
+#1 /home/platafo5/public_html/classes/Master.php(2527): Master->place_order()
+#2 {main}
+  thrown in /home/platafo5/public_html/config.php on line 637
+[10-Jun-2024 21:40:19 America/Sao_Paulo] PHP Fatal error:  Uncaught Error: Call to undefined function leowp_gn_access_token() in /home/platafo5/public_html/config.php:637
+Stack trace:
+#0 /home/platafo5/public_html/classes/Master.php(851): gerencianet_generate_pix()
+#1 /home/platafo5/public_html/classes/Master.php(2527): Master->place_order()
+#2 {main}
+  thrown in /home/platafo5/public_html/config.php on line 637
+[10-Jun-2024 21:40:19 America/Sao_Paulo] PHP Fatal error:  Uncaught Error: Call to undefined function leowp_gn_access_token() in /home/platafo5/public_html/config.php:637
+Stack trace:
+#0 /home/platafo5/public_html/classes/Master.php(851): gerencianet_generate_pix()
+#1 /home/platafo5/public_html/classes/Master.php(2527): Master->place_order()
+#2 {main}
+  thrown in /home/platafo5/public_html/config.php on line 637
+[10-Jun-2024 21:40:19 America/Sao_Paulo] PHP Fatal error:  Uncaught Error: Call to undefined function leowp_gn_access_token() in /home/platafo5/public_html/config.php:637
+Stack trace:
+#0 /home/platafo5/public_html/classes/Master.php(851): gerencianet_generate_pix()
+#1 /home/platafo5/public_html/classes/Master.php(2527): Master->place_order()
+#2 {main}
+  thrown in /home/platafo5/public_html/config.php on line 637
+[10-Jun-2024 21:40:19 America/Sao_Paulo] PHP Fatal error:  Uncaught Error: Call to undefined function leowp_gn_access_token() in /home/platafo5/public_html/config.php:637
+Stack trace:
+#0 /home/platafo5/public_html/classes/Master.php(851): gerencianet_generate_pix()
+#1 /home/platafo5/public_html/classes/Master.php(2527): Master->place_order()
+#2 {main}
+  thrown in /home/platafo5/public_html/config.php on line 637
+[10-Jun-2024 21:40:19 America/Sao_Paulo] PHP Fatal error:  Uncaught Error: Call to undefined function leowp_gn_access_token() in /home/platafo5/public_html/config.php:637
+Stack trace:
+#0 /home/platafo5/public_html/classes/Master.php(851): gerencianet_generate_pix()
+#1 /home/platafo5/public_html/classes/Master.php(2527): Master->place_order()
+#2 {main}
+  thrown in /home/platafo5/public_html/config.php on line 637
+[10-Jun-2024 21:40:20 America/Sao_Paulo] PHP Fatal error:  Uncaught Error: Call to undefined function leowp_gn_access_token() in /home/platafo5/public_html/config.php:637
+Stack trace:
+#0 /home/platafo5/public_html/classes/Master.php(851): gerencianet_generate_pix()
+#1 /home/platafo5/public_html/classes/Master.php(2527): Master->place_order()
+#2 {main}
+  thrown in /home/platafo5/public_html/config.php on line 637
+[10-Jun-2024 21:40:20 America/Sao_Paulo] PHP Fatal error:  Uncaught Error: Call to undefined function leowp_gn_access_token() in /home/platafo5/public_html/config.php:637
+Stack trace:
+#0 /home/platafo5/public_html/classes/Master.php(851): gerencianet_generate_pix()
+#1 /home/platafo5/public_html/classes/Master.php(2527): Master->place_order()
+#2 {main}
+  thrown in /home/platafo5/public_html/config.php on line 637
+[10-Jun-2024 21:40:20 America/Sao_Paulo] PHP Fatal error:  Uncaught Error: Call to undefined function leowp_gn_access_token() in /home/platafo5/public_html/config.php:637
+Stack trace:
+#0 /home/platafo5/public_html/classes/Master.php(851): gerencianet_generate_pix()
+#1 /home/platafo5/public_html/classes/Master.php(2527): Master->place_order()
+#2 {main}
+  thrown in /home/platafo5/public_html/config.php on line 637
+[10-Jun-2024 21:40:20 America/Sao_Paulo] PHP Fatal error:  Uncaught Error: Call to undefined function leowp_gn_access_token() in /home/platafo5/public_html/config.php:637
+Stack trace:
+#0 /home/platafo5/public_html/classes/Master.php(851): gerencianet_generate_pix()
+#1 /home/platafo5/public_html/classes/Master.php(2527): Master->place_order()
+#2 {main}
+  thrown in /home/platafo5/public_html/config.php on line 637
+[10-Jun-2024 21:40:20 America/Sao_Paulo] PHP Fatal error:  Uncaught Error: Call to undefined function leowp_gn_access_token() in /home/platafo5/public_html/config.php:637
+Stack trace:
+#0 /home/platafo5/public_html/classes/Master.php(851): gerencianet_generate_pix()
+#1 /home/platafo5/public_html/classes/Master.php(2527): Master->place_order()
+#2 {main}
+  thrown in /home/platafo5/public_html/config.php on line 637
+[10-Jun-2024 21:40:20 America/Sao_Paulo] PHP Fatal error:  Uncaught Error: Call to undefined function leowp_gn_access_token() in /home/platafo5/public_html/config.php:637
+Stack trace:
+#0 /home/platafo5/public_html/classes/Master.php(851): gerencianet_generate_pix()
+#1 /home/platafo5/public_html/classes/Master.php(2527): Master->place_order()
+#2 {main}
+  thrown in /home/platafo5/public_html/config.php on line 637
+[10-Jun-2024 21:40:20 America/Sao_Paulo] PHP Fatal error:  Uncaught Error: Call to undefined function leowp_gn_access_token() in /home/platafo5/public_html/config.php:637
+Stack trace:
+#0 /home/platafo5/public_html/classes/Master.php(851): gerencianet_generate_pix()
+#1 /home/platafo5/public_html/classes/Master.php(2527): Master->place_order()
+#2 {main}
+  thrown in /home/platafo5/public_html/config.php on line 637
+[10-Jun-2024 21:40:20 America/Sao_Paulo] PHP Fatal error:  Uncaught Error: Call to undefined function leowp_gn_access_token() in /home/platafo5/public_html/config.php:637
+Stack trace:
+#0 /home/platafo5/public_html/classes/Master.php(851): gerencianet_generate_pix()
+#1 /home/platafo5/public_html/classes/Master.php(2527): Master->place_order()
+#2 {main}
+  thrown in /home/platafo5/public_html/config.php on line 637
+[10-Jun-2024 21:40:20 America/Sao_Paulo] PHP Fatal error:  Uncaught Error: Call to undefined function leowp_gn_access_token() in /home/platafo5/public_html/config.php:637
+Stack trace:
+#0 /home/platafo5/public_html/classes/Master.php(851): gerencianet_generate_pix()
+#1 /home/platafo5/public_html/classes/Master.php(2527): Master->place_order()
+#2 {main}
+  thrown in /home/platafo5/public_html/config.php on line 637
+[10-Jun-2024 21:40:20 America/Sao_Paulo] PHP Fatal error:  Uncaught Error: Call to undefined function leowp_gn_access_token() in /home/platafo5/public_html/config.php:637
+Stack trace:
+#0 /home/platafo5/public_html/classes/Master.php(851): gerencianet_generate_pix()
+#1 /home/platafo5/public_html/classes/Master.php(2527): Master->place_order()
+#2 {main}
+  thrown in /home/platafo5/public_html/config.php on line 637
+[10-Jun-2024 21:40:20 America/Sao_Paulo] PHP Fatal error:  Uncaught Error: Call to undefined function leowp_gn_access_token() in /home/platafo5/public_html/config.php:637
+Stack trace:
+#0 /home/platafo5/public_html/classes/Master.php(851): gerencianet_generate_pix()
+#1 /home/platafo5/public_html/classes/Master.php(2527): Master->place_order()
+#2 {main}
+  thrown in /home/platafo5/public_html/config.php on line 637
+[10-Jun-2024 21:40:20 America/Sao_Paulo] PHP Fatal error:  Uncaught Error: Call to undefined function leowp_gn_access_token() in /home/platafo5/public_html/config.php:637
+Stack trace:
+#0 /home/platafo5/public_html/classes/Master.php(851): gerencianet_generate_pix()
+#1 /home/platafo5/public_html/classes/Master.php(2527): Master->place_order()
+#2 {main}
+  thrown in /home/platafo5/public_html/config.php on line 637
+[10-Jun-2024 21:40:21 America/Sao_Paulo] PHP Fatal error:  Uncaught Error: Call to undefined function leowp_gn_access_token() in /home/platafo5/public_html/config.php:637
+Stack trace:
+#0 /home/platafo5/public_html/classes/Master.php(851): gerencianet_generate_pix()
+#1 /home/platafo5/public_html/classes/Master.php(2527): Master->place_order()
+#2 {main}
+  thrown in /home/platafo5/public_html/config.php on line 637
+[10-Jun-2024 21:40:21 America/Sao_Paulo] PHP Fatal error:  Uncaught Error: Call to undefined function leowp_gn_access_token() in /home/platafo5/public_html/config.php:637
+Stack trace:
+#0 /home/platafo5/public_html/classes/Master.php(851): gerencianet_generate_pix()
+#1 /home/platafo5/public_html/classes/Master.php(2527): Master->place_order()
+#2 {main}
+  thrown in /home/platafo5/public_html/config.php on line 637
+[10-Jun-2024 21:40:21 America/Sao_Paulo] PHP Fatal error:  Uncaught Error: Call to undefined function leowp_gn_access_token() in /home/platafo5/public_html/config.php:637
+Stack trace:
+#0 /home/platafo5/public_html/classes/Master.php(851): gerencianet_generate_pix()
+#1 /home/platafo5/public_html/classes/Master.php(2527): Master->place_order()
+#2 {main}
+  thrown in /home/platafo5/public_html/config.php on line 637
+[10-Jun-2024 21:40:21 America/Sao_Paulo] PHP Fatal error:  Uncaught Error: Call to undefined function leowp_gn_access_token() in /home/platafo5/public_html/config.php:637
+Stack trace:
+#0 /home/platafo5/public_html/classes/Master.php(851): gerencianet_generate_pix()
+#1 /home/platafo5/public_html/classes/Master.php(2527): Master->place_order()
+#2 {main}
+  thrown in /home/platafo5/public_html/config.php on line 637
+[10-Jun-2024 21:40:21 America/Sao_Paulo] PHP Fatal error:  Uncaught Error: Call to undefined function leowp_gn_access_token() in /home/platafo5/public_html/config.php:637
+Stack trace:
+#0 /home/platafo5/public_html/classes/Master.php(851): gerencianet_generate_pix()
+#1 /home/platafo5/public_html/classes/Master.php(2527): Master->place_order()
+#2 {main}
+  thrown in /home/platafo5/public_html/config.php on line 637
+[10-Jun-2024 21:40:21 America/Sao_Paulo] PHP Fatal error:  Uncaught Error: Call to undefined function leowp_gn_access_token() in /home/platafo5/public_html/config.php:637
+Stack trace:
+#0 /home/platafo5/public_html/classes/Master.php(851): gerencianet_generate_pix()
+#1 /home/platafo5/public_html/classes/Master.php(2527): Master->place_order()
+#2 {main}
+  thrown in /home/platafo5/public_html/config.php on line 637
+[10-Jun-2024 21:40:21 America/Sao_Paulo] PHP Fatal error:  Uncaught Error: Call to undefined function leowp_gn_access_token() in /home/platafo5/public_html/config.php:637
+Stack trace:
+#0 /home/platafo5/public_html/classes/Master.php(851): gerencianet_generate_pix()
+#1 /home/platafo5/public_html/classes/Master.php(2527): Master->place_order()
+#2 {main}
+  thrown in /home/platafo5/public_html/config.php on line 637
+[10-Jun-2024 21:40:21 America/Sao_Paulo] PHP Fatal error:  Uncaught Error: Call to undefined function leowp_gn_access_token() in /home/platafo5/public_html/config.php:637
+Stack trace:
+#0 /home/platafo5/public_html/classes/Master.php(851): gerencianet_generate_pix()
+#1 /home/platafo5/public_html/classes/Master.php(2527): Master->place_order()
+#2 {main}
+  thrown in /home/platafo5/public_html/config.php on line 637
+[10-Jun-2024 21:40:22 America/Sao_Paulo] PHP Fatal error:  Uncaught Error: Call to undefined function leowp_gn_access_token() in /home/platafo5/public_html/config.php:637
+Stack trace:
+#0 /home/platafo5/public_html/classes/Master.php(851): gerencianet_generate_pix()
+#1 /home/platafo5/public_html/classes/Master.php(2527): Master->place_order()
+#2 {main}
+  thrown in /home/platafo5/public_html/config.php on line 637
+[10-Jun-2024 21:40:22 America/Sao_Paulo] PHP Fatal error:  Uncaught Error: Call to undefined function leowp_gn_access_token() in /home/platafo5/public_html/config.php:637
+Stack trace:
+#0 /home/platafo5/public_html/classes/Master.php(851): gerencianet_generate_pix()
+#1 /home/platafo5/public_html/classes/Master.php(2527): Master->place_order()
+#2 {main}
+  thrown in /home/platafo5/public_html/config.php on line 637
+[10-Jun-2024 21:40:22 America/Sao_Paulo] PHP Fatal error:  Uncaught Error: Call to undefined function leowp_gn_access_token() in /home/platafo5/public_html/config.php:637
+Stack trace:
+#0 /home/platafo5/public_html/classes/Master.php(851): gerencianet_generate_pix()
+#1 /home/platafo5/public_html/classes/Master.php(2527): Master->place_order()
+#2 {main}
+  thrown in /home/platafo5/public_html/config.php on line 637
+[10-Jun-2024 21:40:22 America/Sao_Paulo] PHP Fatal error:  Uncaught Error: Call to undefined function leowp_gn_access_token() in /home/platafo5/public_html/config.php:637
+Stack trace:
+#0 /home/platafo5/public_html/classes/Master.php(851): gerencianet_generate_pix()
+#1 /home/platafo5/public_html/classes/Master.php(2527): Master->place_order()
+#2 {main}
+  thrown in /home/platafo5/public_html/config.php on line 637
+[10-Jun-2024 21:40:22 America/Sao_Paulo] PHP Fatal error:  Uncaught Error: Call to undefined function leowp_gn_access_token() in /home/platafo5/public_html/config.php:637
+Stack trace:
+#0 /home/platafo5/public_html/classes/Master.php(851): gerencianet_generate_pix()
+#1 /home/platafo5/public_html/classes/Master.php(2527): Master->place_order()
+#2 {main}
+  thrown in /home/platafo5/public_html/config.php on line 637
+[10-Jun-2024 21:40:22 America/Sao_Paulo] PHP Fatal error:  Uncaught Error: Call to undefined function leowp_gn_access_token() in /home/platafo5/public_html/config.php:637
+Stack trace:
+#0 /home/platafo5/public_html/classes/Master.php(851): gerencianet_generate_pix()
+#1 /home/platafo5/public_html/classes/Master.php(2527): Master->place_order()
+#2 {main}
+  thrown in /home/platafo5/public_html/config.php on line 637
+[10-Jun-2024 21:40:22 America/Sao_Paulo] PHP Fatal error:  Uncaught Error: Call to undefined function leowp_gn_access_token() in /home/platafo5/public_html/config.php:637
+Stack trace:
+#0 /home/platafo5/public_html/classes/Master.php(851): gerencianet_generate_pix()
+#1 /home/platafo5/public_html/classes/Master.php(2527): Master->place_order()
+#2 {main}
+  thrown in /home/platafo5/public_html/config.php on line 637
+[10-Jun-2024 21:40:22 America/Sao_Paulo] PHP Fatal error:  Uncaught Error: Call to undefined function leowp_gn_access_token() in /home/platafo5/public_html/config.php:637
+Stack trace:
+#0 /home/platafo5/public_html/classes/Master.php(851): gerencianet_generate_pix()
+#1 /home/platafo5/public_html/classes/Master.php(2527): Master->place_order()
+#2 {main}
+  thrown in /home/platafo5/public_html/config.php on line 637
+[10-Jun-2024 21:40:22 America/Sao_Paulo] PHP Fatal error:  Uncaught Error: Call to undefined function leowp_gn_access_token() in /home/platafo5/public_html/config.php:637
+Stack trace:
+#0 /home/platafo5/public_html/classes/Master.php(851): gerencianet_generate_pix()
+#1 /home/platafo5/public_html/classes/Master.php(2527): Master->place_order()
+#2 {main}
+  thrown in /home/platafo5/public_html/config.php on line 637
+[10-Jun-2024 21:40:22 America/Sao_Paulo] PHP Fatal error:  Uncaught Error: Call to undefined function leowp_gn_access_token() in /home/platafo5/public_html/config.php:637
+Stack trace:
+#0 /home/platafo5/public_html/classes/Master.php(851): gerencianet_generate_pix()
+#1 /home/platafo5/public_html/classes/Master.php(2527): Master->place_order()
+#2 {main}
+  thrown in /home/platafo5/public_html/config.php on line 637
+[10-Jun-2024 21:40:23 America/Sao_Paulo] PHP Fatal error:  Uncaught Error: Call to undefined function leowp_gn_access_token() in /home/platafo5/public_html/config.php:637
+Stack trace:
+#0 /home/platafo5/public_html/classes/Master.php(851): gerencianet_generate_pix()
+#1 /home/platafo5/public_html/classes/Master.php(2527): Master->place_order()
+#2 {main}
+  thrown in /home/platafo5/public_html/config.php on line 637
+[10-Jun-2024 21:40:23 America/Sao_Paulo] PHP Fatal error:  Uncaught Error: Call to undefined function leowp_gn_access_token() in /home/platafo5/public_html/config.php:637
+Stack trace:
+#0 /home/platafo5/public_html/classes/Master.php(851): gerencianet_generate_pix()
+#1 /home/platafo5/public_html/classes/Master.php(2527): Master->place_order()
+#2 {main}
+  thrown in /home/platafo5/public_html/config.php on line 637
+[10-Jun-2024 21:40:23 America/Sao_Paulo] PHP Fatal error:  Uncaught Error: Call to undefined function leowp_gn_access_token() in /home/platafo5/public_html/config.php:637
+Stack trace:
+#0 /home/platafo5/public_html/classes/Master.php(851): gerencianet_generate_pix()
+#1 /home/platafo5/public_html/classes/Master.php(2527): Master->place_order()
+#2 {main}
+  thrown in /home/platafo5/public_html/config.php on line 637
+[10-Jun-2024 21:40:23 America/Sao_Paulo] PHP Fatal error:  Uncaught Error: Call to undefined function leowp_gn_access_token() in /home/platafo5/public_html/config.php:637
+Stack trace:
+#0 /home/platafo5/public_html/classes/Master.php(851): gerencianet_generate_pix()
+#1 /home/platafo5/public_html/classes/Master.php(2527): Master->place_order()
+#2 {main}
+  thrown in /home/platafo5/public_html/config.php on line 637
+[10-Jun-2024 21:40:23 America/Sao_Paulo] PHP Fatal error:  Uncaught Error: Call to undefined function leowp_gn_access_token() in /home/platafo5/public_html/config.php:637
+Stack trace:
+#0 /home/platafo5/public_html/classes/Master.php(851): gerencianet_generate_pix()
+#1 /home/platafo5/public_html/classes/Master.php(2527): Master->place_order()
+#2 {main}
+  thrown in /home/platafo5/public_html/config.php on line 637
+[10-Jun-2024 21:40:23 America/Sao_Paulo] PHP Fatal error:  Uncaught Error: Call to undefined function leowp_gn_access_token() in /home/platafo5/public_html/config.php:637
+Stack trace:
+#0 /home/platafo5/public_html/classes/Master.php(851): gerencianet_generate_pix()
+#1 /home/platafo5/public_html/classes/Master.php(2527): Master->place_order()
+#2 {main}
+  thrown in /home/platafo5/public_html/config.php on line 637
+[10-Jun-2024 21:40:23 America/Sao_Paulo] PHP Fatal error:  Uncaught Error: Call to undefined function leowp_gn_access_token() in /home/platafo5/public_html/config.php:637
+Stack trace:
+#0 /home/platafo5/public_html/classes/Master.php(851): gerencianet_generate_pix()
+#1 /home/platafo5/public_html/classes/Master.php(2527): Master->place_order()
+#2 {main}
+  thrown in /home/platafo5/public_html/config.php on line 637
+[10-Jun-2024 21:40:23 America/Sao_Paulo] PHP Fatal error:  Uncaught Error: Call to undefined function leowp_gn_access_token() in /home/platafo5/public_html/config.php:637
+Stack trace:
+#0 /home/platafo5/public_html/classes/Master.php(851): gerencianet_generate_pix()
+#1 /home/platafo5/public_html/classes/Master.php(2527): Master->place_order()
+#2 {main}
+  thrown in /home/platafo5/public_html/config.php on line 637
+[10-Jun-2024 21:40:24 America/Sao_Paulo] PHP Fatal error:  Uncaught Error: Call to undefined function leowp_gn_access_token() in /home/platafo5/public_html/config.php:637
+Stack trace:
+#0 /home/platafo5/public_html/classes/Master.php(851): gerencianet_generate_pix()
+#1 /home/platafo5/public_html/classes/Master.php(2527): Master->place_order()
+#2 {main}
+  thrown in /home/platafo5/public_html/config.php on line 637
+[10-Jun-2024 21:40:24 America/Sao_Paulo] PHP Fatal error:  Uncaught Error: Call to undefined function leowp_gn_access_token() in /home/platafo5/public_html/config.php:637
+Stack trace:
+#0 /home/platafo5/public_html/classes/Master.php(851): gerencianet_generate_pix()
+#1 /home/platafo5/public_html/classes/Master.php(2527): Master->place_order()
+#2 {main}
+  thrown in /home/platafo5/public_html/config.php on line 637
+[10-Jun-2024 21:40:24 America/Sao_Paulo] PHP Fatal error:  Uncaught Error: Call to undefined function leowp_gn_access_token() in /home/platafo5/public_html/config.php:637
+Stack trace:
+#0 /home/platafo5/public_html/classes/Master.php(851): gerencianet_generate_pix()
+#1 /home/platafo5/public_html/classes/Master.php(2527): Master->place_order()
+#2 {main}
+  thrown in /home/platafo5/public_html/config.php on line 637
+[10-Jun-2024 21:40:24 America/Sao_Paulo] PHP Fatal error:  Uncaught Error: Call to undefined function leowp_gn_access_token() in /home/platafo5/public_html/config.php:637
+Stack trace:
+#0 /home/platafo5/public_html/classes/Master.php(851): gerencianet_generate_pix()
+#1 /home/platafo5/public_html/classes/Master.php(2527): Master->place_order()
+#2 {main}
+  thrown in /home/platafo5/public_html/config.php on line 637
+[10-Jun-2024 21:40:24 America/Sao_Paulo] PHP Fatal error:  Uncaught Error: Call to undefined function leowp_gn_access_token() in /home/platafo5/public_html/config.php:637
+Stack trace:
+#0 /home/platafo5/public_html/classes/Master.php(851): gerencianet_generate_pix()
+#1 /home/platafo5/public_html/classes/Master.php(2527): Master->place_order()
+#2 {main}
+  thrown in /home/platafo5/public_html/config.php on line 637
+[10-Jun-2024 21:40:24 America/Sao_Paulo] PHP Fatal error:  Uncaught Error: Call to undefined function leowp_gn_access_token() in /home/platafo5/public_html/config.php:637
+Stack trace:
+#0 /home/platafo5/public_html/classes/Master.php(851): gerencianet_generate_pix()
+#1 /home/platafo5/public_html/classes/Master.php(2527): Master->place_order()
+#2 {main}
+  thrown in /home/platafo5/public_html/config.php on line 637
+[10-Jun-2024 21:40:24 America/Sao_Paulo] PHP Fatal error:  Uncaught Error: Call to undefined function leowp_gn_access_token() in /home/platafo5/public_html/config.php:637
+Stack trace:
+#0 /home/platafo5/public_html/classes/Master.php(851): gerencianet_generate_pix()
+#1 /home/platafo5/public_html/classes/Master.php(2527): Master->place_order()
+#2 {main}
+  thrown in /home/platafo5/public_html/config.php on line 637
+[10-Jun-2024 21:40:24 America/Sao_Paulo] PHP Fatal error:  Uncaught Error: Call to undefined function leowp_gn_access_token() in /home/platafo5/public_html/config.php:637
+Stack trace:
+#0 /home/platafo5/public_html/classes/Master.php(851): gerencianet_generate_pix()
+#1 /home/platafo5/public_html/classes/Master.php(2527): Master->place_order()
+#2 {main}
+  thrown in /home/platafo5/public_html/config.php on line 637
+[10-Jun-2024 21:40:24 America/Sao_Paulo] PHP Fatal error:  Uncaught Error: Call to undefined function leowp_gn_access_token() in /home/platafo5/public_html/config.php:637
+Stack trace:
+#0 /home/platafo5/public_html/classes/Master.php(851): gerencianet_generate_pix()
+#1 /home/platafo5/public_html/classes/Master.php(2527): Master->place_order()
+#2 {main}
+  thrown in /home/platafo5/public_html/config.php on line 637
+[10-Jun-2024 21:40:24 America/Sao_Paulo] PHP Fatal error:  Uncaught Error: Call to undefined function leowp_gn_access_token() in /home/platafo5/public_html/config.php:637
+Stack trace:
+#0 /home/platafo5/public_html/classes/Master.php(851): gerencianet_generate_pix()
+#1 /home/platafo5/public_html/classes/Master.php(2527): Master->place_order()
+#2 {main}
+  thrown in /home/platafo5/public_html/config.php on line 637
+[10-Jun-2024 21:40:24 America/Sao_Paulo] PHP Fatal error:  Uncaught Error: Call to undefined function leowp_gn_access_token() in /home/platafo5/public_html/config.php:637
+Stack trace:
+#0 /home/platafo5/public_html/classes/Master.php(851): gerencianet_generate_pix()
+#1 /home/platafo5/public_html/classes/Master.php(2527): Master->place_order()
+#2 {main}
+  thrown in /home/platafo5/public_html/config.php on line 637
+[10-Jun-2024 21:40:25 America/Sao_Paulo] PHP Fatal error:  Uncaught Error: Call to undefined function leowp_gn_access_token() in /home/platafo5/public_html/config.php:637
+Stack trace:
+#0 /home/platafo5/public_html/classes/Master.php(851): gerencianet_generate_pix()
+#1 /home/platafo5/public_html/classes/Master.php(2527): Master->place_order()
+#2 {main}
+  thrown in /home/platafo5/public_html/config.php on line 637
+[10-Jun-2024 21:40:25 America/Sao_Paulo] PHP Fatal error:  Uncaught Error: Call to undefined function leowp_gn_access_token() in /home/platafo5/public_html/config.php:637
+Stack trace:
+#0 /home/platafo5/public_html/classes/Master.php(851): gerencianet_generate_pix()
+#1 /home/platafo5/public_html/classes/Master.php(2527): Master->place_order()
+#2 {main}
+  thrown in /home/platafo5/public_html/config.php on line 637
+[10-Jun-2024 21:40:25 America/Sao_Paulo] PHP Fatal error:  Uncaught Error: Call to undefined function leowp_gn_access_token() in /home/platafo5/public_html/config.php:637
+Stack trace:
+#0 /home/platafo5/public_html/classes/Master.php(851): gerencianet_generate_pix()
+#1 /home/platafo5/public_html/classes/Master.php(2527): Master->place_order()
+#2 {main}
+  thrown in /home/platafo5/public_html/config.php on line 637
+[10-Jun-2024 21:40:25 America/Sao_Paulo] PHP Fatal error:  Uncaught Error: Call to undefined function leowp_gn_access_token() in /home/platafo5/public_html/config.php:637
+Stack trace:
+#0 /home/platafo5/public_html/classes/Master.php(851): gerencianet_generate_pix()
+#1 /home/platafo5/public_html/classes/Master.php(2527): Master->place_order()
+#2 {main}
+  thrown in /home/platafo5/public_html/config.php on line 637
+[10-Jun-2024 21:40:25 America/Sao_Paulo] PHP Fatal error:  Uncaught Error: Call to undefined function leowp_gn_access_token() in /home/platafo5/public_html/config.php:637
+Stack trace:
+#0 /home/platafo5/public_html/classes/Master.php(851): gerencianet_generate_pix()
+#1 /home/platafo5/public_html/classes/Master.php(2527): Master->place_order()
+#2 {main}
+  thrown in /home/platafo5/public_html/config.php on line 637
+[10-Jun-2024 21:40:25 America/Sao_Paulo] PHP Fatal error:  Uncaught Error: Call to undefined function leowp_gn_access_token() in /home/platafo5/public_html/config.php:637
+Stack trace:
+#0 /home/platafo5/public_html/classes/Master.php(851): gerencianet_generate_pix()
+#1 /home/platafo5/public_html/classes/Master.php(2527): Master->place_order()
+#2 {main}
+  thrown in /home/platafo5/public_html/config.php on line 637
+[10-Jun-2024 21:40:25 America/Sao_Paulo] PHP Fatal error:  Uncaught Error: Call to undefined function leowp_gn_access_token() in /home/platafo5/public_html/config.php:637
+Stack trace:
+#0 /home/platafo5/public_html/classes/Master.php(851): gerencianet_generate_pix()
+#1 /home/platafo5/public_html/classes/Master.php(2527): Master->place_order()
+#2 {main}
+  thrown in /home/platafo5/public_html/config.php on line 637
+[10-Jun-2024 21:40:25 America/Sao_Paulo] PHP Fatal error:  Uncaught Error: Call to undefined function leowp_gn_access_token() in /home/platafo5/public_html/config.php:637
+Stack trace:
+#0 /home/platafo5/public_html/classes/Master.php(851): gerencianet_generate_pix()
+#1 /home/platafo5/public_html/classes/Master.php(2527): Master->place_order()
+#2 {main}
+  thrown in /home/platafo5/public_html/config.php on line 637
+[10-Jun-2024 21:40:25 America/Sao_Paulo] PHP Fatal error:  Uncaught Error: Call to undefined function leowp_gn_access_token() in /home/platafo5/public_html/config.php:637
+Stack trace:
+#0 /home/platafo5/public_html/classes/Master.php(851): gerencianet_generate_pix()
+#1 /home/platafo5/public_html/classes/Master.php(2527): Master->place_order()
+#2 {main}
+  thrown in /home/platafo5/public_html/config.php on line 637
+[10-Jun-2024 21:40:25 America/Sao_Paulo] PHP Fatal error:  Uncaught Error: Call to undefined function leowp_gn_access_token() in /home/platafo5/public_html/config.php:637
+Stack trace:
+#0 /home/platafo5/public_html/classes/Master.php(851): gerencianet_generate_pix()
+#1 /home/platafo5/public_html/classes/Master.php(2527): Master->place_order()
+#2 {main}
+  thrown in /home/platafo5/public_html/config.php on line 637
+[10-Jun-2024 21:40:25 America/Sao_Paulo] PHP Fatal error:  Uncaught Error: Call to undefined function leowp_gn_access_token() in /home/platafo5/public_html/config.php:637
+Stack trace:
+#0 /home/platafo5/public_html/classes/Master.php(851): gerencianet_generate_pix()
+#1 /home/platafo5/public_html/classes/Master.php(2527): Master->place_order()
+#2 {main}
+  thrown in /home/platafo5/public_html/config.php on line 637
+[10-Jun-2024 21:40:26 America/Sao_Paulo] PHP Fatal error:  Uncaught Error: Call to undefined function leowp_gn_access_token() in /home/platafo5/public_html/config.php:637
+Stack trace:
+#0 /home/platafo5/public_html/classes/Master.php(851): gerencianet_generate_pix()
+#1 /home/platafo5/public_html/classes/Master.php(2527): Master->place_order()
+#2 {main}
+  thrown in /home/platafo5/public_html/config.php on line 637
+[10-Jun-2024 21:40:26 America/Sao_Paulo] PHP Fatal error:  Uncaught Error: Call to undefined function leowp_gn_access_token() in /home/platafo5/public_html/config.php:637
+Stack trace:
+#0 /home/platafo5/public_html/classes/Master.php(851): gerencianet_generate_pix()
+#1 /home/platafo5/public_html/classes/Master.php(2527): Master->place_order()
+#2 {main}
+  thrown in /home/platafo5/public_html/config.php on line 637
+[10-Jun-2024 21:40:26 America/Sao_Paulo] PHP Fatal error:  Uncaught Error: Call to undefined function leowp_gn_access_token() in /home/platafo5/public_html/config.php:637
+Stack trace:
+#0 /home/platafo5/public_html/classes/Master.php(851): gerencianet_generate_pix()
+#1 /home/platafo5/public_html/classes/Master.php(2527): Master->place_order()
+#2 {main}
+  thrown in /home/platafo5/public_html/config.php on line 637
+[10-Jun-2024 21:40:26 America/Sao_Paulo] PHP Fatal error:  Uncaught Error: Call to undefined function leowp_gn_access_token() in /home/platafo5/public_html/config.php:637
+Stack trace:
+#0 /home/platafo5/public_html/classes/Master.php(851): gerencianet_generate_pix()
+#1 /home/platafo5/public_html/classes/Master.php(2527): Master->place_order()
+#2 {main}
+  thrown in /home/platafo5/public_html/config.php on line 637
+[10-Jun-2024 21:40:26 America/Sao_Paulo] PHP Fatal error:  Uncaught Error: Call to undefined function leowp_gn_access_token() in /home/platafo5/public_html/config.php:637
+Stack trace:
+#0 /home/platafo5/public_html/classes/Master.php(851): gerencianet_generate_pix()
+#1 /home/platafo5/public_html/classes/Master.php(2527): Master->place_order()
+#2 {main}
+  thrown in /home/platafo5/public_html/config.php on line 637
+[10-Jun-2024 21:40:26 America/Sao_Paulo] PHP Fatal error:  Uncaught Error: Call to undefined function leowp_gn_access_token() in /home/platafo5/public_html/config.php:637
+Stack trace:
+#0 /home/platafo5/public_html/classes/Master.php(851): gerencianet_generate_pix()
+#1 /home/platafo5/public_html/classes/Master.php(2527): Master->place_order()
+#2 {main}
+  thrown in /home/platafo5/public_html/config.php on line 637
+[10-Jun-2024 21:40:26 America/Sao_Paulo] PHP Fatal error:  Uncaught Error: Call to undefined function leowp_gn_access_token() in /home/platafo5/public_html/config.php:637
+Stack trace:
+#0 /home/platafo5/public_html/classes/Master.php(851): gerencianet_generate_pix()
+#1 /home/platafo5/public_html/classes/Master.php(2527): Master->place_order()
+#2 {main}
+  thrown in /home/platafo5/public_html/config.php on line 637
+[10-Jun-2024 21:40:26 America/Sao_Paulo] PHP Fatal error:  Uncaught Error: Call to undefined function leowp_gn_access_token() in /home/platafo5/public_html/config.php:637
+Stack trace:
+#0 /home/platafo5/public_html/classes/Master.php(851): gerencianet_generate_pix()
+#1 /home/platafo5/public_html/classes/Master.php(2527): Master->place_order()
+#2 {main}
+  thrown in /home/platafo5/public_html/config.php on line 637
+[10-Jun-2024 21:40:26 America/Sao_Paulo] PHP Fatal error:  Uncaught Error: Call to undefined function leowp_gn_access_token() in /home/platafo5/public_html/config.php:637
+Stack trace:
+#0 /home/platafo5/public_html/classes/Master.php(851): gerencianet_generate_pix()
+#1 /home/platafo5/public_html/classes/Master.php(2527): Master->place_order()
+#2 {main}
+  thrown in /home/platafo5/public_html/config.php on line 637
+[10-Jun-2024 21:40:27 America/Sao_Paulo] PHP Fatal error:  Uncaught Error: Call to undefined function leowp_gn_access_token() in /home/platafo5/public_html/config.php:637
+Stack trace:
+#0 /home/platafo5/public_html/classes/Master.php(851): gerencianet_generate_pix()
+#1 /home/platafo5/public_html/classes/Master.php(2527): Master->place_order()
+#2 {main}
+  thrown in /home/platafo5/public_html/config.php on line 637
+[10-Jun-2024 21:40:27 America/Sao_Paulo] PHP Fatal error:  Uncaught Error: Call to undefined function leowp_gn_access_token() in /home/platafo5/public_html/config.php:637
+Stack trace:
+#0 /home/platafo5/public_html/classes/Master.php(851): gerencianet_generate_pix()
+#1 /home/platafo5/public_html/classes/Master.php(2527): Master->place_order()
+#2 {main}
+  thrown in /home/platafo5/public_html/config.php on line 637
+[10-Jun-2024 21:40:27 America/Sao_Paulo] PHP Fatal error:  Uncaught Error: Call to undefined function leowp_gn_access_token() in /home/platafo5/public_html/config.php:637
+Stack trace:
+#0 /home/platafo5/public_html/classes/Master.php(851): gerencianet_generate_pix()
+#1 /home/platafo5/public_html/classes/Master.php(2527): Master->place_order()
+#2 {main}
+  thrown in /home/platafo5/public_html/config.php on line 637
+[10-Jun-2024 21:40:27 America/Sao_Paulo] PHP Fatal error:  Uncaught Error: Call to undefined function leowp_gn_access_token() in /home/platafo5/public_html/config.php:637
+Stack trace:
+#0 /home/platafo5/public_html/classes/Master.php(851): gerencianet_generate_pix()
+#1 /home/platafo5/public_html/classes/Master.php(2527): Master->place_order()
+#2 {main}
+  thrown in /home/platafo5/public_html/config.php on line 637
+[10-Jun-2024 21:40:27 America/Sao_Paulo] PHP Fatal error:  Uncaught Error: Call to undefined function leowp_gn_access_token() in /home/platafo5/public_html/config.php:637
+Stack trace:
+#0 /home/platafo5/public_html/classes/Master.php(851): gerencianet_generate_pix()
+#1 /home/platafo5/public_html/classes/Master.php(2527): Master->place_order()
+#2 {main}
+  thrown in /home/platafo5/public_html/config.php on line 637
+[10-Jun-2024 21:40:27 America/Sao_Paulo] PHP Fatal error:  Uncaught Error: Call to undefined function leowp_gn_access_token() in /home/platafo5/public_html/config.php:637
+Stack trace:
+#0 /home/platafo5/public_html/classes/Master.php(851): gerencianet_generate_pix()
+#1 /home/platafo5/public_html/classes/Master.php(2527): Master->place_order()
+#2 {main}
+  thrown in /home/platafo5/public_html/config.php on line 637
+[10-Jun-2024 21:40:27 America/Sao_Paulo] PHP Fatal error:  Uncaught Error: Call to undefined function leowp_gn_access_token() in /home/platafo5/public_html/config.php:637
+Stack trace:
+#0 /home/platafo5/public_html/classes/Master.php(851): gerencianet_generate_pix()
+#1 /home/platafo5/public_html/classes/Master.php(2527): Master->place_order()
+#2 {main}
+  thrown in /home/platafo5/public_html/config.php on line 637
+[10-Jun-2024 21:40:27 America/Sao_Paulo] PHP Fatal error:  Uncaught Error: Call to undefined function leowp_gn_access_token() in /home/platafo5/public_html/config.php:637
+Stack trace:
+#0 /home/platafo5/public_html/classes/Master.php(851): gerencianet_generate_pix()
+#1 /home/platafo5/public_html/classes/Master.php(2527): Master->place_order()
+#2 {main}
+  thrown in /home/platafo5/public_html/config.php on line 637
+[10-Jun-2024 21:40:27 America/Sao_Paulo] PHP Fatal error:  Uncaught Error: Call to undefined function leowp_gn_access_token() in /home/platafo5/public_html/config.php:637
+Stack trace:
+#0 /home/platafo5/public_html/classes/Master.php(851): gerencianet_generate_pix()
+#1 /home/platafo5/public_html/classes/Master.php(2527): Master->place_order()
+#2 {main}
+  thrown in /home/platafo5/public_html/config.php on line 637
+[10-Jun-2024 21:40:27 America/Sao_Paulo] PHP Fatal error:  Uncaught Error: Call to undefined function leowp_gn_access_token() in /home/platafo5/public_html/config.php:637
+Stack trace:
+#0 /home/platafo5/public_html/classes/Master.php(851): gerencianet_generate_pix()
+#1 /home/platafo5/public_html/classes/Master.php(2527): Master->place_order()
+#2 {main}
+  thrown in /home/platafo5/public_html/config.php on line 637
+[10-Jun-2024 21:40:27 America/Sao_Paulo] PHP Fatal error:  Uncaught Error: Call to undefined function leowp_gn_access_token() in /home/platafo5/public_html/config.php:637
+Stack trace:
+#0 /home/platafo5/public_html/classes/Master.php(851): gerencianet_generate_pix()
+#1 /home/platafo5/public_html/classes/Master.php(2527): Master->place_order()
+#2 {main}
+  thrown in /home/platafo5/public_html/config.php on line 637
+[10-Jun-2024 21:40:27 America/Sao_Paulo] PHP Fatal error:  Uncaught Error: Call to undefined function leowp_gn_access_token() in /home/platafo5/public_html/config.php:637
+Stack trace:
+#0 /home/platafo5/public_html/classes/Master.php(851): gerencianet_generate_pix()
+#1 /home/platafo5/public_html/classes/Master.php(2527): Master->place_order()
+#2 {main}
+  thrown in /home/platafo5/public_html/config.php on line 637
+[10-Jun-2024 21:40:27 America/Sao_Paulo] PHP Fatal error:  Uncaught Error: Call to undefined function leowp_gn_access_token() in /home/platafo5/public_html/config.php:637
+Stack trace:
+#0 /home/platafo5/public_html/classes/Master.php(851): gerencianet_generate_pix()
+#1 /home/platafo5/public_html/classes/Master.php(2527): Master->place_order()
+#2 {main}
+  thrown in /home/platafo5/public_html/config.php on line 637
+[10-Jun-2024 21:40:28 America/Sao_Paulo] PHP Fatal error:  Uncaught Error: Call to undefined function leowp_gn_access_token() in /home/platafo5/public_html/config.php:637
+Stack trace:
+#0 /home/platafo5/public_html/classes/Master.php(851): gerencianet_generate_pix()
+#1 /home/platafo5/public_html/classes/Master.php(2527): Master->place_order()
+#2 {main}
+  thrown in /home/platafo5/public_html/config.php on line 637
+[10-Jun-2024 21:40:28 America/Sao_Paulo] PHP Fatal error:  Uncaught Error: Call to undefined function leowp_gn_access_token() in /home/platafo5/public_html/config.php:637
+Stack trace:
+#0 /home/platafo5/public_html/classes/Master.php(851): gerencianet_generate_pix()
+#1 /home/platafo5/public_html/classes/Master.php(2527): Master->place_order()
+#2 {main}
+  thrown in /home/platafo5/public_html/config.php on line 637
+[10-Jun-2024 21:40:28 America/Sao_Paulo] PHP Fatal error:  Uncaught Error: Call to undefined function leowp_gn_access_token() in /home/platafo5/public_html/config.php:637
+Stack trace:
+#0 /home/platafo5/public_html/classes/Master.php(851): gerencianet_generate_pix()
+#1 /home/platafo5/public_html/classes/Master.php(2527): Master->place_order()
+#2 {main}
+  thrown in /home/platafo5/public_html/config.php on line 637
+[10-Jun-2024 21:40:28 America/Sao_Paulo] PHP Fatal error:  Uncaught Error: Call to undefined function leowp_gn_access_token() in /home/platafo5/public_html/config.php:637
+Stack trace:
+#0 /home/platafo5/public_html/classes/Master.php(851): gerencianet_generate_pix()
+#1 /home/platafo5/public_html/classes/Master.php(2527): Master->place_order()
+#2 {main}
+  thrown in /home/platafo5/public_html/config.php on line 637
+[10-Jun-2024 21:40:28 America/Sao_Paulo] PHP Fatal error:  Uncaught Error: Call to undefined function leowp_gn_access_token() in /home/platafo5/public_html/config.php:637
+Stack trace:
+#0 /home/platafo5/public_html/classes/Master.php(851): gerencianet_generate_pix()
+#1 /home/platafo5/public_html/classes/Master.php(2527): Master->place_order()
+#2 {main}
+  thrown in /home/platafo5/public_html/config.php on line 637
+[10-Jun-2024 21:40:28 America/Sao_Paulo] PHP Fatal error:  Uncaught Error: Call to undefined function leowp_gn_access_token() in /home/platafo5/public_html/config.php:637
+Stack trace:
+#0 /home/platafo5/public_html/classes/Master.php(851): gerencianet_generate_pix()
+#1 /home/platafo5/public_html/classes/Master.php(2527): Master->place_order()
+#2 {main}
+  thrown in /home/platafo5/public_html/config.php on line 637
+[10-Jun-2024 21:40:28 America/Sao_Paulo] PHP Fatal error:  Uncaught Error: Call to undefined function leowp_gn_access_token() in /home/platafo5/public_html/config.php:637
+Stack trace:
+#0 /home/platafo5/public_html/classes/Master.php(851): gerencianet_generate_pix()
+#1 /home/platafo5/public_html/classes/Master.php(2527): Master->place_order()
+#2 {main}
+  thrown in /home/platafo5/public_html/config.php on line 637
+[10-Jun-2024 21:40:28 America/Sao_Paulo] PHP Fatal error:  Uncaught Error: Call to undefined function leowp_gn_access_token() in /home/platafo5/public_html/config.php:637
+Stack trace:
+#0 /home/platafo5/public_html/classes/Master.php(851): gerencianet_generate_pix()
+#1 /home/platafo5/public_html/classes/Master.php(2527): Master->place_order()
+#2 {main}
+  thrown in /home/platafo5/public_html/config.php on line 637
+[10-Jun-2024 21:40:28 America/Sao_Paulo] PHP Fatal error:  Uncaught Error: Call to undefined function leowp_gn_access_token() in /home/platafo5/public_html/config.php:637
+Stack trace:
+#0 /home/platafo5/public_html/classes/Master.php(851): gerencianet_generate_pix()
+#1 /home/platafo5/public_html/classes/Master.php(2527): Master->place_order()
+#2 {main}
+  thrown in /home/platafo5/public_html/config.php on line 637
+[10-Jun-2024 21:40:28 America/Sao_Paulo] PHP Fatal error:  Uncaught Error: Call to undefined function leowp_gn_access_token() in /home/platafo5/public_html/config.php:637
+Stack trace:
+#0 /home/platafo5/public_html/classes/Master.php(851): gerencianet_generate_pix()
+#1 /home/platafo5/public_html/classes/Master.php(2527): Master->place_order()
+#2 {main}
+  thrown in /home/platafo5/public_html/config.php on line 637
+[10-Jun-2024 21:40:28 America/Sao_Paulo] PHP Fatal error:  Uncaught Error: Call to undefined function leowp_gn_access_token() in /home/platafo5/public_html/config.php:637
+Stack trace:
+#0 /home/platafo5/public_html/classes/Master.php(851): gerencianet_generate_pix()
+#1 /home/platafo5/public_html/classes/Master.php(2527): Master->place_order()
+#2 {main}
+  thrown in /home/platafo5/public_html/config.php on line 637
+[10-Jun-2024 21:40:28 America/Sao_Paulo] PHP Fatal error:  Uncaught Error: Call to undefined function leowp_gn_access_token() in /home/platafo5/public_html/config.php:637
+Stack trace:
+#0 /home/platafo5/public_html/classes/Master.php(851): gerencianet_generate_pix()
+#1 /home/platafo5/public_html/classes/Master.php(2527): Master->place_order()
+#2 {main}
+  thrown in /home/platafo5/public_html/config.php on line 637
+[10-Jun-2024 21:40:28 America/Sao_Paulo] PHP Fatal error:  Uncaught Error: Call to undefined function leowp_gn_access_token() in /home/platafo5/public_html/config.php:637
+Stack trace:
+#0 /home/platafo5/public_html/classes/Master.php(851): gerencianet_generate_pix()
+#1 /home/platafo5/public_html/classes/Master.php(2527): Master->place_order()
+#2 {main}
+  thrown in /home/platafo5/public_html/config.php on line 637
+[10-Jun-2024 21:40:29 America/Sao_Paulo] PHP Fatal error:  Uncaught Error: Call to undefined function leowp_gn_access_token() in /home/platafo5/public_html/config.php:637
+Stack trace:
+#0 /home/platafo5/public_html/classes/Master.php(851): gerencianet_generate_pix()
+#1 /home/platafo5/public_html/classes/Master.php(2527): Master->place_order()
+#2 {main}
+  thrown in /home/platafo5/public_html/config.php on line 637
+[10-Jun-2024 21:40:29 America/Sao_Paulo] PHP Fatal error:  Uncaught Error: Call to undefined function leowp_gn_access_token() in /home/platafo5/public_html/config.php:637
+Stack trace:
+#0 /home/platafo5/public_html/classes/Master.php(851): gerencianet_generate_pix()
+#1 /home/platafo5/public_html/classes/Master.php(2527): Master->place_order()
+#2 {main}
+  thrown in /home/platafo5/public_html/config.php on line 637
+[10-Jun-2024 21:40:29 America/Sao_Paulo] PHP Fatal error:  Uncaught Error: Call to undefined function leowp_gn_access_token() in /home/platafo5/public_html/config.php:637
+Stack trace:
+#0 /home/platafo5/public_html/classes/Master.php(851): gerencianet_generate_pix()
+#1 /home/platafo5/public_html/classes/Master.php(2527): Master->place_order()
+#2 {main}
+  thrown in /home/platafo5/public_html/config.php on line 637
+[10-Jun-2024 21:40:29 America/Sao_Paulo] PHP Fatal error:  Uncaught Error: Call to undefined function leowp_gn_access_token() in /home/platafo5/public_html/config.php:637
+Stack trace:
+#0 /home/platafo5/public_html/classes/Master.php(851): gerencianet_generate_pix()
+#1 /home/platafo5/public_html/classes/Master.php(2527): Master->place_order()
+#2 {main}
+  thrown in /home/platafo5/public_html/config.php on line 637
+[10-Jun-2024 21:40:29 America/Sao_Paulo] PHP Fatal error:  Uncaught Error: Call to undefined function leowp_gn_access_token() in /home/platafo5/public_html/config.php:637
+Stack trace:
+#0 /home/platafo5/public_html/classes/Master.php(851): gerencianet_generate_pix()
+#1 /home/platafo5/public_html/classes/Master.php(2527): Master->place_order()
+#2 {main}
+  thrown in /home/platafo5/public_html/config.php on line 637
+[10-Jun-2024 21:40:29 America/Sao_Paulo] PHP Fatal error:  Uncaught Error: Call to undefined function leowp_gn_access_token() in /home/platafo5/public_html/config.php:637
+Stack trace:
+#0 /home/platafo5/public_html/classes/Master.php(851): gerencianet_generate_pix()
+#1 /home/platafo5/public_html/classes/Master.php(2527): Master->place_order()
+#2 {main}
+  thrown in /home/platafo5/public_html/config.php on line 637
+[10-Jun-2024 21:40:29 America/Sao_Paulo] PHP Fatal error:  Uncaught Error: Call to undefined function leowp_gn_access_token() in /home/platafo5/public_html/config.php:637
+Stack trace:
+#0 /home/platafo5/public_html/classes/Master.php(851): gerencianet_generate_pix()
+#1 /home/platafo5/public_html/classes/Master.php(2527): Master->place_order()
+#2 {main}
+  thrown in /home/platafo5/public_html/config.php on line 637
+[10-Jun-2024 21:40:29 America/Sao_Paulo] PHP Fatal error:  Uncaught Error: Call to undefined function leowp_gn_access_token() in /home/platafo5/public_html/config.php:637
+Stack trace:
+#0 /home/platafo5/public_html/classes/Master.php(851): gerencianet_generate_pix()
+#1 /home/platafo5/public_html/classes/Master.php(2527): Master->place_order()
+#2 {main}
+  thrown in /home/platafo5/public_html/config.php on line 637
+[10-Jun-2024 21:40:29 America/Sao_Paulo] PHP Fatal error:  Uncaught Error: Call to undefined function leowp_gn_access_token() in /home/platafo5/public_html/config.php:637
+Stack trace:
+#0 /home/platafo5/public_html/classes/Master.php(851): gerencianet_generate_pix()
+#1 /home/platafo5/public_html/classes/Master.php(2527): Master->place_order()
+#2 {main}
+  thrown in /home/platafo5/public_html/config.php on line 637
+[10-Jun-2024 21:40:29 America/Sao_Paulo] PHP Fatal error:  Uncaught Error: Call to undefined function leowp_gn_access_token() in /home/platafo5/public_html/config.php:637
+Stack trace:
+#0 /home/platafo5/public_html/classes/Master.php(851): gerencianet_generate_pix()
+#1 /home/platafo5/public_html/classes/Master.php(2527): Master->place_order()
+#2 {main}
+  thrown in /home/platafo5/public_html/config.php on line 637
+[10-Jun-2024 21:40:30 America/Sao_Paulo] PHP Fatal error:  Uncaught Error: Call to undefined function leowp_gn_access_token() in /home/platafo5/public_html/config.php:637
+Stack trace:
+#0 /home/platafo5/public_html/classes/Master.php(851): gerencianet_generate_pix()
+#1 /home/platafo5/public_html/classes/Master.php(2527): Master->place_order()
+#2 {main}
+  thrown in /home/platafo5/public_html/config.php on line 637
+[10-Jun-2024 21:40:30 America/Sao_Paulo] PHP Fatal error:  Uncaught Error: Call to undefined function leowp_gn_access_token() in /home/platafo5/public_html/config.php:637
+Stack trace:
+#0 /home/platafo5/public_html/classes/Master.php(851): gerencianet_generate_pix()
+#1 /home/platafo5/public_html/classes/Master.php(2527): Master->place_order()
+#2 {main}
+  thrown in /home/platafo5/public_html/config.php on line 637
+[10-Jun-2024 21:40:30 America/Sao_Paulo] PHP Fatal error:  Uncaught Error: Call to undefined function leowp_gn_access_token() in /home/platafo5/public_html/config.php:637
+Stack trace:
+#0 /home/platafo5/public_html/classes/Master.php(851): gerencianet_generate_pix()
+#1 /home/platafo5/public_html/classes/Master.php(2527): Master->place_order()
+#2 {main}
+  thrown in /home/platafo5/public_html/config.php on line 637
+[10-Jun-2024 21:40:30 America/Sao_Paulo] PHP Fatal error:  Uncaught Error: Call to undefined function leowp_gn_access_token() in /home/platafo5/public_html/config.php:637
+Stack trace:
+#0 /home/platafo5/public_html/classes/Master.php(851): gerencianet_generate_pix()
+#1 /home/platafo5/public_html/classes/Master.php(2527): Master->place_order()
+#2 {main}
+  thrown in /home/platafo5/public_html/config.php on line 637
+[10-Jun-2024 21:40:30 America/Sao_Paulo] PHP Fatal error:  Uncaught Error: Call to undefined function leowp_gn_access_token() in /home/platafo5/public_html/config.php:637
+Stack trace:
+#0 /home/platafo5/public_html/classes/Master.php(851): gerencianet_generate_pix()
+#1 /home/platafo5/public_html/classes/Master.php(2527): Master->place_order()
+#2 {main}
+  thrown in /home/platafo5/public_html/config.php on line 637
+[10-Jun-2024 21:40:30 America/Sao_Paulo] PHP Fatal error:  Uncaught Error: Call to undefined function leowp_gn_access_token() in /home/platafo5/public_html/config.php:637
+Stack trace:
+#0 /home/platafo5/public_html/classes/Master.php(851): gerencianet_generate_pix()
+#1 /home/platafo5/public_html/classes/Master.php(2527): Master->place_order()
+#2 {main}
+  thrown in /home/platafo5/public_html/config.php on line 637
+[10-Jun-2024 21:40:30 America/Sao_Paulo] PHP Fatal error:  Uncaught Error: Call to undefined function leowp_gn_access_token() in /home/platafo5/public_html/config.php:637
+Stack trace:
+#0 /home/platafo5/public_html/classes/Master.php(851): gerencianet_generate_pix()
+#1 /home/platafo5/public_html/classes/Master.php(2527): Master->place_order()
+#2 {main}
+  thrown in /home/platafo5/public_html/config.php on line 637
+[10-Jun-2024 21:40:30 America/Sao_Paulo] PHP Fatal error:  Uncaught Error: Call to undefined function leowp_gn_access_token() in /home/platafo5/public_html/config.php:637
+Stack trace:
+#0 /home/platafo5/public_html/classes/Master.php(851): gerencianet_generate_pix()
+#1 /home/platafo5/public_html/classes/Master.php(2527): Master->place_order()
+#2 {main}
+  thrown in /home/platafo5/public_html/config.php on line 637
+[10-Jun-2024 21:40:30 America/Sao_Paulo] PHP Fatal error:  Uncaught Error: Call to undefined function leowp_gn_access_token() in /home/platafo5/public_html/config.php:637
+Stack trace:
+#0 /home/platafo5/public_html/classes/Master.php(851): gerencianet_generate_pix()
+#1 /home/platafo5/public_html/classes/Master.php(2527): Master->place_order()
+#2 {main}
+  thrown in /home/platafo5/public_html/config.php on line 637
+[10-Jun-2024 21:40:31 America/Sao_Paulo] PHP Fatal error:  Uncaught Error: Call to undefined function leowp_gn_access_token() in /home/platafo5/public_html/config.php:637
+Stack trace:
+#0 /home/platafo5/public_html/classes/Master.php(851): gerencianet_generate_pix()
+#1 /home/platafo5/public_html/classes/Master.php(2527): Master->place_order()
+#2 {main}
+  thrown in /home/platafo5/public_html/config.php on line 637
+[10-Jun-2024 21:40:31 America/Sao_Paulo] PHP Fatal error:  Uncaught Error: Call to undefined function leowp_gn_access_token() in /home/platafo5/public_html/config.php:637
+Stack trace:
+#0 /home/platafo5/public_html/classes/Master.php(851): gerencianet_generate_pix()
+#1 /home/platafo5/public_html/classes/Master.php(2527): Master->place_order()
+#2 {main}
+  thrown in /home/platafo5/public_html/config.php on line 637
+[10-Jun-2024 21:40:31 America/Sao_Paulo] PHP Fatal error:  Uncaught Error: Call to undefined function leowp_gn_access_token() in /home/platafo5/public_html/config.php:637
+Stack trace:
+#0 /home/platafo5/public_html/classes/Master.php(851): gerencianet_generate_pix()
+#1 /home/platafo5/public_html/classes/Master.php(2527): Master->place_order()
+#2 {main}
+  thrown in /home/platafo5/public_html/config.php on line 637
+[10-Jun-2024 21:40:31 America/Sao_Paulo] PHP Fatal error:  Uncaught Error: Call to undefined function leowp_gn_access_token() in /home/platafo5/public_html/config.php:637
+Stack trace:
+#0 /home/platafo5/public_html/classes/Master.php(851): gerencianet_generate_pix()
+#1 /home/platafo5/public_html/classes/Master.php(2527): Master->place_order()
+#2 {main}
+  thrown in /home/platafo5/public_html/config.php on line 637
+[10-Jun-2024 21:40:31 America/Sao_Paulo] PHP Fatal error:  Uncaught Error: Call to undefined function leowp_gn_access_token() in /home/platafo5/public_html/config.php:637
+Stack trace:
+#0 /home/platafo5/public_html/classes/Master.php(851): gerencianet_generate_pix()
+#1 /home/platafo5/public_html/classes/Master.php(2527): Master->place_order()
+#2 {main}
+  thrown in /home/platafo5/public_html/config.php on line 637
+[10-Jun-2024 21:40:31 America/Sao_Paulo] PHP Fatal error:  Uncaught Error: Call to undefined function leowp_gn_access_token() in /home/platafo5/public_html/config.php:637
+Stack trace:
+#0 /home/platafo5/public_html/classes/Master.php(851): gerencianet_generate_pix()
+#1 /home/platafo5/public_html/classes/Master.php(2527): Master->place_order()
+#2 {main}
+  thrown in /home/platafo5/public_html/config.php on line 637
+[10-Jun-2024 21:40:31 America/Sao_Paulo] PHP Fatal error:  Uncaught Error: Call to undefined function leowp_gn_access_token() in /home/platafo5/public_html/config.php:637
+Stack trace:
+#0 /home/platafo5/public_html/classes/Master.php(851): gerencianet_generate_pix()
+#1 /home/platafo5/public_html/classes/Master.php(2527): Master->place_order()
+#2 {main}
+  thrown in /home/platafo5/public_html/config.php on line 637
+[10-Jun-2024 21:40:31 America/Sao_Paulo] PHP Fatal error:  Uncaught Error: Call to undefined function leowp_gn_access_token() in /home/platafo5/public_html/config.php:637
+Stack trace:
+#0 /home/platafo5/public_html/classes/Master.php(851): gerencianet_generate_pix()
+#1 /home/platafo5/public_html/classes/Master.php(2527): Master->place_order()
+#2 {main}
+  thrown in /home/platafo5/public_html/config.php on line 637
+[10-Jun-2024 21:40:31 America/Sao_Paulo] PHP Fatal error:  Uncaught Error: Call to undefined function leowp_gn_access_token() in /home/platafo5/public_html/config.php:637
+Stack trace:
+#0 /home/platafo5/public_html/classes/Master.php(851): gerencianet_generate_pix()
+#1 /home/platafo5/public_html/classes/Master.php(2527): Master->place_order()
+#2 {main}
+  thrown in /home/platafo5/public_html/config.php on line 637
+[10-Jun-2024 21:40:31 America/Sao_Paulo] PHP Fatal error:  Uncaught Error: Call to undefined function leowp_gn_access_token() in /home/platafo5/public_html/config.php:637
+Stack trace:
+#0 /home/platafo5/public_html/classes/Master.php(851): gerencianet_generate_pix()
+#1 /home/platafo5/public_html/classes/Master.php(2527): Master->place_order()
+#2 {main}
+  thrown in /home/platafo5/public_html/config.php on line 637
+[10-Jun-2024 21:40:31 America/Sao_Paulo] PHP Fatal error:  Uncaught Error: Call to undefined function leowp_gn_access_token() in /home/platafo5/public_html/config.php:637
+Stack trace:
+#0 /home/platafo5/public_html/classes/Master.php(851): gerencianet_generate_pix()
+#1 /home/platafo5/public_html/classes/Master.php(2527): Master->place_order()
+#2 {main}
+  thrown in /home/platafo5/public_html/config.php on line 637
+[10-Jun-2024 21:40:32 America/Sao_Paulo] PHP Fatal error:  Uncaught Error: Call to undefined function leowp_gn_access_token() in /home/platafo5/public_html/config.php:637
+Stack trace:
+#0 /home/platafo5/public_html/classes/Master.php(851): gerencianet_generate_pix()
+#1 /home/platafo5/public_html/classes/Master.php(2527): Master->place_order()
+#2 {main}
+  thrown in /home/platafo5/public_html/config.php on line 637
+[10-Jun-2024 21:40:32 America/Sao_Paulo] PHP Fatal error:  Uncaught Error: Call to undefined function leowp_gn_access_token() in /home/platafo5/public_html/config.php:637
+Stack trace:
+#0 /home/platafo5/public_html/classes/Master.php(851): gerencianet_generate_pix()
+#1 /home/platafo5/public_html/classes/Master.php(2527): Master->place_order()
+#2 {main}
+  thrown in /home/platafo5/public_html/config.php on line 637
+[10-Jun-2024 21:40:32 America/Sao_Paulo] PHP Fatal error:  Uncaught Error: Call to undefined function leowp_gn_access_token() in /home/platafo5/public_html/config.php:637
+Stack trace:
+#0 /home/platafo5/public_html/classes/Master.php(851): gerencianet_generate_pix()
+#1 /home/platafo5/public_html/classes/Master.php(2527): Master->place_order()
+#2 {main}
+  thrown in /home/platafo5/public_html/config.php on line 637
+[10-Jun-2024 21:40:32 America/Sao_Paulo] PHP Fatal error:  Uncaught Error: Call to undefined function leowp_gn_access_token() in /home/platafo5/public_html/config.php:637
+Stack trace:
+#0 /home/platafo5/public_html/classes/Master.php(851): gerencianet_generate_pix()
+#1 /home/platafo5/public_html/classes/Master.php(2527): Master->place_order()
+#2 {main}
+  thrown in /home/platafo5/public_html/config.php on line 637
+[10-Jun-2024 21:40:32 America/Sao_Paulo] PHP Fatal error:  Uncaught Error: Call to undefined function leowp_gn_access_token() in /home/platafo5/public_html/config.php:637
+Stack trace:
+#0 /home/platafo5/public_html/classes/Master.php(851): gerencianet_generate_pix()
+#1 /home/platafo5/public_html/classes/Master.php(2527): Master->place_order()
+#2 {main}
+  thrown in /home/platafo5/public_html/config.php on line 637
+[10-Jun-2024 21:40:32 America/Sao_Paulo] PHP Fatal error:  Uncaught Error: Call to undefined function leowp_gn_access_token() in /home/platafo5/public_html/config.php:637
+Stack trace:
+#0 /home/platafo5/public_html/classes/Master.php(851): gerencianet_generate_pix()
+#1 /home/platafo5/public_html/classes/Master.php(2527): Master->place_order()
+#2 {main}
+  thrown in /home/platafo5/public_html/config.php on line 637
+[10-Jun-2024 21:40:32 America/Sao_Paulo] PHP Fatal error:  Uncaught Error: Call to undefined function leowp_gn_access_token() in /home/platafo5/public_html/config.php:637
+Stack trace:
+#0 /home/platafo5/public_html/classes/Master.php(851): gerencianet_generate_pix()
+#1 /home/platafo5/public_html/classes/Master.php(2527): Master->place_order()
+#2 {main}
+  thrown in /home/platafo5/public_html/config.php on line 637
+[10-Jun-2024 21:40:32 America/Sao_Paulo] PHP Fatal error:  Uncaught Error: Call to undefined function leowp_gn_access_token() in /home/platafo5/public_html/config.php:637
+Stack trace:
+#0 /home/platafo5/public_html/classes/Master.php(851): gerencianet_generate_pix()
+#1 /home/platafo5/public_html/classes/Master.php(2527): Master->place_order()
+#2 {main}
+  thrown in /home/platafo5/public_html/config.php on line 637
+[10-Jun-2024 21:40:32 America/Sao_Paulo] PHP Fatal error:  Uncaught Error: Call to undefined function leowp_gn_access_token() in /home/platafo5/public_html/config.php:637
+Stack trace:
+#0 /home/platafo5/public_html/classes/Master.php(851): gerencianet_generate_pix()
+#1 /home/platafo5/public_html/classes/Master.php(2527): Master->place_order()
+#2 {main}
+  thrown in /home/platafo5/public_html/config.php on line 637
+[10-Jun-2024 21:40:32 America/Sao_Paulo] PHP Fatal error:  Uncaught Error: Call to undefined function leowp_gn_access_token() in /home/platafo5/public_html/config.php:637
+Stack trace:
+#0 /home/platafo5/public_html/classes/Master.php(851): gerencianet_generate_pix()
+#1 /home/platafo5/public_html/classes/Master.php(2527): Master->place_order()
+#2 {main}
+  thrown in /home/platafo5/public_html/config.php on line 637
+[10-Jun-2024 21:40:32 America/Sao_Paulo] PHP Fatal error:  Uncaught Error: Call to undefined function leowp_gn_access_token() in /home/platafo5/public_html/config.php:637
+Stack trace:
+#0 /home/platafo5/public_html/classes/Master.php(851): gerencianet_generate_pix()
+#1 /home/platafo5/public_html/classes/Master.php(2527): Master->place_order()
+#2 {main}
+  thrown in /home/platafo5/public_html/config.php on line 637
+[10-Jun-2024 21:40:32 America/Sao_Paulo] PHP Fatal error:  Uncaught Error: Call to undefined function leowp_gn_access_token() in /home/platafo5/public_html/config.php:637
+Stack trace:
+#0 /home/platafo5/public_html/classes/Master.php(851): gerencianet_generate_pix()
+#1 /home/platafo5/public_html/classes/Master.php(2527): Master->place_order()
+#2 {main}
+  thrown in /home/platafo5/public_html/config.php on line 637
+[10-Jun-2024 21:40:33 America/Sao_Paulo] PHP Fatal error:  Uncaught Error: Call to undefined function leowp_gn_access_token() in /home/platafo5/public_html/config.php:637
+Stack trace:
+#0 /home/platafo5/public_html/classes/Master.php(851): gerencianet_generate_pix()
+#1 /home/platafo5/public_html/classes/Master.php(2527): Master->place_order()
+#2 {main}
+  thrown in /home/platafo5/public_html/config.php on line 637
+[10-Jun-2024 21:40:33 America/Sao_Paulo] PHP Fatal error:  Uncaught Error: Call to undefined function leowp_gn_access_token() in /home/platafo5/public_html/config.php:637
+Stack trace:
+#0 /home/platafo5/public_html/classes/Master.php(851): gerencianet_generate_pix()
+#1 /home/platafo5/public_html/classes/Master.php(2527): Master->place_order()
+#2 {main}
+  thrown in /home/platafo5/public_html/config.php on line 637
+[10-Jun-2024 21:40:33 America/Sao_Paulo] PHP Fatal error:  Uncaught Error: Call to undefined function leowp_gn_access_token() in /home/platafo5/public_html/config.php:637
+Stack trace:
+#0 /home/platafo5/public_html/classes/Master.php(851): gerencianet_generate_pix()
+#1 /home/platafo5/public_html/classes/Master.php(2527): Master->place_order()
+#2 {main}
+  thrown in /home/platafo5/public_html/config.php on line 637
+[10-Jun-2024 21:40:33 America/Sao_Paulo] PHP Fatal error:  Uncaught Error: Call to undefined function leowp_gn_access_token() in /home/platafo5/public_html/config.php:637
+Stack trace:
+#0 /home/platafo5/public_html/classes/Master.php(851): gerencianet_generate_pix()
+#1 /home/platafo5/public_html/classes/Master.php(2527): Master->place_order()
+#2 {main}
+  thrown in /home/platafo5/public_html/config.php on line 637
+[10-Jun-2024 21:40:33 America/Sao_Paulo] PHP Fatal error:  Uncaught Error: Call to undefined function leowp_gn_access_token() in /home/platafo5/public_html/config.php:637
+Stack trace:
+#0 /home/platafo5/public_html/classes/Master.php(851): gerencianet_generate_pix()
+#1 /home/platafo5/public_html/classes/Master.php(2527): Master->place_order()
+#2 {main}
+  thrown in /home/platafo5/public_html/config.php on line 637
+[10-Jun-2024 21:40:33 America/Sao_Paulo] PHP Fatal error:  Uncaught Error: Call to undefined function leowp_gn_access_token() in /home/platafo5/public_html/config.php:637
+Stack trace:
+#0 /home/platafo5/public_html/classes/Master.php(851): gerencianet_generate_pix()
+#1 /home/platafo5/public_html/classes/Master.php(2527): Master->place_order()
+#2 {main}
+  thrown in /home/platafo5/public_html/config.php on line 637
+[10-Jun-2024 21:40:33 America/Sao_Paulo] PHP Fatal error:  Uncaught Error: Call to undefined function leowp_gn_access_token() in /home/platafo5/public_html/config.php:637
+Stack trace:
+#0 /home/platafo5/public_html/classes/Master.php(851): gerencianet_generate_pix()
+#1 /home/platafo5/public_html/classes/Master.php(2527): Master->place_order()
+#2 {main}
+  thrown in /home/platafo5/public_html/config.php on line 637
+[10-Jun-2024 21:40:33 America/Sao_Paulo] PHP Fatal error:  Uncaught Error: Call to undefined function leowp_gn_access_token() in /home/platafo5/public_html/config.php:637
+Stack trace:
+#0 /home/platafo5/public_html/classes/Master.php(851): gerencianet_generate_pix()
+#1 /home/platafo5/public_html/classes/Master.php(2527): Master->place_order()
+#2 {main}
+  thrown in /home/platafo5/public_html/config.php on line 637
+[10-Jun-2024 21:40:33 America/Sao_Paulo] PHP Fatal error:  Uncaught Error: Call to undefined function leowp_gn_access_token() in /home/platafo5/public_html/config.php:637
+Stack trace:
+#0 /home/platafo5/public_html/classes/Master.php(851): gerencianet_generate_pix()
+#1 /home/platafo5/public_html/classes/Master.php(2527): Master->place_order()
+#2 {main}
+  thrown in /home/platafo5/public_html/config.php on line 637
+[10-Jun-2024 21:40:33 America/Sao_Paulo] PHP Fatal error:  Uncaught Error: Call to undefined function leowp_gn_access_token() in /home/platafo5/public_html/config.php:637
+Stack trace:
+#0 /home/platafo5/public_html/classes/Master.php(851): gerencianet_generate_pix()
+#1 /home/platafo5/public_html/classes/Master.php(2527): Master->place_order()
+#2 {main}
+  thrown in /home/platafo5/public_html/config.php on line 637
+[10-Jun-2024 21:40:34 America/Sao_Paulo] PHP Fatal error:  Uncaught Error: Call to undefined function leowp_gn_access_token() in /home/platafo5/public_html/config.php:637
+Stack trace:
+#0 /home/platafo5/public_html/classes/Master.php(851): gerencianet_generate_pix()
+#1 /home/platafo5/public_html/classes/Master.php(2527): Master->place_order()
+#2 {main}
+  thrown in /home/platafo5/public_html/config.php on line 637
+[10-Jun-2024 21:40:34 America/Sao_Paulo] PHP Fatal error:  Uncaught Error: Call to undefined function leowp_gn_access_token() in /home/platafo5/public_html/config.php:637
+Stack trace:
+#0 /home/platafo5/public_html/classes/Master.php(851): gerencianet_generate_pix()
+#1 /home/platafo5/public_html/classes/Master.php(2527): Master->place_order()
+#2 {main}
+  thrown in /home/platafo5/public_html/config.php on line 637
+[10-Jun-2024 21:40:34 America/Sao_Paulo] PHP Fatal error:  Uncaught Error: Call to undefined function leowp_gn_access_token() in /home/platafo5/public_html/config.php:637
+Stack trace:
+#0 /home/platafo5/public_html/classes/Master.php(851): gerencianet_generate_pix()
+#1 /home/platafo5/public_html/classes/Master.php(2527): Master->place_order()
+#2 {main}
+  thrown in /home/platafo5/public_html/config.php on line 637
+[10-Jun-2024 21:40:34 America/Sao_Paulo] PHP Fatal error:  Uncaught Error: Call to undefined function leowp_gn_access_token() in /home/platafo5/public_html/config.php:637
+Stack trace:
+#0 /home/platafo5/public_html/classes/Master.php(851): gerencianet_generate_pix()
+#1 /home/platafo5/public_html/classes/Master.php(2527): Master->place_order()
+#2 {main}
+  thrown in /home/platafo5/public_html/config.php on line 637
+[10-Jun-2024 21:40:34 America/Sao_Paulo] PHP Fatal error:  Uncaught Error: Call to undefined function leowp_gn_access_token() in /home/platafo5/public_html/config.php:637
+Stack trace:
+#0 /home/platafo5/public_html/classes/Master.php(851): gerencianet_generate_pix()
+#1 /home/platafo5/public_html/classes/Master.php(2527): Master->place_order()
+#2 {main}
+  thrown in /home/platafo5/public_html/config.php on line 637
+[10-Jun-2024 21:40:34 America/Sao_Paulo] PHP Fatal error:  Uncaught Error: Call to undefined function leowp_gn_access_token() in /home/platafo5/public_html/config.php:637
+Stack trace:
+#0 /home/platafo5/public_html/classes/Master.php(851): gerencianet_generate_pix()
+#1 /home/platafo5/public_html/classes/Master.php(2527): Master->place_order()
+#2 {main}
+  thrown in /home/platafo5/public_html/config.php on line 637
+[10-Jun-2024 21:40:34 America/Sao_Paulo] PHP Fatal error:  Uncaught Error: Call to undefined function leowp_gn_access_token() in /home/platafo5/public_html/config.php:637
+Stack trace:
+#0 /home/platafo5/public_html/classes/Master.php(851): gerencianet_generate_pix()
+#1 /home/platafo5/public_html/classes/Master.php(2527): Master->place_order()
+#2 {main}
+  thrown in /home/platafo5/public_html/config.php on line 637
+[10-Jun-2024 21:40:34 America/Sao_Paulo] PHP Fatal error:  Uncaught Error: Call to undefined function leowp_gn_access_token() in /home/platafo5/public_html/config.php:637
+Stack trace:
+#0 /home/platafo5/public_html/classes/Master.php(851): gerencianet_generate_pix()
+#1 /home/platafo5/public_html/classes/Master.php(2527): Master->place_order()
+#2 {main}
+  thrown in /home/platafo5/public_html/config.php on line 637
+[10-Jun-2024 21:40:34 America/Sao_Paulo] PHP Fatal error:  Uncaught Error: Call to undefined function leowp_gn_access_token() in /home/platafo5/public_html/config.php:637
+Stack trace:
+#0 /home/platafo5/public_html/classes/Master.php(851): gerencianet_generate_pix()
+#1 /home/platafo5/public_html/classes/Master.php(2527): Master->place_order()
+#2 {main}
+  thrown in /home/platafo5/public_html/config.php on line 637
+[10-Jun-2024 21:40:34 America/Sao_Paulo] PHP Fatal error:  Uncaught Error: Call to undefined function leowp_gn_access_token() in /home/platafo5/public_html/config.php:637
+Stack trace:
+#0 /home/platafo5/public_html/classes/Master.php(851): gerencianet_generate_pix()
+#1 /home/platafo5/public_html/classes/Master.php(2527): Master->place_order()
+#2 {main}
+  thrown in /home/platafo5/public_html/config.php on line 637
+[10-Jun-2024 21:40:34 America/Sao_Paulo] PHP Fatal error:  Uncaught Error: Call to undefined function leowp_gn_access_token() in /home/platafo5/public_html/config.php:637
+Stack trace:
+#0 /home/platafo5/public_html/classes/Master.php(851): gerencianet_generate_pix()
+#1 /home/platafo5/public_html/classes/Master.php(2527): Master->place_order()
+#2 {main}
+  thrown in /home/platafo5/public_html/config.php on line 637
+[10-Jun-2024 21:40:34 America/Sao_Paulo] PHP Fatal error:  Uncaught Error: Call to undefined function leowp_gn_access_token() in /home/platafo5/public_html/config.php:637
+Stack trace:
+#0 /home/platafo5/public_html/classes/Master.php(851): gerencianet_generate_pix()
+#1 /home/platafo5/public_html/classes/Master.php(2527): Master->place_order()
+#2 {main}
+  thrown in /home/platafo5/public_html/config.php on line 637
+[10-Jun-2024 21:40:34 America/Sao_Paulo] PHP Fatal error:  Uncaught Error: Call to undefined function leowp_gn_access_token() in /home/platafo5/public_html/config.php:637
+Stack trace:
+#0 /home/platafo5/public_html/classes/Master.php(851): gerencianet_generate_pix()
+#1 /home/platafo5/public_html/classes/Master.php(2527): Master->place_order()
+#2 {main}
+  thrown in /home/platafo5/public_html/config.php on line 637
+[10-Jun-2024 21:40:34 America/Sao_Paulo] PHP Fatal error:  Uncaught Error: Call to undefined function leowp_gn_access_token() in /home/platafo5/public_html/config.php:637
+Stack trace:
+#0 /home/platafo5/public_html/classes/Master.php(851): gerencianet_generate_pix()
+#1 /home/platafo5/public_html/classes/Master.php(2527): Master->place_order()
+#2 {main}
+  thrown in /home/platafo5/public_html/config.php on line 637
+[10-Jun-2024 21:40:35 America/Sao_Paulo] PHP Fatal error:  Uncaught Error: Call to undefined function leowp_gn_access_token() in /home/platafo5/public_html/config.php:637
+Stack trace:
+#0 /home/platafo5/public_html/classes/Master.php(851): gerencianet_generate_pix()
+#1 /home/platafo5/public_html/classes/Master.php(2527): Master->place_order()
+#2 {main}
+  thrown in /home/platafo5/public_html/config.php on line 637
+[10-Jun-2024 21:40:35 America/Sao_Paulo] PHP Fatal error:  Uncaught Error: Call to undefined function leowp_gn_access_token() in /home/platafo5/public_html/config.php:637
+Stack trace:
+#0 /home/platafo5/public_html/classes/Master.php(851): gerencianet_generate_pix()
+#1 /home/platafo5/public_html/classes/Master.php(2527): Master->place_order()
+#2 {main}
+  thrown in /home/platafo5/public_html/config.php on line 637
+[10-Jun-2024 21:40:35 America/Sao_Paulo] PHP Fatal error:  Uncaught Error: Call to undefined function leowp_gn_access_token() in /home/platafo5/public_html/config.php:637
+Stack trace:
+#0 /home/platafo5/public_html/classes/Master.php(851): gerencianet_generate_pix()
+#1 /home/platafo5/public_html/classes/Master.php(2527): Master->place_order()
+#2 {main}
+  thrown in /home/platafo5/public_html/config.php on line 637
+[10-Jun-2024 21:40:35 America/Sao_Paulo] PHP Fatal error:  Uncaught Error: Call to undefined function leowp_gn_access_token() in /home/platafo5/public_html/config.php:637
+Stack trace:
+#0 /home/platafo5/public_html/classes/Master.php(851): gerencianet_generate_pix()
+#1 /home/platafo5/public_html/classes/Master.php(2527): Master->place_order()
+#2 {main}
+  thrown in /home/platafo5/public_html/config.php on line 637
+[10-Jun-2024 21:40:35 America/Sao_Paulo] PHP Fatal error:  Uncaught Error: Call to undefined function leowp_gn_access_token() in /home/platafo5/public_html/config.php:637
+Stack trace:
+#0 /home/platafo5/public_html/classes/Master.php(851): gerencianet_generate_pix()
+#1 /home/platafo5/public_html/classes/Master.php(2527): Master->place_order()
+#2 {main}
+  thrown in /home/platafo5/public_html/config.php on line 637
+[10-Jun-2024 21:40:35 America/Sao_Paulo] PHP Fatal error:  Uncaught Error: Call to undefined function leowp_gn_access_token() in /home/platafo5/public_html/config.php:637
+Stack trace:
+#0 /home/platafo5/public_html/classes/Master.php(851): gerencianet_generate_pix()
+#1 /home/platafo5/public_html/classes/Master.php(2527): Master->place_order()
+#2 {main}
+  thrown in /home/platafo5/public_html/config.php on line 637
+[10-Jun-2024 21:40:35 America/Sao_Paulo] PHP Fatal error:  Uncaught Error: Call to undefined function leowp_gn_access_token() in /home/platafo5/public_html/config.php:637
+Stack trace:
+#0 /home/platafo5/public_html/classes/Master.php(851): gerencianet_generate_pix()
+#1 /home/platafo5/public_html/classes/Master.php(2527): Master->place_order()
+#2 {main}
+  thrown in /home/platafo5/public_html/config.php on line 637
+[10-Jun-2024 21:40:35 America/Sao_Paulo] PHP Fatal error:  Uncaught Error: Call to undefined function leowp_gn_access_token() in /home/platafo5/public_html/config.php:637
+Stack trace:
+#0 /home/platafo5/public_html/classes/Master.php(851): gerencianet_generate_pix()
+#1 /home/platafo5/public_html/classes/Master.php(2527): Master->place_order()
+#2 {main}
+  thrown in /home/platafo5/public_html/config.php on line 637
+[10-Jun-2024 21:40:35 America/Sao_Paulo] PHP Fatal error:  Uncaught Error: Call to undefined function leowp_gn_access_token() in /home/platafo5/public_html/config.php:637
+Stack trace:
+#0 /home/platafo5/public_html/classes/Master.php(851): gerencianet_generate_pix()
+#1 /home/platafo5/public_html/classes/Master.php(2527): Master->place_order()
+#2 {main}
+  thrown in /home/platafo5/public_html/config.php on line 637
+[10-Jun-2024 21:40:35 America/Sao_Paulo] PHP Fatal error:  Uncaught Error: Call to undefined function leowp_gn_access_token() in /home/platafo5/public_html/config.php:637
+Stack trace:
+#0 /home/platafo5/public_html/classes/Master.php(851): gerencianet_generate_pix()
+#1 /home/platafo5/public_html/classes/Master.php(2527): Master->place_order()
+#2 {main}
+  thrown in /home/platafo5/public_html/config.php on line 637
+[10-Jun-2024 21:40:35 America/Sao_Paulo] PHP Fatal error:  Uncaught Error: Call to undefined function leowp_gn_access_token() in /home/platafo5/public_html/config.php:637
+Stack trace:
+#0 /home/platafo5/public_html/classes/Master.php(851): gerencianet_generate_pix()
+#1 /home/platafo5/public_html/classes/Master.php(2527): Master->place_order()
+#2 {main}
+  thrown in /home/platafo5/public_html/config.php on line 637
+[10-Jun-2024 21:40:35 America/Sao_Paulo] PHP Fatal error:  Uncaught Error: Call to undefined function leowp_gn_access_token() in /home/platafo5/public_html/config.php:637
+Stack trace:
+#0 /home/platafo5/public_html/classes/Master.php(851): gerencianet_generate_pix()
+#1 /home/platafo5/public_html/classes/Master.php(2527): Master->place_order()
+#2 {main}
+  thrown in /home/platafo5/public_html/config.php on line 637
+[10-Jun-2024 21:40:35 America/Sao_Paulo] PHP Fatal error:  Uncaught Error: Call to undefined function leowp_gn_access_token() in /home/platafo5/public_html/config.php:637
+Stack trace:
+#0 /home/platafo5/public_html/classes/Master.php(851): gerencianet_generate_pix()
+#1 /home/platafo5/public_html/classes/Master.php(2527): Master->place_order()
+#2 {main}
+  thrown in /home/platafo5/public_html/config.php on line 637
+[10-Jun-2024 21:40:35 America/Sao_Paulo] PHP Fatal error:  Uncaught Error: Call to undefined function leowp_gn_access_token() in /home/platafo5/public_html/config.php:637
+Stack trace:
+#0 /home/platafo5/public_html/classes/Master.php(851): gerencianet_generate_pix()
+#1 /home/platafo5/public_html/classes/Master.php(2527): Master->place_order()
+#2 {main}
+  thrown in /home/platafo5/public_html/config.php on line 637
+[10-Jun-2024 21:40:35 America/Sao_Paulo] PHP Fatal error:  Uncaught Error: Call to undefined function leowp_gn_access_token() in /home/platafo5/public_html/config.php:637
+Stack trace:
+#0 /home/platafo5/public_html/classes/Master.php(851): gerencianet_generate_pix()
+#1 /home/platafo5/public_html/classes/Master.php(2527): Master->place_order()
+#2 {main}
+  thrown in /home/platafo5/public_html/config.php on line 637
+[10-Jun-2024 21:40:36 America/Sao_Paulo] PHP Fatal error:  Uncaught Error: Call to undefined function leowp_gn_access_token() in /home/platafo5/public_html/config.php:637
+Stack trace:
+#0 /home/platafo5/public_html/classes/Master.php(851): gerencianet_generate_pix()
+#1 /home/platafo5/public_html/classes/Master.php(2527): Master->place_order()
+#2 {main}
+  thrown in /home/platafo5/public_html/config.php on line 637
+[10-Jun-2024 21:40:36 America/Sao_Paulo] PHP Fatal error:  Uncaught Error: Call to undefined function leowp_gn_access_token() in /home/platafo5/public_html/config.php:637
+Stack trace:
+#0 /home/platafo5/public_html/classes/Master.php(851): gerencianet_generate_pix()
+#1 /home/platafo5/public_html/classes/Master.php(2527): Master->place_order()
+#2 {main}
+  thrown in /home/platafo5/public_html/config.php on line 637
+[10-Jun-2024 21:40:36 America/Sao_Paulo] PHP Fatal error:  Uncaught Error: Call to undefined function leowp_gn_access_token() in /home/platafo5/public_html/config.php:637
+Stack trace:
+#0 /home/platafo5/public_html/classes/Master.php(851): gerencianet_generate_pix()
+#1 /home/platafo5/public_html/classes/Master.php(2527): Master->place_order()
+#2 {main}
+  thrown in /home/platafo5/public_html/config.php on line 637
+[10-Jun-2024 21:40:36 America/Sao_Paulo] PHP Fatal error:  Uncaught Error: Call to undefined function leowp_gn_access_token() in /home/platafo5/public_html/config.php:637
+Stack trace:
+#0 /home/platafo5/public_html/classes/Master.php(851): gerencianet_generate_pix()
+#1 /home/platafo5/public_html/classes/Master.php(2527): Master->place_order()
+#2 {main}
+  thrown in /home/platafo5/public_html/config.php on line 637
+[10-Jun-2024 21:40:36 America/Sao_Paulo] PHP Fatal error:  Uncaught Error: Call to undefined function leowp_gn_access_token() in /home/platafo5/public_html/config.php:637
+Stack trace:
+#0 /home/platafo5/public_html/classes/Master.php(851): gerencianet_generate_pix()
+#1 /home/platafo5/public_html/classes/Master.php(2527): Master->place_order()
+#2 {main}
+  thrown in /home/platafo5/public_html/config.php on line 637
+[10-Jun-2024 21:40:36 America/Sao_Paulo] PHP Fatal error:  Uncaught Error: Call to undefined function leowp_gn_access_token() in /home/platafo5/public_html/config.php:637
+Stack trace:
+#0 /home/platafo5/public_html/classes/Master.php(851): gerencianet_generate_pix()
+#1 /home/platafo5/public_html/classes/Master.php(2527): Master->place_order()
+#2 {main}
+  thrown in /home/platafo5/public_html/config.php on line 637
+[10-Jun-2024 21:40:36 America/Sao_Paulo] PHP Fatal error:  Uncaught Error: Call to undefined function leowp_gn_access_token() in /home/platafo5/public_html/config.php:637
+Stack trace:
+#0 /home/platafo5/public_html/classes/Master.php(851): gerencianet_generate_pix()
+#1 /home/platafo5/public_html/classes/Master.php(2527): Master->place_order()
+#2 {main}
+  thrown in /home/platafo5/public_html/config.php on line 637
+[10-Jun-2024 21:40:36 America/Sao_Paulo] PHP Fatal error:  Uncaught Error: Call to undefined function leowp_gn_access_token() in /home/platafo5/public_html/config.php:637
+Stack trace:
+#0 /home/platafo5/public_html/classes/Master.php(851): gerencianet_generate_pix()
+#1 /home/platafo5/public_html/classes/Master.php(2527): Master->place_order()
+#2 {main}
+  thrown in /home/platafo5/public_html/config.php on line 637
+[10-Jun-2024 21:40:36 America/Sao_Paulo] PHP Fatal error:  Uncaught Error: Call to undefined function leowp_gn_access_token() in /home/platafo5/public_html/config.php:637
+Stack trace:
+#0 /home/platafo5/public_html/classes/Master.php(851): gerencianet_generate_pix()
+#1 /home/platafo5/public_html/classes/Master.php(2527): Master->place_order()
+#2 {main}
+  thrown in /home/platafo5/public_html/config.php on line 637
+[10-Jun-2024 21:40:36 America/Sao_Paulo] PHP Fatal error:  Uncaught Error: Call to undefined function leowp_gn_access_token() in /home/platafo5/public_html/config.php:637
+Stack trace:
+#0 /home/platafo5/public_html/classes/Master.php(851): gerencianet_generate_pix()
+#1 /home/platafo5/public_html/classes/Master.php(2527): Master->place_order()
+#2 {main}
+  thrown in /home/platafo5/public_html/config.php on line 637
+[10-Jun-2024 21:40:36 America/Sao_Paulo] PHP Fatal error:  Uncaught Error: Call to undefined function leowp_gn_access_token() in /home/platafo5/public_html/config.php:637
+Stack trace:
+#0 /home/platafo5/public_html/classes/Master.php(851): gerencianet_generate_pix()
+#1 /home/platafo5/public_html/classes/Master.php(2527): Master->place_order()
+#2 {main}
+  thrown in /home/platafo5/public_html/config.php on line 637
+[10-Jun-2024 21:40:36 America/Sao_Paulo] PHP Fatal error:  Uncaught Error: Call to undefined function leowp_gn_access_token() in /home/platafo5/public_html/config.php:637
+Stack trace:
+#0 /home/platafo5/public_html/classes/Master.php(851): gerencianet_generate_pix()
+#1 /home/platafo5/public_html/classes/Master.php(2527): Master->place_order()
+#2 {main}
+  thrown in /home/platafo5/public_html/config.php on line 637
+[10-Jun-2024 21:40:36 America/Sao_Paulo] PHP Fatal error:  Uncaught Error: Call to undefined function leowp_gn_access_token() in /home/platafo5/public_html/config.php:637
+Stack trace:
+#0 /home/platafo5/public_html/classes/Master.php(851): gerencianet_generate_pix()
+#1 /home/platafo5/public_html/classes/Master.php(2527): Master->place_order()
+#2 {main}
+  thrown in /home/platafo5/public_html/config.php on line 637
+[10-Jun-2024 21:40:36 America/Sao_Paulo] PHP Fatal error:  Uncaught Error: Call to undefined function leowp_gn_access_token() in /home/platafo5/public_html/config.php:637
+Stack trace:
+#0 /home/platafo5/public_html/classes/Master.php(851): gerencianet_generate_pix()
+#1 /home/platafo5/public_html/classes/Master.php(2527): Master->place_order()
+#2 {main}
+  thrown in /home/platafo5/public_html/config.php on line 637
+[10-Jun-2024 21:40:36 America/Sao_Paulo] PHP Fatal error:  Uncaught Error: Call to undefined function leowp_gn_access_token() in /home/platafo5/public_html/config.php:637
+Stack trace:
+#0 /home/platafo5/public_html/classes/Master.php(851): gerencianet_generate_pix()
+#1 /home/platafo5/public_html/classes/Master.php(2527): Master->place_order()
+#2 {main}
+  thrown in /home/platafo5/public_html/config.php on line 637
+[10-Jun-2024 21:40:36 America/Sao_Paulo] PHP Fatal error:  Uncaught Error: Call to undefined function leowp_gn_access_token() in /home/platafo5/public_html/config.php:637
+Stack trace:
+#0 /home/platafo5/public_html/classes/Master.php(851): gerencianet_generate_pix()
+#1 /home/platafo5/public_html/classes/Master.php(2527): Master->place_order()
+#2 {main}
+  thrown in /home/platafo5/public_html/config.php on line 637
+[10-Jun-2024 21:40:36 America/Sao_Paulo] PHP Fatal error:  Uncaught Error: Call to undefined function leowp_gn_access_token() in /home/platafo5/public_html/config.php:637
+Stack trace:
+#0 /home/platafo5/public_html/classes/Master.php(851): gerencianet_generate_pix()
+#1 /home/platafo5/public_html/classes/Master.php(2527): Master->place_order()
+#2 {main}
+  thrown in /home/platafo5/public_html/config.php on line 637
+[10-Jun-2024 21:40:36 America/Sao_Paulo] PHP Fatal error:  Uncaught Error: Call to undefined function leowp_gn_access_token() in /home/platafo5/public_html/config.php:637
+Stack trace:
+#0 /home/platafo5/public_html/classes/Master.php(851): gerencianet_generate_pix()
+#1 /home/platafo5/public_html/classes/Master.php(2527): Master->place_order()
+#2 {main}
+  thrown in /home/platafo5/public_html/config.php on line 637
+[10-Jun-2024 21:40:37 America/Sao_Paulo] PHP Fatal error:  Uncaught Error: Call to undefined function leowp_gn_access_token() in /home/platafo5/public_html/config.php:637
+Stack trace:
+#0 /home/platafo5/public_html/classes/Master.php(851): gerencianet_generate_pix()
+#1 /home/platafo5/public_html/classes/Master.php(2527): Master->place_order()
+#2 {main}
+  thrown in /home/platafo5/public_html/config.php on line 637
+[10-Jun-2024 21:40:37 America/Sao_Paulo] PHP Fatal error:  Uncaught Error: Call to undefined function leowp_gn_access_token() in /home/platafo5/public_html/config.php:637
+Stack trace:
+#0 /home/platafo5/public_html/classes/Master.php(851): gerencianet_generate_pix()
+#1 /home/platafo5/public_html/classes/Master.php(2527): Master->place_order()
+#2 {main}
+  thrown in /home/platafo5/public_html/config.php on line 637
+[10-Jun-2024 21:40:37 America/Sao_Paulo] PHP Fatal error:  Uncaught Error: Call to undefined function leowp_gn_access_token() in /home/platafo5/public_html/config.php:637
+Stack trace:
+#0 /home/platafo5/public_html/classes/Master.php(851): gerencianet_generate_pix()
+#1 /home/platafo5/public_html/classes/Master.php(2527): Master->place_order()
+#2 {main}
+  thrown in /home/platafo5/public_html/config.php on line 637
+[10-Jun-2024 21:40:37 America/Sao_Paulo] PHP Warning:  Trying to access array offset on value of type null in /home/platafo5/public_html/config.php on line 735
+[10-Jun-2024 21:40:37 America/Sao_Paulo] PHP Warning:  Trying to access array offset on value of type null in /home/platafo5/public_html/config.php on line 736
+[10-Jun-2024 21:40:42 America/Sao_Paulo] PHP Warning:  Trying to access array offset on value of type null in /home/platafo5/public_html/config.php on line 735
+[10-Jun-2024 21:40:42 America/Sao_Paulo] PHP Warning:  Trying to access array offset on value of type null in /home/platafo5/public_html/config.php on line 736
