@@ -200,6 +200,27 @@ require_once('sess_auth.php');
       background-color: #6b46c1;
       border-radius: 1px;
     }
+
+    /* Dark mode menu fixes */
+    .dark .sidebar .sidebar-content a {
+      color: #e2e8f0 !important;
+    }
+    
+    .dark .sidebar .sidebar-content a:hover {
+      color: #fff !important;
+    }
+    
+    .dark .sidebar-header h1 {
+      color: #e2e8f0 !important;
+    }
+    
+    .dark .sidebar-menu li a {
+      color: #e2e8f0 !important;
+    }
+    
+    .dark .sidebar-menu li a:hover {
+      color: #fff !important;
+    }
   </style>
 </head>
 <body>

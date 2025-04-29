@@ -27,6 +27,35 @@ if(isset($_SERVER['HTTP_USER_AGENT'])) {
     color: black; /* Cor dos asteriscos */
 }
 
+/* Menu Dark Mode Fixes */
+.dark .text-gray-800 {
+  color: #e2e8f0 !important;
+}
+
+.dark .text-gray-700 {
+  color: #e2e8f0 !important;
+}
+
+.dark li.relative.px-6.py-3 a.inline-flex.items-center.w-full.text-sm.font-semibold {
+  color: #e2e8f0 !important;
+}
+
+.dark .text-gray-500 {
+  color: #a0aec0 !important;
+}
+
+.dark .sidebar-item:hover {
+  color: #fff !important;
+}
+
+.dark .submenu-link {
+  color: #cbd5e0 !important;
+}
+
+.dark .submenu-link:hover {
+  color: #fff !important;
+}
+
 /* Estilos para os cards estatísticos */
 .stat-card {
   background-color: #fff;
@@ -40,8 +69,9 @@ if(isset($_SERVER['HTTP_USER_AGENT'])) {
 }
 
 .dark .stat-card {
-  background-color: #1a1c23;
+  background-color: #1a1c23 !important;
   border: 1px solid rgba(74, 85, 104, 0.2);
+  color: #e2e8f0;
 }
 
 .stat-card:hover {
@@ -114,7 +144,7 @@ if(isset($_SERVER['HTTP_USER_AGENT'])) {
 }
 
 .dark .stat-title {
-  color: #d5d6d7;
+  color: #d5d6d7 !important;
 }
 
 .stat-value {
@@ -124,7 +154,7 @@ if(isset($_SERVER['HTTP_USER_AGENT'])) {
 }
 
 .dark .stat-value {
-  color: #f7fafc;
+  color: #f7fafc !important;
 }
 
 .stat-eye {
@@ -245,6 +275,24 @@ footer {
   .footer-container {
     padding: 0.5rem;
   }
+}
+
+/* Estilos para os cards com resultados de análise */
+.dark .bg-gray-50 {
+  background-color: #2d3748 !important;
+}
+
+.dark .text-gray-600 {
+  color: #cbd5e0 !important;
+}
+
+.dark .text-gray-500 {
+  color: #a0aec0 !important;
+}
+
+/* Garantir que modais e cards de análise tenham cores corretas no modo escuro */
+.dark .bg-white {
+  background-color: #1a1c23 !important;
 }
 
 </style>
@@ -1078,8 +1126,8 @@ $stat_arr = ['Pending Orders', 'Packed Orders', 'Our for Delivery', 'Completed O
 </script>
 
 <!-- Footer Section -->
-<footer class="bg-white dark:bg-gray-800 py-4 mt-auto w-full shadow-md">
-  <div class="container mx-auto px-4 footer-container">
+<footer class="bg-white dark:bg-gray-800 py-4 mt-auto w-full shadow-md" style="width: 100vw; margin-left: calc(-50vw + 50%);">
+  <div class="container mx-auto px-4">
     <div class="flex flex-col md:flex-row justify-between items-center">
       <p class="text-sm text-gray-600 dark:text-gray-400 mb-3 md:mb-0">&copy; <?= date('Y') ?> Rifa10mi2. Todos os direitos reservados.</p>
       <div class="flex space-x-4">
