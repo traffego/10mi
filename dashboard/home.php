@@ -353,24 +353,26 @@ tbody {
         <div class="border-t border-gray-200 dark:border-gray-700"></div>
         <div class="p-4">
             <form action="" id="buscar-ganhador" style="margin-bottom:10px">
-                <div class="flex">
-                    <div>
-                        <p class="mb-2 text-sm font-medium text-gray-600 dark:text-gray-400">Selecione a rifa:</p>
-                        <select name="raffle" id="raffle" class="block w-full mt-1 text-sm dark:text-gray-300 dark:border-gray-600 dark:bg-gray-700 form-select focus:border-purple-400 focus:outline-none focus:shadow-outline-purple dark:focus:shadow-outline-gray">
-                            <option value="">Selecione</option>
-                            <?php 
-                            $qry = $conn->query("SELECT * FROM `product_list`");
-                            while ($row = $qry->fetch_assoc()) { ?>
-                          <option value="<?= $row['id'] ?>" <?php if($raffle == $row['id']){echo 'selected';} ?>><?= $row['name'] ?></option>
-                           <?php }  ?>
-                        </select>
+                <div class="flex flex-col w-full">
+                    <div class="flex w-full mb-4">
+                        <div class="w-1/2 pr-2">
+                            <p class="mb-2 text-sm font-medium text-gray-600 dark:text-gray-400">Selecione a rifa:</p>
+                            <select name="raffle" id="raffle" class="block w-full mt-1 text-sm dark:text-gray-300 dark:border-gray-600 dark:bg-gray-700 form-select focus:border-purple-400 focus:outline-none focus:shadow-outline-purple dark:focus:shadow-outline-gray">
+                                <option value="">Selecione</option>
+                                <?php 
+                                $qry = $conn->query("SELECT * FROM `product_list`");
+                                while ($row = $qry->fetch_assoc()) { ?>
+                              <option value="<?= $row['id'] ?>" <?php if($raffle == $row['id']){echo 'selected';} ?>><?= $row['name'] ?></option>
+                               <?php }  ?>
+                            </select>
+                        </div>
+                        <div class="w-1/2 pl-2">
+                            <p class="mb-2 text-sm font-medium text-gray-600 dark:text-gray-400">Número / bicho sorteado</p>
+                            <input type="text" name="number" class="block w-full mt-1 text-sm dark:border-gray-600 dark:bg-gray-700 focus:border-purple-400 focus:outline-none focus:shadow-outline-purple dark:text-gray-300 dark:focus:shadow-outline-gray form-input" placeholder="ex: 15 / Leão">
+                        </div>
                     </div>
-                    <div>
-                        <p class="mb-2 text-sm font-medium text-gray-600 dark:text-gray-400">Número / bicho sorteado</p>
-                        <input type="text" name="number" class="block w-full mt-1 text-sm dark:border-gray-600 dark:bg-gray-700 focus:border-purple-400 focus:outline-none focus:shadow-outline-purple dark:text-gray-300 dark:focus:shadow-outline-gray form-input" placeholder="ex: 15 / Leão">
-                    </div>
-                    <div><br>
-                        <button class="px-5 py-3 font-medium leading-5 text-white transition-colors duration-150 bg-purple-600 border border-transparent rounded-lg active:bg-purple-600 hover:bg-purple-700 focus:outline-none focus:shadow-outline-purple filtrar"> Buscar</button>
+                    <div class="w-full">
+                        <button class="w-full px-5 py-3 font-medium leading-5 text-white transition-colors duration-150 bg-purple-600 border border-transparent rounded-lg active:bg-purple-600 hover:bg-purple-700 focus:outline-none focus:shadow-outline-purple filtrar">Buscar</button>
                     </div>
                 </div>
             </form>
