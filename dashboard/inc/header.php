@@ -229,29 +229,27 @@ require_once('sess_auth.php');
         <!-- Mobile menu for small screens, hidden by default -->
         <div id="mobile-menu" class="mobile-menu hidden md:hidden absolute top-full left-0 right-0 z-20 bg-white shadow-lg border-t border-gray-100">
           <div class="px-2 pt-2 pb-3 space-y-1">
-            <a href="<?= base_url ?>dashboard/" class="nav-item block px-3 py-2 text-sm rounded-md hover:text-purple-700 transition-colors">Dashboard</a>
-            <a href="<?= base_url ?>dashboard/?page=maintenance/product_list" class="nav-item block px-3 py-2 text-sm rounded-md hover:text-purple-700 transition-colors">Rifas</a>
-            <a href="<?= base_url ?>dashboard/?page=orders" class="nav-item block px-3 py-2 text-sm rounded-md hover:text-purple-700 transition-colors">Pedidos</a>
-            <a href="<?= base_url ?>dashboard/?page=clients" class="nav-item block px-3 py-2 text-sm rounded-md hover:text-purple-700 transition-colors">Clientes</a>
-            <a href="<?= base_url ?>dashboard/?page=reports" class="nav-item block px-3 py-2 text-sm rounded-md hover:text-purple-700 transition-colors">Relatorios</a>
-            <?php if($_settings->userdata('type') == 1): ?>
-            <a href="<?= base_url ?>dashboard/?page=user" class="nav-item block px-3 py-2 text-sm rounded-md hover:text-purple-700 transition-colors">Usuarios</a>
-            <a href="<?= base_url ?>dashboard/?page=system_info" class="nav-item block px-3 py-2 text-sm rounded-md hover:text-purple-700 transition-colors">Configuraciones</a>
-            <?php endif; ?>
+            <a href="./" class="nav-item block px-3 py-2 text-sm rounded-md hover:text-purple-700 transition-colors <?php echo (!isset($_GET['page'])) ? 'active' : ''; ?>">Dashboard</a>
+            <a href="./?page=products" class="nav-item block px-3 py-2 text-sm rounded-md hover:text-purple-700 transition-colors <?php echo (isset($_GET['page']) && $_GET['page'] == 'products') ? 'active' : ''; ?>">Sorteios</a>
+            <a href="./?page=orders" class="nav-item block px-3 py-2 text-sm rounded-md hover:text-purple-700 transition-colors <?php echo (isset($_GET['page']) && $_GET['page'] == 'orders') ? 'active' : ''; ?>">Pedidos</a>
+            <a href="./?page=ranking" class="nav-item block px-3 py-2 text-sm rounded-md hover:text-purple-700 transition-colors <?php echo (isset($_GET['page']) && $_GET['page'] == 'ranking') ? 'active' : ''; ?>">Ranking</a>
+            <a href="./?page=customers" class="nav-item block px-3 py-2 text-sm rounded-md hover:text-purple-700 transition-colors <?php echo (isset($_GET['page']) && $_GET['page'] == 'customers') ? 'active' : ''; ?>">Clientes</a>
+            <a href="./?page=user/list" class="nav-item block px-3 py-2 text-sm rounded-md hover:text-purple-700 transition-colors <?php echo (isset($_GET['page']) && $_GET['page'] == 'user/list') ? 'active' : ''; ?>">Usuários</a>
+            <a href="./?page=gateway" class="nav-item block px-3 py-2 text-sm rounded-md hover:text-purple-700 transition-colors <?php echo (isset($_GET['page']) && $_GET['page'] == 'gateway') ? 'active' : ''; ?>">Gateway</a>
+            <a href="./?page=system_info" class="nav-item block px-3 py-2 text-sm rounded-md hover:text-purple-700 transition-colors <?php echo (isset($_GET['page']) && $_GET['page'] == 'system_info') ? 'active' : ''; ?>">Configuração</a>
           </div>
         </div>
         
         <!-- Desktop navigation menu -->
         <nav class="hidden md:flex md:items-center">
-          <a href="<?= base_url ?>dashboard/" class="nav-item px-3 py-2 text-sm rounded-md hover:text-purple-700 transition-colors">Dashboard</a>
-          <a href="<?= base_url ?>dashboard/?page=maintenance/product_list" class="nav-item px-3 py-2 text-sm rounded-md hover:text-purple-700 transition-colors">Rifas</a>
-          <a href="<?= base_url ?>dashboard/?page=orders" class="nav-item px-3 py-2 text-sm rounded-md hover:text-purple-700 transition-colors">Pedidos</a>
-          <a href="<?= base_url ?>dashboard/?page=clients" class="nav-item px-3 py-2 text-sm rounded-md hover:text-purple-700 transition-colors">Clientes</a>
-          <a href="<?= base_url ?>dashboard/?page=reports" class="nav-item px-3 py-2 text-sm rounded-md hover:text-purple-700 transition-colors">Relatorios</a>
-          <?php if($_settings->userdata('type') == 1): ?>
-          <a href="<?= base_url ?>dashboard/?page=user" class="nav-item px-3 py-2 text-sm rounded-md hover:text-purple-700 transition-colors">Usuarios</a>
-          <a href="<?= base_url ?>dashboard/?page=system_info" class="nav-item px-3 py-2 text-sm rounded-md hover:text-purple-700 transition-colors">Configuraciones</a>
-          <?php endif; ?>
+          <a href="./" class="nav-item px-3 py-2 text-sm rounded-md hover:text-purple-700 transition-colors <?php echo (!isset($_GET['page'])) ? 'active' : ''; ?>">Dashboard</a>
+          <a href="./?page=products" class="nav-item px-3 py-2 text-sm rounded-md hover:text-purple-700 transition-colors <?php echo (isset($_GET['page']) && $_GET['page'] == 'products') ? 'active' : ''; ?>">Sorteios</a>
+          <a href="./?page=orders" class="nav-item px-3 py-2 text-sm rounded-md hover:text-purple-700 transition-colors <?php echo (isset($_GET['page']) && $_GET['page'] == 'orders') ? 'active' : ''; ?>">Pedidos</a>
+          <a href="./?page=ranking" class="nav-item px-3 py-2 text-sm rounded-md hover:text-purple-700 transition-colors <?php echo (isset($_GET['page']) && $_GET['page'] == 'ranking') ? 'active' : ''; ?>">Ranking</a>
+          <a href="./?page=customers" class="nav-item px-3 py-2 text-sm rounded-md hover:text-purple-700 transition-colors <?php echo (isset($_GET['page']) && $_GET['page'] == 'customers') ? 'active' : ''; ?>">Clientes</a>
+          <a href="./?page=user/list" class="nav-item px-3 py-2 text-sm rounded-md hover:text-purple-700 transition-colors <?php echo (isset($_GET['page']) && $_GET['page'] == 'user/list') ? 'active' : ''; ?>">Usuários</a>
+          <a href="./?page=gateway" class="nav-item px-3 py-2 text-sm rounded-md hover:text-purple-700 transition-colors <?php echo (isset($_GET['page']) && $_GET['page'] == 'gateway') ? 'active' : ''; ?>">Gateway</a>
+          <a href="./?page=system_info" class="nav-item px-3 py-2 text-sm rounded-md hover:text-purple-700 transition-colors <?php echo (isset($_GET['page']) && $_GET['page'] == 'system_info') ? 'active' : ''; ?>">Configuração</a>
         </nav>
         
         <!-- Right side tools -->
