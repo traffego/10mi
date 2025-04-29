@@ -27,7 +27,84 @@ if(isset($_SERVER['HTTP_USER_AGENT'])) {
     color: black; /* Cor dos asteriscos */
 }
 
+/* Estilos para os cards estatísticos */
+.stat-card {
+  background-color: #fff;
+  border-radius: 0.5rem;
+  padding: 1.5rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
 
+.dark .stat-card {
+  background-color: #1a1c23;
+}
+
+.stat-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.stat-icon {
+  width: 3rem;
+  height: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+}
+
+.stat-icon.campaigns {
+  background-color: rgba(72, 187, 120, 0.2);
+  color: #48bb78;
+}
+
+.stat-icon.clients {
+  background-color: rgba(237, 137, 54, 0.2);
+  color: #ed8936;
+}
+
+.stat-icon.orders {
+  background-color: rgba(66, 153, 225, 0.2);
+  color: #4299e1;
+}
+
+.stat-icon.billing {
+  background-color: rgba(160, 174, 192, 0.2);
+  color: #a0aec0;
+}
+
+.stat-content {
+  text-align: left;
+}
+
+.stat-title {
+  color: #718096;
+  font-size: 0.875rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.dark .stat-title {
+  color: #d5d6d7;
+}
+
+.stat-value {
+  color: #2d3748;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.dark .stat-value {
+  color: #f7fafc;
+}
+
+.stat-eye {
+  opacity: 0.6;
+}
 
 </style>
 
@@ -160,6 +237,79 @@ tbody {
     Dashboard
   </h2>
 
+  <!-- Cards Estatísticos -->
+  <div class="grid gap-6 mb-8 md:grid-cols-2 xl:grid-cols-4">
+    <!-- Card Campanhas -->
+    <div class="stat-card">
+      <div class="stat-content">
+        <p class="stat-title">Campanhas</p>
+        <?php 
+        $campaigns_count = $conn->query("SELECT COUNT(*) as total FROM product_list")->fetch_assoc()['total'];
+        ?>
+        <p class="stat-value"><?= $campaigns_count ?></p>
+      </div>
+      <div class="stat-icon campaigns">
+        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+          <path d="M10 2a6 6 0 00-6 6v3.586l-.707.707A1 1 0 004 14h12a1 1 0 00.707-1.707L16 11.586V8a6 6 0 00-6-6zM10 18a3 3 0 01-3-3h6a3 3 0 01-3 3z"></path>
+        </svg>
+      </div>
+    </div>
+
+    <!-- Card Clientes -->
+    <div class="stat-card">
+      <div class="stat-content">
+        <p class="stat-title">Clientes</p>
+        <?php 
+        $clients_count = $conn->query("SELECT COUNT(*) as total FROM customer_list")->fetch_assoc()['total'];
+        ?>
+        <p class="stat-value"><?= $clients_count ?></p>
+      </div>
+      <div class="stat-icon clients">
+        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+          <path d="M13 6a3 3 0 11-6 0 3 3 0 016 0zM18 8a2 2 0 11-4 0 2 2 0 014 0zM14 15a4 4 0 00-8 0v3h8v-3zM6 8a2 2 0 11-4 0 2 2 0 014 0zM16 18v-3a5.972 5.972 0 00-.75-2.906A3.005 3.005 0 0119 15v3h-3zM4.75 12.094A5.973 5.973 0 004 15v3H1v-3a3 3 0 013.75-2.906z"></path>
+        </svg>
+      </div>
+    </div>
+
+    <!-- Card Pedidos -->
+    <div class="stat-card">
+      <div class="stat-content">
+        <p class="stat-title">Pedidos</p>
+        <?php 
+        $orders_count = $conn->query("SELECT COUNT(*) as total FROM order_list")->fetch_assoc()['total'];
+        ?>
+        <p class="stat-value"><?= $orders_count ?></p>
+      </div>
+      <div class="stat-icon orders">
+        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+          <path fill-rule="evenodd" d="M4 4a2 2 0 00-2 2v4a2 2 0 002 2V6h10a2 2 0 00-2-2H4zm2 6a2 2 0 012-2h8a2 2 0 012 2v4a2 2 0 01-2 2H8a2 2 0 01-2-2v-4zm6 4a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"></path>
+        </svg>
+      </div>
+    </div>
+
+    <!-- Card Faturamento -->
+    <div class="stat-card">
+      <div class="stat-content">
+        <p class="stat-title">Faturamento</p>
+        <?php 
+        $total_billing = $conn->query("SELECT SUM(total_amount) as total FROM order_list WHERE status = 2")->fetch_assoc()['total'];
+        $total_billing = $total_billing ? format_num($total_billing, 2) : '0.00';
+        ?>
+        <p class="stat-value">
+          <svg class="w-5 h-5 stat-eye inline-block" fill="currentColor" viewBox="0 0 20 20">
+            <path d="M10 12a2 2 0 100-4 2 2 0 000 4z"></path>
+            <path fill-rule="evenodd" d="M10 3C5.5 3 2 8 2 10c0 2 3.5 7 8 7s8-5 8-7c0-2-3.5-7-8-7zm0 11c-3.3 0-6-4-6-6 0-2 2.7-6 6-6s6 4 6 6c0 2-2.7 6-6 6z" clip-rule="evenodd"></path>
+          </svg>
+        </p>
+      </div>
+      <div class="stat-icon billing">
+        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+          <path fill-rule="evenodd" d="M4 4a2 2 0 00-2 2v4a2 2 0 002 2V6h10a2 2 0 00-2-2H4zm2 6a2 2 0 012-2h8a2 2 0 012 2v4a2 2 0 01-2 2H8a2 2 0 01-2-2v-4zm6 4a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"></path>
+        </svg>
+      </div>
+    </div>
+  </div>
+  <!-- Fim dos Cards Estatísticos -->
 
 <!--Busca Ganhador x Ranking -->
 <div class="grid gap-6 mb-8 md:grid-cols-2 xl:grid-cols-2">
