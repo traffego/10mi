@@ -58,6 +58,7 @@ function strcasecmp_utf8($str1, $str2) {
 }*/
 .adm-pedido-numeros {
 	position: relative;
+	color: #000;
     display: block;
     width: 100%;
     cursor: pointer;
