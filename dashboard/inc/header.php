@@ -79,6 +79,8 @@ require_once('sess_auth.php');
     /* Estilos adicionais para a navbar */
     .nav-item.active {
       border-bottom: 2px solid #9f7aea;
+      color: #805ad5;
+      background-color: rgba(159, 122, 234, 0.1);
     }
     .nav-item:hover {
       border-bottom: 2px solid #9f7aea;
@@ -86,9 +88,14 @@ require_once('sess_auth.php');
     @media (max-width: 768px) {
       .mobile-menu {
         display: none;
+        max-height: 0;
+        transition: max-height 0.3s ease-out;
+        overflow: hidden;
       }
       .mobile-menu.show {
         display: block;
+        max-height: 500px;
+        transition: max-height 0.3s ease-in;
       }
     }
   </style>
@@ -96,29 +103,29 @@ require_once('sess_auth.php');
 <body>
   <div class="flex flex-col h-screen bg-gray-50 dark:bg-gray-900">
     <!-- Main Navbar -->
-    <header class="z-10 py-4 bg-white shadow-md dark:bg-gray-800">
+  <header class="z-10 py-4 bg-white shadow-md dark:bg-gray-800">
       <div class="container flex flex-wrap items-center justify-between px-6 mx-auto">
         <!-- Logo e Botão Mobile -->
         <div class="flex items-center">
           <!-- Mobile menu button -->
-          <button
+    <button
             class="p-1 mr-5 -ml-1 rounded-md md:hidden focus:outline-none focus:shadow-outline-purple"
-            @click="toggleSideMenu"
-            aria-label="Menu"
-          >
-            <svg
-              class="w-6 h-6"
-              aria-hidden="true"
-              fill="currentColor"
-              viewBox="0 0 20 20"
-            >
-              <path
-                fill-rule="evenodd"
-                d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
-                clip-rule="evenodd"
-              ></path>
-            </svg>
-          </button>
+    @click="toggleSideMenu"
+    aria-label="Menu"
+    >
+    <svg
+    class="w-6 h-6"
+    aria-hidden="true"
+    fill="currentColor"
+    viewBox="0 0 20 20"
+    >
+    <path
+    fill-rule="evenodd"
+    d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
+    clip-rule="evenodd"
+    ></path>
+  </svg>
+</button>
           
           <!-- Logo -->
           <a
@@ -132,51 +139,79 @@ require_once('sess_auth.php');
         <!-- Desktop Navigation -->
         <nav class="hidden md:flex md:items-center md:space-x-4">
           <a
-            class="nav-item px-3 py-2 text-sm font-medium text-gray-600 transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200 dark:text-gray-400 <?php echo (!isset($_GET['page'])) ? 'active' : ''; ?>"
+            class="nav-item px-3 py-2 text-sm font-medium text-gray-600 transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200 dark:text-gray-400 flex items-center <?php echo (!isset($_GET['page'])) ? 'active' : ''; ?>"
             href="./"
           >
+            <svg class="w-5 h-5 mr-2" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" stroke="currentColor">
+              <path d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"></path>
+            </svg>
             <span>Dashboard</span>
           </a>
           <a
-            class="nav-item px-3 py-2 text-sm font-medium text-gray-600 transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200 dark:text-gray-400 <?php echo (isset($_GET['page']) && $_GET['page'] == 'products') ? 'active' : ''; ?>"
+            class="nav-item px-3 py-2 text-sm font-medium text-gray-600 transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200 dark:text-gray-400 flex items-center <?php echo (isset($_GET['page']) && $_GET['page'] == 'products') ? 'active' : ''; ?>"
             href="./?page=products"
           >
+            <svg class="w-5 h-5 mr-2" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" stroke="currentColor">
+              <path d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01"></path>
+            </svg>
             <span>Sorteios</span>
           </a>
           <a
-            class="nav-item px-3 py-2 text-sm font-medium text-gray-600 transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200 dark:text-gray-400 <?php echo (isset($_GET['page']) && $_GET['page'] == 'orders') ? 'active' : ''; ?>"
+            class="nav-item px-3 py-2 text-sm font-medium text-gray-600 transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200 dark:text-gray-400 flex items-center <?php echo (isset($_GET['page']) && $_GET['page'] == 'orders') ? 'active' : ''; ?>"
             href="./?page=orders"
           >
+            <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20">
+              <path d="M3 1a1 1 0 000 2h1.22l.305 1.222a.997.997 0 00.01.042l1.358 5.43-.893.892C3.74 11.846 4.632 14 6.414 14H15a1 1 0 000-2H6.414l1-1H14a1 1 0 00.894-.553l3-6A1 1 0 0017 3H6.28l-.31-1.243A1 1 0 005 1H3zM16 16.5a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0zM6.5 18a1.5 1.5 0 100-3 1.5 1.5 0 000 3z"></path>
+            </svg>
             <span>Pedidos</span>
           </a>
           <a
-            class="nav-item px-3 py-2 text-sm font-medium text-gray-600 transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200 dark:text-gray-400 <?php echo (isset($_GET['page']) && $_GET['page'] == 'ranking') ? 'active' : ''; ?>"
+            class="nav-item px-3 py-2 text-sm font-medium text-gray-600 transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200 dark:text-gray-400 flex items-center <?php echo (isset($_GET['page']) && $_GET['page'] == 'ranking') ? 'active' : ''; ?>"
             href="./?page=ranking"
           >
+            <svg class="w-5 h-5 mr-2" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke="currentColor">
+              <path d="M2.5.5A.5.5 0 0 1 3 0h10a.5.5 0 0 1 .5.5c0 .538-.012 1.05-.034 1.536a3 3 0 1 1-1.133 5.89c-.79 1.865-1.878 2.777-2.833 3.011v2.173l1.425.356c.194.048.377.135.537.255L13.3 15.1a.5.5 0 0 1-.3.9H3a.5.5 0 0 1-.3-.9l1.838-1.379c.16-.12.343-.207.537-.255L6.5 13.11v-2.173c-.955-.234-2.043-1.146-2.833-3.012a3 3 0 1 1-1.132-5.89A33.076 33.076 0 0 1 2.5.5zm.099 2.54a2 2 0 0 0 .72 3.935c-.333-1.05-.588-2.346-.72-3.935zm10.083 3.935a2 2 0 0 0 .72-3.935c-.133 1.59-.388 2.885-.72 3.935zM3.504 1c.007.517.026 1.006.056 1.469.13 2.028.457 3.546.87 4.667C5.294 9.48 6.484 10 7 10a.5.5 0 0 1 .5.5v2.61a1 1 0 0 1-.757.97l-1.426.356a.5.5 0 0 0-.179.085L4.5 15h7l-.638-.479a.501.501 0 0 0-.18-.085l-1.425-.356a1 1 0 0 1-.757-.97V10.5A.5.5 0 0 1 9 10c.516 0 1.706-.52 2.57-2.864.413-1.12.74-2.64.87-4.667.03-.463.049-.952.056-1.469H3.504z"/>
+            </svg>
             <span>Ranking</span>
           </a>
           <a
-            class="nav-item px-3 py-2 text-sm font-medium text-gray-600 transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200 dark:text-gray-400 <?php echo (isset($_GET['page']) && $_GET['page'] == 'customers') ? 'active' : ''; ?>"
+            class="nav-item px-3 py-2 text-sm font-medium text-gray-600 transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200 dark:text-gray-400 flex items-center <?php echo (isset($_GET['page']) && $_GET['page'] == 'customers') ? 'active' : ''; ?>"
             href="./?page=customers"
           >
+            <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20">
+              <path d="M13 6a3 3 0 11-6 0 3 3 0 016 0zM18 8a2 2 0 11-4 0 2 2 0 014 0zM14 15a4 4 0 00-8 0v3h8v-3zM6 8a2 2 0 11-4 0 2 2 0 014 0zM16 18v-3a5.972 5.972 0 00-.75-2.906A3.005 3.005 0 0119 15v3h-3zM4.75 12.094A5.973 5.973 0 004 15v3H1v-3a3 3 0 013.75-2.906z"></path>
+            </svg>
             <span>Clientes</span>
           </a>
           <a
-            class="nav-item px-3 py-2 text-sm font-medium text-gray-600 transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200 dark:text-gray-400 <?php echo (isset($_GET['page']) && $_GET['page'] == 'user/list') ? 'active' : ''; ?>"
+            class="nav-item px-3 py-2 text-sm font-medium text-gray-600 transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200 dark:text-gray-400 flex items-center <?php echo (isset($_GET['page']) && $_GET['page'] == 'user/list') ? 'active' : ''; ?>"
             href="./?page=user/list"
           >
+            <svg class="w-5 h-5 mr-2" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke="currentColor">
+              <path d="M12.5 16a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7Zm1.679-4.493-1.335 2.226a.75.75 0 0 1-1.174.144l-.774-.773a.5.5 0 0 1 .708-.708l.547.548 1.17-1.951a.5.5 0 1 1 .858.514ZM11 5a3 3 0 1 1-6 0 3 3 0 0 1 6 0ZM8 7a2 2 0 1 0 0-4 2 2 0 0 0 0 4Z"/>
+              <path d="M8.256 14a4.474 4.474 0 0 1-.229-1.004H3c.001-.246.154-.986.832-1.664C4.484 10.68 5.711 10 8 10c.26 0 .507.009.74.025.226-.341.496-.65.804-.918C9.077 9.038 8.564 9 8 9c-5 0-6 3-6 4s1 1 1 1h5.256Z"/>
+            </svg>
             <span>Usuários</span>
           </a>
           <a
-            class="nav-item px-3 py-2 text-sm font-medium text-gray-600 transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200 dark:text-gray-400 <?php echo (isset($_GET['page']) && $_GET['page'] == 'gateway') ? 'active' : ''; ?>"
+            class="nav-item px-3 py-2 text-sm font-medium text-gray-600 transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200 dark:text-gray-400 flex items-center <?php echo (isset($_GET['page']) && $_GET['page'] == 'gateway') ? 'active' : ''; ?>"
             href="./?page=gateway"
           >
+            <svg class="w-4 h-4 mr-2" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke="currentColor">
+              <path fill-rule="evenodd" d="M11 15a4 4 0 1 0 0-8 4 4 0 0 0 0 8zm5-4a5 5 0 1 1-10 0 5 5 0 0 1 10 0z"/>
+              <path d="M9.438 11.944c.047.596.518 1.06 1.363 1.116v.44h.375v-.443c.875-.061 1.386-.529 1.386-1.207 0-.618-.39-.936-1.09-1.1l-.296-.07v-1.2c.376.043.614.248.671.532h.658c-.047-.575-.54-1.024-1.329-1.073V8.5h-.375v.45c-.747.073-1.255.522-1.255 1.158 0 .562.378.92 1.007 1.066l.248.061v1.272c-.384-.058-.639-.27-.696-.563h-.668zm1.36-1.354c-.369-.085-.569-.26-.569-.522 0-.294.216-.514.572-.578v1.1h-.003zm.432.746c.449.104.655.272.655.569 0 .339-.257.571-.709.614v-1.195l.054.012z"/>
+              <path d="M1 0a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h4.083c.058-.344.145-.678.258-1H3a2 2 0 0 0-2-2V3a2 2 0 0 0 2-2h10a2 2 0 0 0 2 2v3.528c.38.34.717.728 1 1.154V1a1 1 0 0 0-1-1H1z"/>
+              <path d="M9.998 5.083 10 5a2 2 0 1 0-3.132 1.65 5.982 5.982 0 0 1 3.13-1.567z"/>
+            </svg>
             <span>Gateway</span>
           </a>
           <a
-            class="nav-item px-3 py-2 text-sm font-medium text-gray-600 transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200 dark:text-gray-400 <?php echo (isset($_GET['page']) && $_GET['page'] == 'system_info') ? 'active' : ''; ?>"
+            class="nav-item px-3 py-2 text-sm font-medium text-gray-600 transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200 dark:text-gray-400 flex items-center <?php echo (isset($_GET['page']) && $_GET['page'] == 'system_info') ? 'active' : ''; ?>"
             href="./?page=system_info"
           >
+            <svg class="w-5 h-5 mr-2" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" stroke="currentColor">
+              <path d="M4 6h16M4 10h16M4 14h16M4 18h16"></path>
+            </svg>
             <span>Configuração</span>
           </a>
         </nav>
@@ -184,43 +219,43 @@ require_once('sess_auth.php');
         <!-- Right side tools -->
         <div class="flex items-center space-x-4">
           <!-- Theme toggle -->
-          <button
-            class="rounded-md focus:outline-none focus:shadow-outline-purple"
-            @click="toggleTheme"
-            aria-label="Toggle color mode"
-          >
-            <template x-if="!dark">
-              <svg
-                class="w-5 h-5"
-                aria-hidden="true"
-                fill="currentColor"
-                viewBox="0 0 20 20"
-              >
-                <path
-                  d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"
-                ></path>
-              </svg>
-            </template>
-            <template x-if="dark">
-              <svg
-                class="w-5 h-5"
-                aria-hidden="true"
-                fill="currentColor"
-                viewBox="0 0 20 20"
-              >
-                <path
-                  fill-rule="evenodd"
-                  d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z"
-                  clip-rule="evenodd"
-                ></path>
-              </svg>
-            </template>
-          </button>
+    <button
+    class="rounded-md focus:outline-none focus:shadow-outline-purple"
+    @click="toggleTheme"
+    aria-label="Toggle color mode"
+    >
+    <template x-if="!dark">
+      <svg
+      class="w-5 h-5"
+      aria-hidden="true"
+      fill="currentColor"
+      viewBox="0 0 20 20"
+      >
+      <path
+      d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"
+      ></path>
+    </svg>
+  </template>
+  <template x-if="dark">
+    <svg
+    class="w-5 h-5"
+    aria-hidden="true"
+    fill="currentColor"
+    viewBox="0 0 20 20"
+    >
+    <path
+    fill-rule="evenodd"
+    d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z"
+    clip-rule="evenodd"
+    ></path>
+  </svg>
+</template>
+</button>
           
-          <!-- Profile menu -->
+<!-- Profile menu -->
           <div class="relative">
             <button
-              class="align-middle rounded-full focus:shadow-outline-purple focus:outline-none"
+              class="align-middle rounded-full focus:shadow-outline-purple focus:outline-none border-2 border-gray-200 dark:border-gray-700 hover:border-purple-300 dark:hover:border-purple-500 transition-colors duration-150"
               @click="toggleProfileMenu"
               @keydown.escape="closeProfileMenu"
               aria-label="Account"
@@ -235,9 +270,12 @@ require_once('sess_auth.php');
             </button>
             <template x-if="isProfileMenuOpen">
               <ul
-                x-transition:leave="transition ease-in duration-150"
-                x-transition:leave-start="opacity-100"
-                x-transition:leave-end="opacity-0"
+                x-transition:enter="transition ease-out duration-150"
+                x-transition:enter-start="transform opacity-0 scale-95"
+                x-transition:enter-end="transform opacity-100 scale-100"
+                x-transition:leave="transition ease-in duration-75"
+                x-transition:leave-start="transform opacity-100 scale-100"
+                x-transition:leave-end="transform opacity-0 scale-95"
                 @click.away="closeProfileMenu"
                 @keydown.escape="closeProfileMenu"
                 class="absolute right-0 w-56 p-2 mt-2 space-y-2 text-gray-600 bg-white border border-gray-100 rounded-md shadow-md dark:border-gray-700 dark:text-gray-300 dark:bg-gray-700"
@@ -321,58 +359,86 @@ require_once('sess_auth.php');
         class="mobile-menu md:hidden px-6 mt-3"
         :class="{'show': isSideMenuOpen}"
       >
-        <nav class="flex flex-col space-y-2 py-4">
+        <nav class="flex flex-col space-y-1 py-3 bg-white dark:bg-gray-800 rounded-lg shadow-lg">
           <a
-            class="nav-item px-3 py-2 text-sm font-medium text-gray-600 transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200 dark:text-gray-400 <?php echo (!isset($_GET['page'])) ? 'active' : ''; ?>"
+            class="nav-item px-3 py-3 text-sm font-medium text-gray-600 transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200 dark:text-gray-400 flex items-center rounded-md <?php echo (!isset($_GET['page'])) ? 'active' : ''; ?>"
             href="./"
           >
+            <svg class="w-5 h-5 mr-2" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" stroke="currentColor">
+              <path d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"></path>
+            </svg>
             <span>Dashboard</span>
           </a>
           <a
-            class="nav-item px-3 py-2 text-sm font-medium text-gray-600 transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200 dark:text-gray-400 <?php echo (isset($_GET['page']) && $_GET['page'] == 'products') ? 'active' : ''; ?>"
+            class="nav-item px-3 py-3 text-sm font-medium text-gray-600 transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200 dark:text-gray-400 flex items-center rounded-md <?php echo (isset($_GET['page']) && $_GET['page'] == 'products') ? 'active' : ''; ?>"
             href="./?page=products"
           >
+            <svg class="w-5 h-5 mr-2" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" stroke="currentColor">
+              <path d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01"></path>
+            </svg>
             <span>Sorteios</span>
           </a>
           <a
-            class="nav-item px-3 py-2 text-sm font-medium text-gray-600 transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200 dark:text-gray-400 <?php echo (isset($_GET['page']) && $_GET['page'] == 'orders') ? 'active' : ''; ?>"
+            class="nav-item px-3 py-3 text-sm font-medium text-gray-600 transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200 dark:text-gray-400 flex items-center rounded-md <?php echo (isset($_GET['page']) && $_GET['page'] == 'orders') ? 'active' : ''; ?>"
             href="./?page=orders"
           >
+            <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20">
+              <path d="M3 1a1 1 0 000 2h1.22l.305 1.222a.997.997 0 00.01.042l1.358 5.43-.893.892C3.74 11.846 4.632 14 6.414 14H15a1 1 0 000-2H6.414l1-1H14a1 1 0 00.894-.553l3-6A1 1 0 0017 3H6.28l-.31-1.243A1 1 0 005 1H3zM16 16.5a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0zM6.5 18a1.5 1.5 0 100-3 1.5 1.5 0 000 3z"></path>
+            </svg>
             <span>Pedidos</span>
           </a>
           <a
-            class="nav-item px-3 py-2 text-sm font-medium text-gray-600 transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200 dark:text-gray-400 <?php echo (isset($_GET['page']) && $_GET['page'] == 'ranking') ? 'active' : ''; ?>"
+            class="nav-item px-3 py-3 text-sm font-medium text-gray-600 transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200 dark:text-gray-400 flex items-center rounded-md <?php echo (isset($_GET['page']) && $_GET['page'] == 'ranking') ? 'active' : ''; ?>"
             href="./?page=ranking"
           >
+            <svg class="w-5 h-5 mr-2" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke="currentColor">
+              <path d="M2.5.5A.5.5 0 0 1 3 0h10a.5.5 0 0 1 .5.5c0 .538-.012 1.05-.034 1.536a3 3 0 1 1-1.133 5.89c-.79 1.865-1.878 2.777-2.833 3.011v2.173l1.425.356c.194.048.377.135.537.255L13.3 15.1a.5.5 0 0 1-.3.9H3a.5.5 0 0 1-.3-.9l1.838-1.379c.16-.12.343-.207.537-.255L6.5 13.11v-2.173c-.955-.234-2.043-1.146-2.833-3.012a3 3 0 1 1-1.132-5.89A33.076 33.076 0 0 1 2.5.5zm.099 2.54a2 2 0 0 0 .72 3.935c-.333-1.05-.588-2.346-.72-3.935zm10.083 3.935a2 2 0 0 0 .72-3.935c-.133 1.59-.388 2.885-.72 3.935zM3.504 1c.007.517.026 1.006.056 1.469.13 2.028.457 3.546.87 4.667C5.294 9.48 6.484 10 7 10a.5.5 0 0 1 .5.5v2.61a1 1 0 0 1-.757.97l-1.426.356a.5.5 0 0 0-.179.085L4.5 15h7l-.638-.479a.501.501 0 0 0-.18-.085l-1.425-.356a1 1 0 0 1-.757-.97V10.5A.5.5 0 0 1 9 10c.516 0 1.706-.52 2.57-2.864.413-1.12.74-2.64.87-4.667.03-.463.049-.952.056-1.469H3.504z"/>
+            </svg>
             <span>Ranking</span>
           </a>
           <a
-            class="nav-item px-3 py-2 text-sm font-medium text-gray-600 transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200 dark:text-gray-400 <?php echo (isset($_GET['page']) && $_GET['page'] == 'customers') ? 'active' : ''; ?>"
+            class="nav-item px-3 py-3 text-sm font-medium text-gray-600 transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200 dark:text-gray-400 flex items-center rounded-md <?php echo (isset($_GET['page']) && $_GET['page'] == 'customers') ? 'active' : ''; ?>"
             href="./?page=customers"
           >
+            <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20">
+              <path d="M13 6a3 3 0 11-6 0 3 3 0 016 0zM18 8a2 2 0 11-4 0 2 2 0 014 0zM14 15a4 4 0 00-8 0v3h8v-3zM6 8a2 2 0 11-4 0 2 2 0 014 0zM16 18v-3a5.972 5.972 0 00-.75-2.906A3.005 3.005 0 0119 15v3h-3zM4.75 12.094A5.973 5.973 0 004 15v3H1v-3a3 3 0 013.75-2.906z"></path>
+            </svg>
             <span>Clientes</span>
           </a>
           <a
-            class="nav-item px-3 py-2 text-sm font-medium text-gray-600 transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200 dark:text-gray-400 <?php echo (isset($_GET['page']) && $_GET['page'] == 'user/list') ? 'active' : ''; ?>"
+            class="nav-item px-3 py-3 text-sm font-medium text-gray-600 transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200 dark:text-gray-400 flex items-center rounded-md <?php echo (isset($_GET['page']) && $_GET['page'] == 'user/list') ? 'active' : ''; ?>"
             href="./?page=user/list"
           >
+            <svg class="w-5 h-5 mr-2" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke="currentColor">
+              <path d="M12.5 16a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7Zm1.679-4.493-1.335 2.226a.75.75 0 0 1-1.174.144l-.774-.773a.5.5 0 0 1 .708-.708l.547.548 1.17-1.951a.5.5 0 1 1 .858.514ZM11 5a3 3 0 1 1-6 0 3 3 0 0 1 6 0ZM8 7a2 2 0 1 0 0-4 2 2 0 0 0 0 4Z"/>
+              <path d="M8.256 14a4.474 4.474 0 0 1-.229-1.004H3c.001-.246.154-.986.832-1.664C4.484 10.68 5.711 10 8 10c.26 0 .507.009.74.025.226-.341.496-.65.804-.918C9.077 9.038 8.564 9 8 9c-5 0-6 3-6 4s1 1 1 1h5.256Z"/>
+            </svg>
             <span>Usuários</span>
           </a>
           <a
-            class="nav-item px-3 py-2 text-sm font-medium text-gray-600 transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200 dark:text-gray-400 <?php echo (isset($_GET['page']) && $_GET['page'] == 'gateway') ? 'active' : ''; ?>"
+            class="nav-item px-3 py-3 text-sm font-medium text-gray-600 transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200 dark:text-gray-400 flex items-center rounded-md <?php echo (isset($_GET['page']) && $_GET['page'] == 'gateway') ? 'active' : ''; ?>"
             href="./?page=gateway"
           >
+            <svg class="w-5 h-5 mr-2" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke="currentColor">
+              <path fill-rule="evenodd" d="M11 15a4 4 0 1 0 0-8 4 4 0 0 0 0 8zm5-4a5 5 0 1 1-10 0 5 5 0 0 1 10 0z"/>
+              <path d="M9.438 11.944c.047.596.518 1.06 1.363 1.116v.44h.375v-.443c.875-.061 1.386-.529 1.386-1.207 0-.618-.39-.936-1.09-1.1l-.296-.07v-1.2c.376.043.614.248.671.532h.658c-.047-.575-.54-1.024-1.329-1.073V8.5h-.375v.45c-.747.073-1.255.522-1.255 1.158 0 .562.378.92 1.007 1.066l.248.061v1.272c-.384-.058-.639-.27-.696-.563h-.668zm1.36-1.354c-.369-.085-.569-.26-.569-.522 0-.294.216-.514.572-.578v1.1h-.003zm.432.746c.449.104.655.272.655.569 0 .339-.257.571-.709.614v-1.195l.054.012z"/>
+              <path d="M1 0a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h4.083c.058-.344.145-.678.258-1H3a2 2 0 0 0-2-2V3a2 2 0 0 0 2-2h10a2 2 0 0 0 2 2v3.528c.38.34.717.728 1 1.154V1a1 1 0 0 0-1-1H1z"/>
+              <path d="M9.998 5.083 10 5a2 2 0 1 0-3.132 1.65 5.982 5.982 0 0 1 3.13-1.567z"/>
+            </svg>
             <span>Gateway</span>
           </a>
           <a
-            class="nav-item px-3 py-2 text-sm font-medium text-gray-600 transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200 dark:text-gray-400 <?php echo (isset($_GET['page']) && $_GET['page'] == 'system_info') ? 'active' : ''; ?>"
+            class="nav-item px-3 py-3 text-sm font-medium text-gray-600 transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200 dark:text-gray-400 flex items-center rounded-md <?php echo (isset($_GET['page']) && $_GET['page'] == 'system_info') ? 'active' : ''; ?>"
             href="./?page=system_info"
           >
+            <svg class="w-5 h-5 mr-2" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" stroke="currentColor">
+              <path d="M4 6h16M4 10h16M4 14h16M4 18h16"></path>
+            </svg>
             <span>Configuração</span>
           </a>
         </nav>
-      </div>
-    </header>
+</div>
+</header>
     
     <div class="flex flex-col flex-1 w-full">
 </body>
