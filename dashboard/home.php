@@ -304,34 +304,39 @@ html[class*="theme-dark"] .stat-title,
 
 html[class*="theme-dark"] .stat-value,
 .theme-dark .stat-value,
-:root.theme-dark .stat-value {
+:root.dark .stat-value,
+.dark .stat-value {
   color: #f7fafc !important;
 }
 
 html[class*="theme-dark"] .stat-icon.campaigns,
 .theme-dark .stat-icon.campaigns,
-:root.theme-dark .stat-icon.campaigns {
+:root.dark .stat-icon.campaigns,
+.dark .stat-icon.campaigns {
   background-color: rgba(72, 187, 120, 0.1) !important;
   color: #68d391 !important;
 }
 
 html[class*="theme-dark"] .stat-icon.clients,
 .theme-dark .stat-icon.clients,
-:root.theme-dark .stat-icon.clients {
+:root.dark .stat-icon.clients,
+.dark .stat-icon.clients {
   background-color: rgba(237, 137, 54, 0.1) !important;
   color: #f6ad55 !important;
 }
 
 html[class*="theme-dark"] .stat-icon.orders,
 .theme-dark .stat-icon.orders,
-:root.theme-dark .stat-icon.orders {
+:root.dark .stat-icon.orders,
+.dark .stat-icon.orders {
   background-color: rgba(66, 153, 225, 0.1) !important;
   color: #63b3ed !important;
 }
 
 html[class*="theme-dark"] .stat-icon.billing,
 .theme-dark .stat-icon.billing,
-:root.theme-dark .stat-icon.billing {
+:root.dark .stat-icon.billing,
+.dark .stat-icon.billing {
   background-color: rgba(160, 174, 192, 0.1) !important;
   color: #cbd5e0 !important;
 }
@@ -522,30 +527,6 @@ html[data-theme="dark"] footer .text-gray-500,
   }
 }
 
-</style>
-
-<script>
-    // script.js
-document.addEventListener("DOMContentLoaded", function() {
-    var phoneNumbers = document.querySelectorAll('.enable_raffle_mode_class_phone');
-    phoneNumbers.forEach(function(phoneNumber) {
-        var text = phoneNumber.textContent.trim();
-        var ddd = text.slice(0, 4); // Extrai o DDD com parênteses
-        var number = text.slice(4).trim(); // Extrai o restante do número
-        phoneNumber.innerHTML = '<span class="real-number">' + text + '</span>' +
-                                '<span class="masked-number" data-ddd="' + ddd + '"></span>';
-    });
-});
-
-</script>
-<?php
-$raffle = isset($_GET['raffle']) ? $_GET['raffle'] : '';
-$d_start = isset($_GET['ranking_date_start']) ? $_GET['ranking_date_start'] : date('Y-m-d');
-$d_end = isset($_GET['ranking_date_end']) ? $_GET['ranking_date_end'] : date('Y-m-d');
-$top = isset($_GET['top']) ? $_GET['top'] : '';
- ?>
- <style>
-
 html[class*="theme-dark"] .adm-pedido-numeros  {
   color: #000 !important;
 }
@@ -553,7 +534,15 @@ html[class*="theme-dark"] .adm-pedido-numeros a:hover{
   color: #000 !important;
 }
 
- .adm-pedido-numeros {
+.dark .adm-pedido-numeros {
+  color: #046c4e !important;
+}
+
+.dark .adm-pedido-numeros:hover {
+  color: #000 !important;
+}
+
+.adm-pedido-numeros {
 position: relative;
     display: block;
     width: max-content;
@@ -650,6 +639,37 @@ tbody {
     line-height: 4px !important;
 }
 
+}
+
+/* Dark mode style for adm-pedido-numeros */
+.dark .adm-pedido-numeros,
+html.dark .adm-pedido-numeros,
+.theme-dark .adm-pedido-numeros,
+html[class*="theme-dark"] .adm-pedido-numeros {
+  color: #000 !important; /* Ensuring text stays dark in dark mode */
+  background-color: #def7ec !important; /* Keep the light background */
+}
+
+.dark .adm-pedido-numeros:hover,
+html.dark .adm-pedido-numeros:hover,
+.theme-dark .adm-pedido-numeros:hover,
+html[class*="theme-dark"] .adm-pedido-numeros:hover {
+  color: #000 !important; /* Ensuring text stays dark on hover */
+}
+
+/* Fix for modal buttons */
+@media (max-width: 640px) {
+  #modal-admin footer {
+    padding-left: 1rem !important;
+    padding-right: 1rem !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
+  
+  #modal-admin footer button {
+    font-size: 0.75rem !important;
+    padding: 0.5rem 0.75rem !important;
+  }
 }
 </style>       
 
