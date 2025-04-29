@@ -337,173 +337,185 @@ tbody {
 
 <!--Busca Ganhador x Ranking -->
 <div class="grid gap-6 mb-8 md:grid-cols-2 xl:grid-cols-2">
-    <!-- Card -->
-    <div class="flex items-center p-4 bg-white rounded-lg shadow-xs dark:bg-gray-800">
+    <!-- Card Buscar Ganhador -->
+    <div class="bg-white rounded-lg shadow-xs overflow-hidden dark:bg-gray-800">
+        <div class="flex items-center p-4 bg-purple-50 dark:bg-gray-700">
+            <div class="p-3 mr-4 text-purple-500 bg-purple-100 rounded-full dark:text-purple-100 dark:bg-purple-500">
+                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                    <path d="M9 9a2 2 0 114 0 2 2 0 01-4 0z"></path>
+                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-13a4 4 0 00-3.446 6.032l-2.261 2.26a1 1 0 101.414 1.415l2.261-2.261A4 4 0 1011 5z" clip-rule="evenodd"></path>
+                </svg>
+            </div>
+            <h3 class="text-lg font-semibold text-gray-700 dark:text-gray-200">
+                BUSCAR GANHADOR
+            </h3>
+        </div>
+        <div class="border-t border-gray-200 dark:border-gray-700"></div>
+        <div class="p-4">
+            <form action="" id="buscar-ganhador" style="margin-bottom:10px">
+                <div class="flex">
+                    <div>
+                        <p class="mb-2 text-sm font-medium text-gray-600 dark:text-gray-400">Selecione a rifa:</p>
+                        <select name="raffle" id="raffle" class="block w-full mt-1 text-sm dark:text-gray-300 dark:border-gray-600 dark:bg-gray-700 form-select focus:border-purple-400 focus:outline-none focus:shadow-outline-purple dark:focus:shadow-outline-gray">
+                            <option value="">Selecione</option>
+                            <?php 
+                            $qry = $conn->query("SELECT * FROM `product_list`");
+                            while ($row = $qry->fetch_assoc()) { ?>
+                          <option value="<?= $row['id'] ?>" <?php if($raffle == $row['id']){echo 'selected';} ?>><?= $row['name'] ?></option>
+                           <?php }  ?>
+                        </select>
+                    </div>
+                    <div>
+                        <p class="mb-2 text-sm font-medium text-gray-600 dark:text-gray-400">Número / bicho sorteado</p>
+                        <input type="text" name="number" class="block w-full mt-1 text-sm dark:border-gray-600 dark:bg-gray-700 focus:border-purple-400 focus:outline-none focus:shadow-outline-purple dark:text-gray-300 dark:focus:shadow-outline-gray form-input" placeholder="ex: 15 / Leão">
+                    </div>
+                    <div><br>
+                        <button class="px-5 py-3 font-medium leading-5 text-white transition-colors duration-150 bg-purple-600 border border-transparent rounded-lg active:bg-purple-600 hover:bg-purple-700 focus:outline-none focus:shadow-outline-purple filtrar"> Buscar</button>
+                    </div>
+                </div>
+            </form>
 
-  <div>
-    <p class="mb-2 text-sm font-medium text-gray-600 dark:text-gray-400">
-    BUSCAR GANHADOR
-  </p>
-      <form action="" id="buscar-ganhador" style="margin-bottom:10px">
-         <div class="flex">
-          <div>
-            <p class="mb-2 text-sm font-medium text-gray-600 dark:text-gray-400">Selecione a rifa:</p>
-            <select name="raffle" id="raffle" class="block w-full mt-1 text-sm dark:text-gray-300 dark:border-gray-600 dark:bg-gray-700 form-select focus:border-purple-400 focus:outline-none focus:shadow-outline-purple dark:focus:shadow-outline-gray">
-                <option value="">Selecione</option>
+            <p class="text-gray-700 dark:text-gray-200 winner-info">
+                <span id="name"></span>
+                <span id="phone"></span>
+                <span id="raffle"></span>
+                <span id="date"></span>
+                <span id="payment_status"></span>
+                <span id="number"></span>
+                <span class="winner"></span>
+            </p>
+        </div>
+    </div>
+    <!-- Card Ranking de Compradores -->
+    <div class="bg-white rounded-lg shadow-xs overflow-hidden dark:bg-gray-800">
+        <div class="flex items-center p-4 bg-blue-50 dark:bg-gray-700">
+            <div class="p-3 mr-4 text-blue-500 bg-blue-100 rounded-full dark:text-blue-100 dark:bg-blue-500">
+                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M18 5v8a2 2 0 01-2 2h-5l-5 4v-4H4a2 2 0 01-2-2V5a2 2 0 012-2h12a2 2 0 012 2zM7 8H5v2h2V8zm2 0h2v2H9V8zm6 0h-2v2h2V8z" clip-rule="evenodd"></path>
+                </svg>
+            </div>
+            <h3 class="text-lg font-semibold text-gray-700 dark:text-gray-200">
+                RANKING DE COMPRADORES
+            </h3>
+        </div>
+        <div class="border-t border-gray-200 dark:border-gray-700"></div>
+        <div class="p-4">
+            <form action="" id="filter-form" style="margin-bottom:10px">
+                <div class="flex flex-wrap justify-between items-end">
+                    <div class="xs:w-full w-auto mb-4 md:mb-0">
+                        <p class="mb-2 text-sm font-medium text-gray-600 dark:text-gray-400">Selecione a rifa</p>
+                        <select name="raffle" id="raffle" class="block w-full mt-1 pr-2 text-sm dark:text-gray-300 dark:border-gray-600 dark:bg-gray-700 form-select focus:border-purple-400 focus:outline-none focus:shadow-outline-purple dark:focus:shadow-outline-gray">
+                            <option value="">Selecione</option>
+                            <?php 
+                            $qry = $conn->query("SELECT * FROM `product_list`");
+                            while ($row = $qry->fetch_assoc()) { ?>
+                          <option value="<?= $row['id'] ?>" <?php if($raffle == $row['id']){echo 'selected';} ?>><?= $row['name'] ?></option>
+                          <?php }  ?>
+                        </select>
+                    </div>
+                    <div class="xs:w-4/12 w-auto mb-4 md:mb-0">
+                        <p class="mb-2 text-sm font-medium text-gray-600 dark:text-gray-400">Data Inicial</p>
+                        <input name="ranking_date_start" id="ranking_date_start" type="date" value="<?=$d_start;?>" class="mr-2 block w-full mt-1 text-sm dark:border-gray-600 dark:bg-gray-700 focus:border-purple-400 focus:outline-none focus:shadow-outline-purple dark:text-gray-300 dark:focus:shadow-outline-gray form-input">
+                    </div>
+                    <div class="xs:w-4/12 w-auto mb-4 md:mb-0">
+                        <p class="mb-2 text-sm font-medium text-gray-600 dark:text-gray-400">Data Final</p>
+                        <input name="ranking_date_end" id="ranking_date_end" type="date" value="<?=$d_end;?>" class="mr-2 block w-full mt-1 text-sm dark:border-gray-600 dark:bg-gray-700 focus:border-purple-400 focus:outline-none focus:shadow-outline-purple dark:text-gray-300 dark:focus:shadow-outline-gray form-input">
+                    </div>
+                    <div class="xs:w-5/12 w-auto mb-4 md:mb-0">
+                        <p class="mb-2 text-sm font-medium text-gray-600 dark:text-gray-400">Quantidade</p>
+                        <select name="top" id="top" class="block w-full mt-1 text-sm dark:text-gray-300 dark:border-gray-600 dark:bg-gray-700 form-select focus:border-purple-400 focus:outline-none focus:shadow-outline-purple dark:focus:shadow-outline-gray">
+                          <option value="1" <?php if($top == 1){echo 'selected';} ?>>1</option>               
+                          <option value="2" <?php if($top == 2){echo 'selected';} ?>>2</option>               
+                          <option value="3" <?php if($top == 3){echo 'selected';} ?>>3</option>               
+                          <option value="4" <?php if($top == 4){echo 'selected';} ?>>4</option>               
+                          <option value="5" <?php if($top == 5){echo 'selected';} ?>>5</option>               
+                          <option value="6" <?php if($top == 6){echo 'selected';} ?>>6</option>               
+                          <option value="7" <?php if($top == 7){echo 'selected';} ?>>7</option>               
+                          <option value="8" <?php if($top == 8){echo 'selected';} ?>>8</option>               
+                          <option value="9" <?php if($top == 9){echo 'selected';} ?>>9</option>               
+                          <option value="10" <?php if($top == 10){echo 'selected';} ?>>10</option>               
+                        </select>
+                    </div>
+                    <div class="xs:w-auto w-full mb-4 md:mb-0">
+                        <button class="w-full px-5 py-2 font-medium leading-5 text-white transition-colors duration-150 bg-purple-600 border border-transparent rounded-lg active:bg-purple-600 hover:bg-purple-700 focus:outline-none focus:shadow-outline-purple filtrar">Gerar lista</button>
+                    </div>
+                </div>
+            </form>
+            <p class="text-lg text-gray-700 dark:text-gray-200">
                 <?php 
-                $qry = $conn->query("SELECT * FROM `product_list`");
-                while ($row = $qry->fetch_assoc()) { ?>
-              <option value="<?= $row['id'] ?>" <?php if($raffle == $row['id']){echo 'selected';} ?>><?= $row['name'] ?></option>
-               <?php }  ?>
-            </select>
-          </div>
-            <div>
-              <p class="mb-2 text-sm font-medium text-gray-600 dark:text-gray-400">Número / bicho sorteado</p>
-             <input type="text" name="number" class="block w-full mt-1 text-sm dark:border-gray-600 dark:bg-gray-700 focus:border-purple-400 focus:outline-none focus:shadow-outline-purple dark:text-gray-300 dark:focus:shadow-outline-gray form-input" placeholder="ex: 15 / Leão">
-           </div>
-           <div><br>
-            <button class="px-5 py-3 font-medium leading-5 text-white transition-colors duration-150 bg-purple-600 border border-transparent rounded-lg active:bg-purple-600 hover:bg-purple-700 focus:outline-none focus:shadow-outline-purple filtrar"> Buscar</button>
-          </div>
-        </div>
-    </form>
+                $g_total = 0;
+                $i = 1; 
+                if($raffle && $top){
+                  
+                  if(empty($_GET['ranking_date_start']) || empty($_GET['ranking_date_end'])) {
 
-  <p class="text-gray-700 dark:text-gray-200 winner-info">
-  <span id="name"></span>
-  <span id="phone"></span>
-  <span id="raffle"></span>
-  <span id="date"></span>
-  <span id="payment_status"></span>
-  <span id="number"></span>
-  <span class="winner"></span>
-</p>
-</div>
-</div>
-<!-- Card -->
-<div class="items-center p-4 bg-white rounded-lg shadow-xs dark:bg-gray-800">
-
-<div>
-  <p class="mb-2 text-sm font-medium text-gray-600 dark:text-gray-400">
-  RANKING DE COMPRADORES
-</p>
-    <form action="" id="filter-form" style="margin-bottom:10px">
-
-        <div class="flex flex-wrap justify-between items-end">
-            <div class="xs:w-full w-auto mb-4 md:mb-0">
-                <p class="mb-2 text-sm font-medium text-gray-600 dark:text-gray-400">Selecione a rifa</p>
-                <select name="raffle" id="raffle" class="block w-full mt-1 pr-2 text-sm dark:text-gray-300 dark:border-gray-600 dark:bg-gray-700 form-select focus:border-purple-400 focus:outline-none focus:shadow-outline-purple dark:focus:shadow-outline-gray">xxx
-                    <option value="">Selecione</option>
-                    <?php 
-                    $qry = $conn->query("SELECT * FROM `product_list`");
-                    while ($row = $qry->fetch_assoc()) { ?>
-                  <option value="<?= $row['id'] ?>" <?php if($raffle == $row['id']){echo 'selected';} ?>><?= $row['name'] ?></option>
-                  <?php }  ?>
-                </select>
-            </div>
-            <div class="xs:w-4/12 w-auto mb-4 md:mb-0">
-                <p class="mb-2 text-sm font-medium text-gray-600 dark:text-gray-400">Data Inicial</p>
-                <input name="ranking_date_start" id="ranking_date_start" type="date" value="<?=$d_start;?>" class="mr-2 block w-full mt-1 text-sm dark:border-gray-600 dark:bg-gray-700 focus:border-purple-400 focus:outline-none focus:shadow-outline-purple dark:text-gray-300 dark:focus:shadow-outline-gray form-input">
-            </div>
-            <div class="xs:w-4/12 w-auto mb-4 md:mb-0">
-                <p class="mb-2 text-sm font-medium text-gray-600 dark:text-gray-400">Data Final</p>
-                <input name="ranking_date_end" id="ranking_date_end" type="date" value="<?=$d_end;?>" class="mr-2 block w-full mt-1 text-sm dark:border-gray-600 dark:bg-gray-700 focus:border-purple-400 focus:outline-none focus:shadow-outline-purple dark:text-gray-300 dark:focus:shadow-outline-gray form-input">
-            </div>
-            <div class="xs:w-5/12 w-auto mb-4 md:mb-0">
-                <p class="mb-2 text-sm font-medium text-gray-600 dark:text-gray-400">Quantidade</p>
-                <select name="top" id="top" class="block w-full mt-1 text-sm dark:text-gray-300 dark:border-gray-600 dark:bg-gray-700 form-select focus:border-purple-400 focus:outline-none focus:shadow-outline-purple dark:focus:shadow-outline-gray">
-                  <option value="1" <?php if($top == 1){echo 'selected';} ?>>1</option>               
-                  <option value="2" <?php if($top == 2){echo 'selected';} ?>>2</option>               
-                  <option value="3" <?php if($top == 3){echo 'selected';} ?>>3</option>               
-                  <option value="4" <?php if($top == 4){echo 'selected';} ?>>4</option>               
-                  <option value="5" <?php if($top == 5){echo 'selected';} ?>>5</option>               
-                  <option value="6" <?php if($top == 6){echo 'selected';} ?>>6</option>               
-                  <option value="7" <?php if($top == 7){echo 'selected';} ?>>7</option>               
-                  <option value="8" <?php if($top == 8){echo 'selected';} ?>>8</option>               
-                  <option value="9" <?php if($top == 9){echo 'selected';} ?>>9</option>               
-                  <option value="10" <?php if($top == 10){echo 'selected';} ?>>10</option>               
-                </select>
-            </div>
-            <div class="xs:w-auto w-full mb-4 md:mb-0">
-                <button class="w-full px-5 py-2 font-medium leading-5 text-white transition-colors duration-150 bg-purple-600 border border-transparent rounded-lg active:bg-purple-600 hover:bg-purple-700 focus:outline-none focus:shadow-outline-purple filtrar">Gerar lista</button>
-            </div>
-        </div>
-    </form>
-<p class="text-lg text-gray-700 dark:text-gray-200">
-           <?php 
-            $g_total = 0;
-            $i = 1; 
-            if($raffle && $top){
-              
-              if(empty($_GET['ranking_date_start']) || empty($_GET['ranking_date_end'])) {
-
-                $stmt = $conn->prepare("
-                    SELECT c.firstname, c.lastname, c.phone, SUM(o.quantity) AS total_quantity, SUM(o.total_amount) AS total_amount, 
-                    o.code, CONCAT(' ', o.product_name) AS product
-                    FROM order_list o
-                    INNER JOIN customer_list c ON o.customer_id = c.id
-                    WHERE o.product_id = ? AND o.status = 2
-                    GROUP BY o.customer_id
-                    ORDER BY total_quantity DESC
-                    LIMIT ?
-                ");
-                
-                if ($stmt === false) {
-                    die('Erro na preparação da consulta: ' . $conn->error);
+                    $stmt = $conn->prepare("
+                        SELECT c.firstname, c.lastname, c.phone, SUM(o.quantity) AS total_quantity, SUM(o.total_amount) AS total_amount, 
+                        o.code, CONCAT(' ', o.product_name) AS product
+                        FROM order_list o
+                        INNER JOIN customer_list c ON o.customer_id = c.id
+                        WHERE o.product_id = ? AND o.status = 2
+                        GROUP BY o.customer_id
+                        ORDER BY total_quantity DESC
+                        LIMIT ?
+                    ");
+                    
+                    if ($stmt === false) {
+                        die('Erro na preparação da consulta: ' . $conn->error);
+                    }
+                   
+                    $stmt->bind_param("ii", $raffle, $top);
+                    $stmt->execute();           
+                    $requests = $stmt->get_result();
+                }else{
+                    $date_start = isset($d_start) ? new DateTime($d_start) : '';
+                    $date_end = isset($d_end) ? new DateTime($d_end) : '';
+                    $date_start_formatted = $date_start->format('Y-m-d') . " 00:00:00";
+                    $date_end_formatted = $date_end->format('Y-m-d') . " 23:59:59";  
+                    $stmt = $conn->prepare("
+                        SELECT c.firstname, c.lastname, c.phone, SUM(o.quantity) AS total_quantity, SUM(o.total_amount) AS total_amount, 
+                        o.code, CONCAT(' ', o.product_name) AS product, o.date_created
+                        FROM order_list o
+                        INNER JOIN customer_list c ON o.customer_id = c.id
+                        WHERE o.product_id = ? AND o.status = 2
+                        AND o.date_created >= ? AND o.date_created <= ?
+                        GROUP BY o.customer_id
+                        ORDER BY total_quantity DESC
+                        LIMIT ?
+                    ");
+                    
+                    if ($stmt === false) {
+                        die('Erro na preparação da consulta: ' . $conn->error);
+                    }
+                    
+                    $stmt->bind_param("issi", $raffle, $date_start_formatted, $date_end_formatted, $top);
+                    $stmt->execute();           
+                    $requests = $stmt->get_result();
                 }
-               
-                $stmt->bind_param("ii", $raffle, $top);
-                $stmt->execute();           
-                $requests = $stmt->get_result();
-            }else{
-                $date_start = isset($d_start) ? new DateTime($d_start) : '';
-                $date_end = isset($d_end) ? new DateTime($d_end) : '';
-                $date_start_formatted = $date_start->format('Y-m-d') . " 00:00:00";
-                $date_end_formatted = $date_end->format('Y-m-d') . " 23:59:59";  
-                $stmt = $conn->prepare("
-                    SELECT c.firstname, c.lastname, c.phone, SUM(o.quantity) AS total_quantity, SUM(o.total_amount) AS total_amount, 
-                    o.code, CONCAT(' ', o.product_name) AS product, o.date_created
-                    FROM order_list o
-                    INNER JOIN customer_list c ON o.customer_id = c.id
-                    WHERE o.product_id = ? AND o.status = 2
-                    AND o.date_created >= ? AND o.date_created <= ?
-                    GROUP BY o.customer_id
-                    ORDER BY total_quantity DESC
-                    LIMIT ?
-                ");
-                
-                if ($stmt === false) {
-                    die('Erro na preparação da consulta: ' . $conn->error);
-                }
-                
-                $stmt->bind_param("issi", $raffle, $date_start_formatted, $date_end_formatted, $top);
-                $stmt->execute();           
-                $requests = $stmt->get_result();
-            }
 
-            while ($row = $requests->fetch_assoc()) {
+                while ($row = $requests->fetch_assoc()) {
 
-                ?>
-                  <p class="mb-2 text-sm font-medium text-gray-600 dark:text-gray-400" style="border:1px solid #eee;margin-bottom:10px;padding:10px;">
-                      
-                    <span>Nome: <?= $row['firstname'] ?> <?= $row['lastname'] ?></span><br>
-                    
-                    <span class="<?=$enable_raffle_mode_class_phone;?>">Telefone: <?= formatPhoneNumber($row['phone']); ?></span><br>
-                    
-                    <span>Rifa: <?= $row['product'] ?></span><br>
-                    
-                    <span>Qtd. Cotas: <?= $row['total_quantity'] ?></span><br>
-                    
-                    <span>Total: R$ <?= format_num($row['total_amount'],2) ?></span>
-                    
-                    </p>         
+                    ?>
+                      <p class="mb-2 text-sm font-medium text-gray-600 dark:text-gray-400" style="border:1px solid #eee;margin-bottom:10px;padding:10px;">
+                          
+                        <span>Nome: <?= $row['firstname'] ?> <?= $row['lastname'] ?></span><br>
+                        
+                        <span class="<?=$enable_raffle_mode_class_phone;?>">Telefone: <?= formatPhoneNumber($row['phone']); ?></span><br>
+                        
+                        <span>Rifa: <?= $row['product'] ?></span><br>
+                        
+                        <span>Qtd. Cotas: <?= $row['total_quantity'] ?></span><br>
+                        
+                        <span>Total: R$ <?= format_num($row['total_amount'],2) ?></span>
+                        
+                        </p>         
 
-            <?php } ?>
+                <?php } ?>
 
-            <?php } ?>
-</p>
-</div>
-</div>
-
-
+                <?php } ?>
+            </p>
+        </div>
+    </div>
 </div>
 <!-- Busca Ganhador x Ranking -->
 
