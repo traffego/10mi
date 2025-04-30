@@ -9,6 +9,9 @@ $enable_hide_numbers = $_settings->info('enable_hide_numbers');
     display: flex;
     flex-wrap: wrap;
     align-content: flex-start;
+    justify-content: center; /* Centralizar os badges horizontalmente */
+    width: 100%; /* Garantir largura completa */
+    max-width: 100%;
   }
   
   /* Aplicando a altura fixa à área compra-cotas */
@@ -25,6 +28,10 @@ $enable_hide_numbers = $_settings->info('enable_hide_numbers');
     transition: height 0.3s ease;
     scrollbar-width: thin;
     -ms-overflow-style: none;
+    text-align: center; /* Centralizar texto e elementos inline */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centralizar conteúdo verticalmente */
   }
   
   .compra-cotas.font-xs::-webkit-scrollbar {
@@ -46,6 +53,7 @@ $enable_hide_numbers = $_settings->info('enable_hide_numbers');
     pointer-events: none;
     z-index: 5;
     overflow: hidden;
+    width: 100%; /* Garantir largura completa */
   }
   
   /* Efeito de blur como elemento separado para facilitar o controle */
@@ -84,6 +92,9 @@ $enable_hide_numbers = $_settings->info('enable_hide_numbers');
     margin: 4px;
     padding: 6px 4px;
     font-size: 0.75rem;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
   }
   
   .expand-button {
