@@ -533,21 +533,6 @@ html[data-theme="dark"] footer .text-gray-500,
   }
 }
 
-html[class*="theme-dark"] .adm-pedido-numeros  {
-  color: #000 !important;
-}
-html[class*="theme-dark"] .adm-pedido-numeros a:hover{
-  color: #000 !important;
-}
-
-.dark .adm-pedido-numeros {
-  color: #046c4e !important;
-}
-
-.dark .adm-pedido-numeros:hover {
-  color: #000 !important;
-}
-
 .adm-pedido-numeros {
 position: relative;
     display: block;
