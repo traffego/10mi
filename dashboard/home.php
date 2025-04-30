@@ -654,6 +654,33 @@ tbody {
     padding: 0.5rem 0.75rem !important;
   }
 }
+
+/* Ícones para o ranking */
+.icon-phone:before {
+  content: "📱";
+  margin-right: 0.25rem;
+}
+
+.icon-ticket:before {
+  content: "🎫";
+  margin-right: 0.25rem;
+}
+
+/* Mensagem quando não há resultados no ranking */
+.no-results-message {
+  text-align: center;
+  padding: 2rem;
+  background-color: #f9fafb;
+  border-radius: 0.5rem;
+  border: 1px dashed #d1d5db;
+  color: #6b7280;
+}
+
+.dark .no-results-message {
+  background-color: #374151;
+  border-color: #4b5563;
+  color: #9ca3af;
+}
 </style>       
 
 <main class="h-full overflow-y-auto">
@@ -763,7 +790,7 @@ tbody {
   </script>
 
 <!--Busca Ganhador x Ranking -->
-<div class="grid gap-6 mb-8 md:grid-cols-2 xl:grid-cols-3">
+<div class="grid gap-6 mb-8 md:grid-cols-2 xl:grid-cols-2">
     <!-- Card Buscar Ganhador -->
     <div class="bg-white rounded-lg shadow-xs overflow-hidden dark:bg-gray-800">
         <div class="flex items-center p-4 bg-purple-50 dark:bg-gray-700">
@@ -871,21 +898,27 @@ tbody {
             </div>
         </div>
     </div>
-    <!-- Card Ranking de Compradores -->
-    <div class="bg-white rounded-lg shadow-xs overflow-hidden dark:bg-gray-800">
-        <div class="flex items-center p-4 bg-blue-50 dark:bg-gray-700">
-            <div class="p-3 mr-4 text-blue-500 bg-blue-100 rounded-full dark:text-blue-100 dark:bg-blue-500">
-                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+</div>
+
+<!-- Divisor visual entre seções -->
+<div class="border-t my-8 border-gray-200 dark:border-gray-700"></div>
+
+<!-- Card Ranking de Compradores -->
+<div class="w-full mb-8">
+    <div class="bg-white rounded-lg shadow-md overflow-hidden dark:bg-gray-800 border border-gray-200 dark:border-gray-700">
+        <div class="flex items-center p-5 bg-blue-50 dark:bg-gray-700 border-b-2 border-blue-200 dark:border-blue-800">
+            <div class="p-3 mr-4 text-blue-500 bg-blue-100 rounded-full dark:text-blue-100 dark:bg-blue-600">
+                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20">
                     <path fill-rule="evenodd" d="M18 5v8a2 2 0 01-2 2h-5l-5 4v-4H4a2 2 0 01-2-2V5a2 2 0 012-2h12a2 2 0 012 2zM7 8H5v2h2V8zm2 0h2v2H9V8zm6 0h-2v2h2V8z" clip-rule="evenodd"></path>
                 </svg>
             </div>
-            <h3 class="text-lg font-semibold text-gray-700 dark:text-gray-200">
-  RANKING DE COMPRADORES
+            <h3 class="text-xl font-bold text-gray-700 dark:text-gray-200">
+                RANKING DE COMPRADORES
             </h3>
         </div>
         <div class="border-t border-gray-200 dark:border-gray-700"></div>
-        <div class="p-4">
-    <form action="" id="filter-form" style="margin-bottom:10px">
+        <div class="p-5">
+    <form action="" id="filter-form" style="margin-bottom:15px">
         <div class="flex flex-wrap justify-between items-end">
             <div class="xs:w-full w-auto mb-4 md:mb-0">
                 <p class="mb-2 text-sm font-medium text-gray-600 dark:text-gray-400">Selecione a rifa</p>
@@ -981,28 +1014,52 @@ tbody {
             while ($row = $requests->fetch_assoc()) {
 
                 ?>
-                  <p class="mb-2 text-sm font-medium text-gray-600 dark:text-gray-400" style="border:1px solid #eee;margin-bottom:10px;padding:10px;">
-                      
-                    <span>Nome: <?= $row['firstname'] ?> <?= $row['lastname'] ?></span><br>
-                    
-                    <span class="<?=$enable_raffle_mode_class_phone;?>">Telefone: <?= formatPhoneNumber($row['phone']); ?></span><br>
-                    
-                    <span>Rifa: <?= $row['product'] ?></span><br>
-                    
-                    <span>Qtd. Cotas: <?= $row['total_quantity'] ?></span><br>
-                    
-                    <span>Total: R$ <?= format_num($row['total_amount'],2) ?></span>
-                    
-                    </p>         
+                  <div class="mb-4 p-4 bg-gray-50 dark:bg-gray-700 rounded-lg border-l-4 border-blue-500 shadow-sm hover:shadow-md transition-shadow duration-200">
+                    <div class="flex flex-wrap">
+                      <div class="w-full md:w-1/2 mb-2 md:mb-0">
+                        <p class="font-medium text-gray-800 dark:text-gray-200 mb-1">
+                          <span class="text-blue-600 dark:text-blue-400 font-bold"><?= $row['firstname'] ?> <?= $row['lastname'] ?></span>
+                        </p>
+                        <p class="text-sm text-gray-600 dark:text-gray-400 mb-1">
+                          <span class="<?=$enable_raffle_mode_class_phone;?>">
+                            <span class="icon-phone"></span><?= formatPhoneNumber($row['phone']); ?>
+                          </span>
+                        </p>
+                        <p class="text-sm text-gray-600 dark:text-gray-400">
+                          <span class="icon-ticket"></span><?= $row['product'] ?>
+                        </p>
+                      </div>
+                      <div class="w-full md:w-1/2 flex items-center justify-end">
+                        <div class="text-right">
+                          <p class="mb-1">
+                            <span class="text-sm font-medium text-gray-600 dark:text-gray-400">Qtd. Cotas:</span> 
+                            <span class="text-lg font-bold text-green-600 dark:text-green-400"><?= $row['total_quantity'] ?></span>
+                          </p>
+                          <p>
+                            <span class="text-sm font-medium text-gray-600 dark:text-gray-400">Total:</span> 
+                            <span class="text-lg font-bold text-indigo-600 dark:text-indigo-400">R$ <?= format_num($row['total_amount'],2) ?></span>
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>         
 
             <?php } ?>
 
+            <?php } else { ?>
+              <div class="no-results-message">
+                <svg class="w-12 h-12 mx-auto mb-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01"></path>
+                </svg>
+                <p class="text-lg font-semibold">Nenhum resultado encontrado</p>
+                <p class="mt-2">Selecione uma rifa e defina os parâmetros para visualizar o ranking de compradores</p>
+              </div>
             <?php } ?>
 </p>
 </div>
 </div>
 </div>
-<!-- Busca Ganhador x Ranking -->
+<!-- Fim Ranking de Compradores -->
 
 <?php 
 $status = isset($_GET['status']) ? $_GET['status'] : '';
@@ -1192,7 +1249,7 @@ $stat_arr = ['Pending Orders', 'Packed Orders', 'Our for Delivery', 'Completed O
   <tr class="text-gray-700 dark:text-gray-400">
     <td colspan="8" class="px-4 py-8 text-center">
       <div class="flex flex-col items-center justify-center">
-        <svg class="w-12 h-12 text-gray-400 mb-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <svg class="w-12 h-12 text-gray-400 mb-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
         </svg>
         <p class="text-lg font-semibold text-gray-700 dark:text-gray-300">Nenhum pedido encontrado</p>
