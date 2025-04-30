@@ -354,6 +354,12 @@ html[class*="theme-dark"] nav a,
   color: #e2e8f0 !important;
 }
 
+html[class*="theme-dark"] nav a,
+.theme-dark nav a,
+:root.theme-dark .adm-pedido-numeros a {
+  color: #e2e8f0 !important;
+}
+
 html[class*="theme-dark"] nav a:hover,
 .theme-dark nav a:hover,
 :root.theme-dark nav a:hover {
