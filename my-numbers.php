@@ -2,50 +2,29 @@
 $enable_hide_numbers = $_settings->info('enable_hide_numbers');
 ?>
 <style>
-  /* Container principal com altura fixa */
-  .compra-cotas.font-xs {
-    position: relative;
-    height: 300px;
-    margin-bottom: 10px;
-    border: 1px solid #e9e9e9;
-    border-radius: 8px;
-    transition: height 0.3s ease;
-    overflow: hidden; /* Esconde qualquer conteúdo que ultrapasse */
-  }
-  
-  /* Área que pode rolar */
-  .numbers-scroll-area {
-    height: 100%;
-    overflow-y: auto !important; /* Força a rolagem vertical */
-    padding: 10px;
-    padding-bottom: 80px; /* Espaço extra para o gradient não cobrir os últimos itens */
-    -webkit-overflow-scrolling: touch; /* Rolagem suave em dispositivos iOS */
-    scrollbar-width: thin; /* Firefox */
-  }
-  
-  /* Estilizando a barra de rolagem */
-  .numbers-scroll-area::-webkit-scrollbar {
-    width: 6px;
-  }
-  
-  .numbers-scroll-area::-webkit-scrollbar-thumb {
-    background-color: rgba(0,0,0,0.2);
-    border-radius: 3px;
-  }
-  
-  .numbers-scroll-area::-webkit-scrollbar-track {
-    background: transparent;
-  }
-  
-  /* Container flexbox para os números */
+  /* Estilos para os badges de números */
   .numbers-container {
+    position: relative;
+    padding: 5px;
     display: flex;
     flex-wrap: wrap;
     align-content: flex-start;
   }
   
-  /* Overlay de gradiente - sempre fixo na parte inferior */
-  .gradient-overlay {
+  /* Aplicando a altura fixa à área compra-cotas */
+  .compra-cotas.font-xs {
+    height: 300px;
+    overflow-y: auto;
+    position: relative;
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #e9e9e9;
+    border-radius: 8px;
+    transition: height 0.3s ease;
+  }
+  
+  /* Efeito de blur como elemento separado para facilitar o controle */
+  .blur-overlay {
     position: absolute;
     bottom: 0;
     left: 0;
@@ -60,22 +39,21 @@ $enable_hide_numbers = $_settings->info('enable_hide_numbers');
   }
   
   /* Modo escuro para o gradiente */
-  .dark .gradient-overlay {
+  .dark .blur-overlay {
     background: linear-gradient(to bottom, rgba(30,30,30,0) 0%, rgba(30,30,30,0.9) 70%, rgba(30,30,30,1) 100%);
   }
   
-  /* Estado expandido */
+  /* Esconder o gradiente quando expandido */
+  .blur-hidden {
+    opacity: 0;
+    visibility: hidden;
+  }
+  
   .compra-cotas.font-xs.expanded {
     height: auto;
     max-height: 600px;
   }
   
-  /* Esconder o gradiente quando expandido */
-  .compra-cotas.font-xs.expanded .gradient-overlay {
-    opacity: 0;
-  }
-  
-  /* Estilo para os badges */
   .badge.bg-success.me-1, .badge.bg-warning.me-1, .badge.bg-danger.me-1 {
     min-width: 60px;
     text-align: center;
@@ -126,7 +104,7 @@ $enable_hide_numbers = $_settings->info('enable_hide_numbers');
       flex: 0 0 calc(33.33% - 8px);
     }
     
-    .gradient-overlay {
+    .blur-overlay {
       height: 80px;
     }
   }
@@ -260,29 +238,21 @@ $enable_hide_numbers = $_settings->info('enable_hide_numbers');
                      // Captura os números em uma variável para usar no contêiner
                      $numbersDisplay = leowp_format_luck_numbers($orderRow['o_numbers'], $orderRow['qty_numbers'], $class, $opt = true, $type_of_draw);
                      ?>
-                     <div class="numbers-scroll-area">
-                       <div class="numbers-container">
-                         <?= $numbersDisplay ?>
-                       </div>
+                     <div class="numbers-container">
+                       <?= $numbersDisplay ?>
                      </div>
-                     <div class="gradient-overlay"></div>
+                     <div class="blur-overlay" id="blur-overlay-<?= $orderRow['id'] ?>"></div>
                   <?php
                   } elseif($type_of_draw == 1 && $status == 1 && $enable_hide_numbers == 1){
-                     ?>
-                     <div class="numbers-scroll-area">
-                       As cotas serão geradas após o pagamento.
-                     </div>
-                     <?php
+                     echo 'As cotas serão geradas após o pagamento.';
                   } else {
                      // Captura os números em uma variável para usar no contêiner
                      $numbersDisplay = leowp_format_luck_numbers($orderRow['o_numbers'], $orderRow['qty_numbers'], $class, $opt = true, $type_of_draw);
                      ?>
-                     <div class="numbers-scroll-area">
-                       <div class="numbers-container">
-                         <?= $numbersDisplay ?>
-                       </div>
+                     <div class="numbers-container">
+                       <?= $numbersDisplay ?>
                      </div>
-                     <div class="gradient-overlay"></div>
+                     <div class="blur-overlay" id="blur-overlay-<?= $orderRow['id'] ?>"></div>
                   <?php
                   }
                   unset($_SESSION['phone']);
@@ -317,13 +287,18 @@ $enable_hide_numbers = $_settings->info('enable_hide_numbers');
   function toggleExpand(id) {
     const container = document.getElementById('compra-cotas-' + id);
     const button = document.getElementById('expand-button-' + id);
+    const blurOverlay = document.getElementById('blur-overlay-' + id);
     
     if (container.classList.contains('expanded')) {
       container.classList.remove('expanded');
       button.innerHTML = '<i class="bi bi-eye"></i> Mostrar todos os números';
+      // Mostrar o efeito de blur novamente
+      blurOverlay.classList.remove('blur-hidden');
     } else {
       container.classList.add('expanded');
       button.innerHTML = '<i class="bi bi-eye-slash"></i> Ocultar números';
+      // Esconder o efeito de blur
+      blurOverlay.classList.add('blur-hidden');
     }
   }
 
