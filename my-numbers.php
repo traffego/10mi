@@ -31,7 +31,7 @@ $enable_hide_numbers = $_settings->info('enable_hide_numbers');
     left: 0;
     right: 0;
     height: 100px;
-    background: linear-gradient(to bottom, rgba(255,255,255,0) 0%, rgba(255,255,255,0.9) 70%, rgba(255,255,255,1) 100%);
+    background: linear-gradient(to bottom, rgba(255,255,255,0) 0%, rgba(49, 49, 49, 0.9) 70%, rgba(49, 49, 49, 1) 100%);
     pointer-events: none;
     z-index: 2;
     border-bottom-left-radius: 8px;
