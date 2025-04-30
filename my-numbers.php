@@ -16,9 +16,25 @@ $enable_hide_numbers = $_settings->info('enable_hide_numbers');
   /* Área que pode rolar */
   .numbers-scroll-area {
     height: 100%;
-    overflow-y: auto;
+    overflow-y: auto !important; /* Força a rolagem vertical */
     padding: 10px;
     padding-bottom: 80px; /* Espaço extra para o gradient não cobrir os últimos itens */
+    -webkit-overflow-scrolling: touch; /* Rolagem suave em dispositivos iOS */
+    scrollbar-width: thin; /* Firefox */
+  }
+  
+  /* Estilizando a barra de rolagem */
+  .numbers-scroll-area::-webkit-scrollbar {
+    width: 6px;
+  }
+  
+  .numbers-scroll-area::-webkit-scrollbar-thumb {
+    background-color: rgba(0,0,0,0.2);
+    border-radius: 3px;
+  }
+  
+  .numbers-scroll-area::-webkit-scrollbar-track {
+    background: transparent;
   }
   
   /* Container flexbox para os números */
