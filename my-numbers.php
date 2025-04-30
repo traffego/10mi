@@ -4,6 +4,15 @@ $enable_hide_numbers = $_settings->info('enable_hide_numbers');
 <style>
   /* Estilos para os badges de números */
   .numbers-container {
+    position: relative;
+    padding: 5px;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-start;
+  }
+  
+  /* Aplicando a altura fixa à área compra-cotas */
+  .compra-cotas.font-xs {
     height: 300px;
     overflow-y: auto;
     position: relative;
@@ -11,13 +20,10 @@ $enable_hide_numbers = $_settings->info('enable_hide_numbers');
     padding: 10px;
     border: 1px solid #e9e9e9;
     border-radius: 8px;
-    display: flex;
-    flex-wrap: wrap;
-    align-content: flex-start;
     transition: height 0.3s ease;
   }
   
-  .numbers-container.expanded {
+  .compra-cotas.font-xs.expanded {
     height: auto;
     max-height: 600px;
   }
@@ -185,19 +191,16 @@ $enable_hide_numbers = $_settings->info('enable_hide_numbers');
                <small class="font-xss opacity-75 text-uppercase">Cancelado</small>
             <?php } ?>
             <?php if($status != 3){ ?>
-               <div class="compra-cotas font-xs">
+               <div class="compra-cotas font-xs" id="compra-cotas-<?= $orderRow['id'] ?>">
                   <?php 
                   $type_of_draw = $orderRow['type_of_draw'];
                   if($type_of_draw > 1){
                      // Captura os números em uma variável para usar no contêiner
                      $numbersDisplay = leowp_format_luck_numbers($orderRow['o_numbers'], $orderRow['qty_numbers'], $class, $opt = true, $type_of_draw);
                      ?>
-                     <div class="numbers-container" id="numbers-container-<?= $orderRow['id'] ?>">
+                     <div class="numbers-container">
                        <?= $numbersDisplay ?>
                      </div>
-                     <button type="button" class="expand-button" id="expand-button-<?= $orderRow['id'] ?>" onclick="toggleExpand('<?= $orderRow['id'] ?>')">
-                       <i class="bi bi-chevron-down"></i> Ver mais
-                     </button>
                   <?php
                   } elseif($type_of_draw == 1 && $status == 1 && $enable_hide_numbers == 1){
                      echo 'As cotas serão geradas após o pagamento.';
@@ -205,17 +208,17 @@ $enable_hide_numbers = $_settings->info('enable_hide_numbers');
                      // Captura os números em uma variável para usar no contêiner
                      $numbersDisplay = leowp_format_luck_numbers($orderRow['o_numbers'], $orderRow['qty_numbers'], $class, $opt = true, $type_of_draw);
                      ?>
-                     <div class="numbers-container" id="numbers-container-<?= $orderRow['id'] ?>">
+                     <div class="numbers-container">
                        <?= $numbersDisplay ?>
                      </div>
-                     <button type="button" class="expand-button" id="expand-button-<?= $orderRow['id'] ?>" onclick="toggleExpand('<?= $orderRow['id'] ?>')">
-                       <i class="bi bi-chevron-down"></i> Ver mais
-                     </button>
                   <?php
                   }
                   unset($_SESSION['phone']);
                   ?>              
                </div>
+               <button type="button" class="expand-button" id="expand-button-<?= $orderRow['id'] ?>" onclick="toggleExpand('<?= $orderRow['id'] ?>')">
+                 <i class="bi bi-chevron-down"></i> Ver mais
+               </button>
             <?php } ?>
       </div>
       <div class="col-auto">
@@ -240,7 +243,7 @@ $enable_hide_numbers = $_settings->info('enable_hide_numbers');
 
 <script>
   function toggleExpand(id) {
-    const container = document.getElementById('numbers-container-' + id);
+    const container = document.getElementById('compra-cotas-' + id);
     const button = document.getElementById('expand-button-' + id);
     
     if (container.classList.contains('expanded')) {
