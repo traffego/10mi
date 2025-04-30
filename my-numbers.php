@@ -1,6 +1,69 @@
 <?php
 $enable_hide_numbers = $_settings->info('enable_hide_numbers');
 ?>
+<style>
+  /* Estilos para os badges de números */
+  .numbers-container {
+    height: 300px;
+    overflow-y: auto;
+    position: relative;
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #e9e9e9;
+    border-radius: 8px;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    transition: height 0.3s ease;
+  }
+  
+  .numbers-container.expanded {
+    height: auto;
+    max-height: 600px;
+  }
+  
+  .badge.bg-success.me-1, .badge.bg-warning.me-1, .badge.bg-danger.me-1 {
+    min-width: 60px;
+    text-align: center;
+    margin-bottom: 8px;
+    flex: 0 0 calc(20% - 8px);
+    margin: 4px;
+    padding: 6px 4px;
+    font-size: 0.75rem;
+  }
+  
+  .expand-button {
+    display: block;
+    width: 100%;
+    text-align: center;
+    margin-top: -1px;
+    padding: 5px;
+    background-color: #f8f9fa;
+    border: 1px solid #e9e9e9;
+    border-top: none;
+    border-radius: 0 0 8px 8px;
+    cursor: pointer;
+    font-size: 0.85rem;
+    transition: all 0.2s ease;
+  }
+  
+  .expand-button:hover {
+    background-color: #e9ecef;
+  }
+  
+  @media (max-width: 768px) {
+    .badge.bg-success.me-1, .badge.bg-warning.me-1, .badge.bg-danger.me-1 {
+      flex: 0 0 calc(25% - 8px);
+    }
+  }
+  
+  @media (max-width: 576px) {
+    .badge.bg-success.me-1, .badge.bg-warning.me-1, .badge.bg-danger.me-1 {
+      flex: 0 0 calc(33.33% - 8px);
+    }
+  }
+</style>
+
 <div class="container app-main">
    <div class="mb-3">
       <div class="row justify-content-between w-100 align-items-center">
@@ -126,13 +189,31 @@ $enable_hide_numbers = $_settings->info('enable_hide_numbers');
                   <?php 
                   $type_of_draw = $orderRow['type_of_draw'];
                   if($type_of_draw > 1){
-                     echo leowp_format_luck_numbers($orderRow['o_numbers'], $orderRow['qty_numbers'], $class, $opt = true, $type_of_draw); 
-                  }elseif($type_of_draw == 1 && $status == 1 && $enable_hide_numbers == 1){
+                     // Captura os números em uma variável para usar no contêiner
+                     $numbersDisplay = leowp_format_luck_numbers($orderRow['o_numbers'], $orderRow['qty_numbers'], $class, $opt = true, $type_of_draw);
+                     ?>
+                     <div class="numbers-container" id="numbers-container-<?= $orderRow['id'] ?>">
+                       <?= $numbersDisplay ?>
+                     </div>
+                     <button type="button" class="expand-button" id="expand-button-<?= $orderRow['id'] ?>" onclick="toggleExpand('<?= $orderRow['id'] ?>')">
+                       <i class="bi bi-chevron-down"></i> Ver mais
+                     </button>
+                  <?php
+                  } elseif($type_of_draw == 1 && $status == 1 && $enable_hide_numbers == 1){
                      echo 'As cotas serão geradas após o pagamento.';
-                  }else{
-                     echo leowp_format_luck_numbers($orderRow['o_numbers'], $orderRow['qty_numbers'], $class, $opt = true, $type_of_draw); 
+                  } else {
+                     // Captura os números em uma variável para usar no contêiner
+                     $numbersDisplay = leowp_format_luck_numbers($orderRow['o_numbers'], $orderRow['qty_numbers'], $class, $opt = true, $type_of_draw);
+                     ?>
+                     <div class="numbers-container" id="numbers-container-<?= $orderRow['id'] ?>">
+                       <?= $numbersDisplay ?>
+                     </div>
+                     <button type="button" class="expand-button" id="expand-button-<?= $orderRow['id'] ?>" onclick="toggleExpand('<?= $orderRow['id'] ?>')">
+                       <i class="bi bi-chevron-down"></i> Ver mais
+                     </button>
+                  <?php
                   }
-                     unset($_SESSION['phone']);
+                  unset($_SESSION['phone']);
                   ?>              
                </div>
             <?php } ?>
@@ -158,6 +239,19 @@ $enable_hide_numbers = $_settings->info('enable_hide_numbers');
 </div>
 
 <script>
+  function toggleExpand(id) {
+    const container = document.getElementById('numbers-container-' + id);
+    const button = document.getElementById('expand-button-' + id);
+    
+    if (container.classList.contains('expanded')) {
+      container.classList.remove('expanded');
+      button.innerHTML = '<i class="bi bi-chevron-down"></i> Ver mais';
+    } else {
+      container.classList.add('expanded');
+      button.innerHTML = '<i class="bi bi-chevron-up"></i> Ver menos';
+    }
+  }
+
   $(document).ready(function(){
     $('#modal-buscar').submit(function(e){
      e.preventDefault()
