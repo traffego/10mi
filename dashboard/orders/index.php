@@ -428,7 +428,7 @@ leowp-tab .leowp-content p { padding: 10px; }
 						$type_of_draw = $row['type_of_draw'];
 												
 						if ($row['quantity'] > 0) {
-							echo '<a style="color: #000;" class="adm-pedido-numeros" href="javascript:void(0)" @click="openModalNumbers(' . $row["id"]. ')" data-pedido-id="' . $row["id"] . '">Ver todos</a>';
+							echo '<a class="adm-pedido-numeros" href="javascript:void(0)" @click="openModalNumbers(' . $row["id"]. ')" data-pedido-id="' . $row["id"] . '">Ver todos</a>';
 						} else {
 							if ($row['quantity'] < 0) {
 								echo leowp_format_luck_numbers_dashboard($row['o_numbers'], $row['quantity'], false, true, $type_of_draw);
