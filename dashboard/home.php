@@ -654,6 +654,31 @@ tbody {
     padding: 0.5rem 0.75rem !important;
   }
 }
+
+/* Dark mode style for adm-pedido-numeros */
+.dark .adm-pedido-numeros,
+html.dark .adm-pedido-numeros,
+.theme-dark .adm-pedido-numeros,
+html[class*="theme-dark"] .adm-pedido-numeros {
+  color: #000 !important; /* Ensuring text stays dark in dark mode */
+  background-color: #def7ec !important; /* Keep the light background */
+}
+
+/* Garantir que as regras de nav não afetem .adm-pedido-numeros */
+.dark nav a.adm-pedido-numeros,
+html.dark nav a.adm-pedido-numeros,
+.theme-dark nav a.adm-pedido-numeros,
+html[class*="theme-dark"] nav a.adm-pedido-numeros,
+:root.theme-dark nav a.adm-pedido-numeros {
+  color: #000 !important;
+}
+
+.dark .adm-pedido-numeros:hover,
+html.dark .adm-pedido-numeros:hover,
+.theme-dark .adm-pedido-numeros:hover,
+html[class*="theme-dark"] .adm-pedido-numeros:hover {
+  color: #000 !important; /* Ensuring text stays dark on hover */
+}
 </style>       
 
 <main class="h-full overflow-y-auto">
