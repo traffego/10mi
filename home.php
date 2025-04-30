@@ -145,8 +145,8 @@ width: fit-content;
                       <a href="/sorteio/<?= $row['slug'] ?>"> 
                          <div class="SorteioTpl_sorteioTpl__2s2Wu   pointer">
                            <div class="SorteioTpl_imagemContainer__2-pl4 col-auto ">
-                              <div style="display:block;overflow:hidden;position:absolute;top:0;left:0;bottom:0;right:0;box-sizing:border-box;margin:0">
-                                 <img alt="1.500,00 com apenas 0,03 centavos" src="<?= validate_image($row['image_path']) ?>" decoding="async" data-nimg="fill" class="SorteioTpl_imagem__2GXxI" style="position:absolute;top:0;left:0;bottom:0;right:0;box-sizing:border-box;padding:0;border:none;margin:auto;display:block;width:0;height:0;min-width:100%;max-width:100%;min-height:100%;max-height:100%">
+                              <div style="display:block;overflow:hidden;position:absolute;top:0;left:0;bottom:0;right:0;box-sizing:border-box;margin:0">cxcxcxc
+                                 <img alt="1.500,00 com apenas 0,03 centavos" src="<?= validate_image($row['image_path']) ?>"  class="SorteioTpl_imagem__2GXxI" style="position:absolute;top:0;left:0;bottom:0;right:0;box-sizing:border-box;padding:0;border:none;margin:auto;display:block;width:0;height:0;min-width:100%;max-width:100%;min-height:100%;max-height:100%">
                                  <noscript><img alt="1.500,00 com apenas 0,03 centavos" src="<?= validate_image($row['image_path']) ?>" decoding="async" data-nimg="fill" style="position:absolute;top:0;left:0;bottom:0;right:0;box-sizing:border-box;padding:0;border:none;margin:auto;display:block;width:0;height:0;min-width:100%;max-width:100%;min-height:100%;max-height:100%" class="SorteioTpl_imagem__2GXxI" loading="lazy"/></noscript>
                               </div>
                            </div>
