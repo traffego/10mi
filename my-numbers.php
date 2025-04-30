@@ -18,10 +18,34 @@ $enable_hide_numbers = $_settings->info('enable_hide_numbers');
     position: relative;
     margin-bottom: 0;
     padding: 10px;
+    padding-bottom: 110px; /* Espaço extra para o gradiente não cobrir números */
     border: 1px solid #e9e9e9;
     border-bottom: none;
     border-radius: 8px 8px 0 0;
     transition: height 0.3s ease;
+    scrollbar-width: thin;
+    -ms-overflow-style: none;
+  }
+  
+  .compra-cotas.font-xs::-webkit-scrollbar {
+    width: 6px;
+  }
+  
+  .compra-cotas.font-xs::-webkit-scrollbar-thumb {
+    background-color: rgba(0,0,0,0.2);
+    border-radius: 3px;
+  }
+  
+  /* Contenedor para o efeito de blur */
+  .blur-container {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 120px;
+    pointer-events: none;
+    z-index: 5;
+    overflow: hidden;
   }
   
   /* Efeito de blur como elemento separado para facilitar o controle */
@@ -30,10 +54,9 @@ $enable_hide_numbers = $_settings->info('enable_hide_numbers');
     bottom: 0;
     left: 0;
     right: 0;
-    height: 100px;
+    height: 120px;
     background: linear-gradient(to bottom, rgba(255,255,255,0) 0%, rgba(255,255,255,0.85) 50%, rgba(255,255,255,1) 100%);
     pointer-events: none;
-    z-index: 2;
     transition: opacity 0.3s ease;
   }
   
@@ -241,7 +264,9 @@ $enable_hide_numbers = $_settings->info('enable_hide_numbers');
                      <div class="numbers-container">
                        <?= $numbersDisplay ?>
                      </div>
-                     <div class="blur-overlay" id="blur-overlay-<?= $orderRow['id'] ?>"></div>
+                     <div class="blur-container">
+                       <div class="blur-overlay" id="blur-overlay-<?= $orderRow['id'] ?>"></div>
+                     </div>
                   <?php
                   } elseif($type_of_draw == 1 && $status == 1 && $enable_hide_numbers == 1){
                      echo 'As cotas serão geradas após o pagamento.';
@@ -252,7 +277,9 @@ $enable_hide_numbers = $_settings->info('enable_hide_numbers');
                      <div class="numbers-container">
                        <?= $numbersDisplay ?>
                      </div>
-                     <div class="blur-overlay" id="blur-overlay-<?= $orderRow['id'] ?>"></div>
+                     <div class="blur-container">
+                       <div class="blur-overlay" id="blur-overlay-<?= $orderRow['id'] ?>"></div>
+                     </div>
                   <?php
                   }
                   unset($_SESSION['phone']);
