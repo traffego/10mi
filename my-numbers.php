@@ -16,10 +16,11 @@ $enable_hide_numbers = $_settings->info('enable_hide_numbers');
     height: 300px;
     overflow-y: auto;
     position: relative;
-    margin-bottom: 10px;
+    margin-bottom: 0;
     padding: 10px;
     border: 1px solid #e9e9e9;
-    border-radius: 8px;
+    border-bottom: none;
+    border-radius: 8px 8px 0 0;
     transition: height 0.3s ease;
   }
   
@@ -30,17 +31,15 @@ $enable_hide_numbers = $_settings->info('enable_hide_numbers');
     left: 0;
     right: 0;
     height: 100px;
-    background: linear-gradient(to bottom, rgba(255,255,255,0) 0%, rgba(49, 49, 49, 0.9) 70%, rgba(49, 49, 49, 1) 100%);
+    background: linear-gradient(to bottom, rgba(255,255,255,0) 0%, rgba(255,255,255,0.85) 50%, rgba(255,255,255,1) 100%);
     pointer-events: none;
     z-index: 2;
-    border-bottom-left-radius: 8px;
-    border-bottom-right-radius: 8px;
     transition: opacity 0.3s ease;
   }
   
   /* Modo escuro para o gradiente */
   .dark .blur-overlay {
-    background: linear-gradient(to bottom, rgba(30,30,30,0) 0%, rgba(30,30,30,0.9) 70%, rgba(30,30,30,1) 100%);
+    background: linear-gradient(to bottom, rgba(30,30,30,0) 0%, rgba(30,30,30,0.85) 50%, rgba(30,30,30,1) 100%);
   }
   
   /* Esconder o gradiente quando expandido */
@@ -68,11 +67,12 @@ $enable_hide_numbers = $_settings->info('enable_hide_numbers');
     display: block;
     width: 100%;
     text-align: center;
-    margin-top: -1px;
-    padding: 8px;
+    margin-top: 0;
+    padding: 10px;
     background-color: #6c5ce7;
     color: white;
-    border: none;
+    border: 1px solid #e9e9e9;
+    border-top: none;
     border-radius: 0 0 8px 8px;
     cursor: pointer;
     font-size: 0.9rem;
