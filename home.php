@@ -85,9 +85,9 @@ width: fit-content;
                            <div id="carouselSorteio640d0a84b1fef407920230311" class="carousel slide carousel-dark carousel-fade" data-bs-ride="carousel">
                               <div class="carousel-inner">
                                  <div class="carousel-item active" >
-                                    <img alt="<?= $row['name'] ?>" src="<?= validate_image($row['image_path']) ?>" decoding="async" data-nimg="fill" class="SorteioTpl_imagem__2GXxI d-block">
+                                    <img alt="<?= $row['name'] ?>" src="<?= validate_image($row['image_path']) ?>" class="SorteioTpl_imagem__2GXxI d-block">
                                     
-                                    <noscript><img alt="<?= $row['name'] ?>" src="<?= validate_image($row['image_path']) ?>" decoding="async" data-nimg="fill" class="SorteioTpl_imagem__2GXxI d-block" loading="lazy"/></noscript>
+                                    <noscript><img alt="<?= $row['name'] ?>" src="<?= validate_image($row['image_path']) ?>" class="SorteioTpl_imagem__2GXxI d-block" loading="lazy"/></noscript>
                                  
                                  </div>
                               </div>
