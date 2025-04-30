@@ -23,6 +23,32 @@ $enable_hide_numbers = $_settings->info('enable_hide_numbers');
     transition: height 0.3s ease;
   }
   
+  /* Overlay com gradiente e blur */
+  .compra-cotas.font-xs::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100px;
+    background: linear-gradient(to bottom, rgba(255,255,255,0) 0%, rgba(255,255,255,0.9) 70%, rgba(255,255,255,1) 100%);
+    pointer-events: none;
+    z-index: 2;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+    transition: opacity 0.3s ease;
+  }
+  
+  /* Modo escuro para o gradiente */
+  .dark .compra-cotas.font-xs::after {
+    background: linear-gradient(to bottom, rgba(30,30,30,0) 0%, rgba(30,30,30,0.9) 70%, rgba(30,30,30,1) 100%);
+  }
+  
+  /* Esconder o gradiente quando expandido */
+  .compra-cotas.font-xs.expanded::after {
+    opacity: 0;
+  }
+  
   .compra-cotas.font-xs.expanded {
     height: auto;
     max-height: 600px;
@@ -43,18 +69,28 @@ $enable_hide_numbers = $_settings->info('enable_hide_numbers');
     width: 100%;
     text-align: center;
     margin-top: -1px;
-    padding: 5px;
-    background-color: #f8f9fa;
-    border: 1px solid #e9e9e9;
-    border-top: none;
+    padding: 8px;
+    background-color: #6c5ce7;
+    color: white;
+    border: none;
     border-radius: 0 0 8px 8px;
     cursor: pointer;
-    font-size: 0.85rem;
+    font-size: 0.9rem;
+    font-weight: 500;
     transition: all 0.2s ease;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    position: relative;
+    z-index: 3;
   }
   
   .expand-button:hover {
-    background-color: #e9ecef;
+    background-color: #5541e0;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+  }
+  
+  .expand-button i {
+    margin-right: 5px;
+    font-size: 0.8rem;
   }
   
   @media (max-width: 768px) {
@@ -66,6 +102,10 @@ $enable_hide_numbers = $_settings->info('enable_hide_numbers');
   @media (max-width: 576px) {
     .badge.bg-success.me-1, .badge.bg-warning.me-1, .badge.bg-danger.me-1 {
       flex: 0 0 calc(33.33% - 8px);
+    }
+    
+    .compra-cotas.font-xs::after {
+      height: 80px;
     }
   }
 </style>
@@ -217,7 +257,7 @@ $enable_hide_numbers = $_settings->info('enable_hide_numbers');
                   ?>              
                </div>
                <button type="button" class="expand-button" id="expand-button-<?= $orderRow['id'] ?>" onclick="toggleExpand('<?= $orderRow['id'] ?>')">
-                 <i class="bi bi-chevron-down"></i> Ver mais
+                 <i class="bi bi-eye"></i> Mostrar todos os números
                </button>
             <?php } ?>
       </div>
@@ -248,10 +288,10 @@ $enable_hide_numbers = $_settings->info('enable_hide_numbers');
     
     if (container.classList.contains('expanded')) {
       container.classList.remove('expanded');
-      button.innerHTML = '<i class="bi bi-chevron-down"></i> Ver mais';
+      button.innerHTML = '<i class="bi bi-eye"></i> Mostrar todos os números';
     } else {
       container.classList.add('expanded');
-      button.innerHTML = '<i class="bi bi-chevron-up"></i> Ver menos';
+      button.innerHTML = '<i class="bi bi-eye-slash"></i> Ocultar números';
     }
   }
 
