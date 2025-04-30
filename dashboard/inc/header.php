@@ -74,6 +74,48 @@ require_once('sess_auth.php');
   <script src="<?php echo base_url ?>plugins/jquery/jquery.min.js"></script>
   <script>
     var _base_url_ = '<?php echo base_url ?>';
+    
+    // Função para limpar o cache do dashboard
+    function clearDashboardCache() {
+      if (confirm('Deseja limpar o cache do dashboard? A página será recarregada.')) {
+        // Limpar todos os tipos de cache que o navegador permite
+        try {
+          // Limpar cache de aplicação
+          if ('caches' in window) {
+            caches.keys().then(function(names) {
+              names.forEach(function(name) {
+                caches.delete(name);
+              });
+            });
+          }
+          
+          // Limpar service workers
+          if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.getRegistrations().then(function(registrations) {
+              for (let registration of registrations) {
+                registration.unregister();
+              }
+            });
+          }
+          
+          // Limpar localStorage para o dashboard
+          const dashboardPrefix = 'dashboard_';
+          Object.keys(localStorage).forEach(key => {
+            if (key.startsWith(dashboardPrefix)) {
+              localStorage.removeItem(key);
+            }
+          });
+          
+          // Forçar recarregamento sem cache
+          const cacheBuster = new Date().getTime();
+          window.location.href = window.location.pathname + '?clearcache=' + cacheBuster;
+        } catch (e) {
+          console.error('Erro ao limpar cache:', e);
+          // Se algo der errado, pelo menos recarrega a página
+          window.location.reload(true);
+        }
+      }
+    }
   </script>
   <style>
     /* Estilos adicionais para a navbar */
@@ -364,6 +406,12 @@ require_once('sess_auth.php');
             <a href="./?page=user/list" class="nav-item block px-3 py-2 text-sm rounded-md hover:text-purple-700 transition-colors <?php echo (isset($_GET['page']) && $_GET['page'] == 'user/list') ? 'active' : ''; ?>">Usuários</a>
             <a href="./?page=gateway" class="nav-item block px-3 py-2 text-sm rounded-md hover:text-purple-700 transition-colors <?php echo (isset($_GET['page']) && $_GET['page'] == 'gateway') ? 'active' : ''; ?>">Gateway</a>
             <a href="./?page=system_info" class="nav-item block px-3 py-2 text-sm rounded-md hover:text-purple-700 transition-colors <?php echo (isset($_GET['page']) && $_GET['page'] == 'system_info') ? 'active' : ''; ?>">Configuração</a>
+            <a href="javascript:void(0)" onclick="clearDashboardCache()" class="nav-item block px-3 py-2 text-sm rounded-md bg-gray-100 hover:bg-gray-200 hover:text-purple-700 transition-colors dark:bg-gray-700 dark:hover:bg-gray-600">
+              <svg class="w-4 h-4 inline-block mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"></path>
+              </svg>
+              Limpar Cache
+            </a>
 </div>
 </div>
         
@@ -377,6 +425,12 @@ require_once('sess_auth.php');
           <a href="./?page=user/list" class="nav-item px-3 py-2 text-sm rounded-md hover:text-purple-700 transition-colors <?php echo (isset($_GET['page']) && $_GET['page'] == 'user/list') ? 'active' : ''; ?>">Usuários</a>
           <a href="./?page=gateway" class="nav-item px-3 py-2 text-sm rounded-md hover:text-purple-700 transition-colors <?php echo (isset($_GET['page']) && $_GET['page'] == 'gateway') ? 'active' : ''; ?>">Gateway</a>
           <a href="./?page=system_info" class="nav-item px-3 py-2 text-sm rounded-md hover:text-purple-700 transition-colors <?php echo (isset($_GET['page']) && $_GET['page'] == 'system_info') ? 'active' : ''; ?>">Configuração</a>
+          <a href="javascript:void(0)" onclick="clearDashboardCache()" class="nav-item px-3 py-2 text-sm rounded-md flex items-center bg-gray-100 hover:bg-gray-200 hover:text-purple-700 transition-colors dark:bg-gray-700 dark:hover:bg-gray-600">
+            <svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"></path>
+            </svg>
+            Limpar Cache
+          </a>
         </nav>
         
         <!-- Right side tools -->

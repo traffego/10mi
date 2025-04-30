@@ -540,7 +540,7 @@ position: relative;
     padding: 1px 5px 1px 5px;
     border: 1px solid #aed2c2;
     background-color: #def7ec;
-    color: #046c4e !important;
+    color:rgb(55, 55, 55) !important;
     font-weight: 500;
     font-size: small;
     border-radius: 5px;
