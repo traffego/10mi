@@ -1,7 +1,13 @@
 <?php $enable_raffle_mode = $_settings->info('enable_raffle_mode');
 $enable_raffle_mode_class_phone = ($enable_raffle_mode == 1) ? 'enable_raffle_mode_class_phone' : '';
-
 $enable_raffle_mode_class_phone_blur = ($enable_raffle_mode == 1) ? 'enable_raffle_mode_class_phone_blur' : '';
+
+// Initialize variables to prevent undefined warnings
+$raffle = isset($_GET['raffle']) ? $_GET['raffle'] : '';
+$d_start = isset($_GET['ranking_date_start']) ? $_GET['ranking_date_start'] : date('Y-m-d');
+$d_end = isset($_GET['ranking_date_end']) ? $_GET['ranking_date_end'] : date('Y-m-d');
+$top = isset($_GET['top']) ? $_GET['top'] : '';
+
 if(isset($_SERVER['HTTP_USER_AGENT'])) {
     $user_agent = $_SERVER['HTTP_USER_AGENT'];
     
