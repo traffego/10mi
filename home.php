@@ -29,44 +29,43 @@ sendConversionEvent($event_name, $event_id, $event_time, $user_data, $custom_dat
         font-weight: 700;
     }
     
+    /* Correção simples e direta para imagens */
     .SorteioTpl_imagem__2GXxI {
-        max-width: 100% !important;
-        height: auto !important;
-        object-fit: contain !important;
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+        object-fit: contain;
     }
     
     .SorteioTpl_imagemContainer__2-pl4 {
-        width: 100% !important;
-        max-width: 100% !important;
-        position: relative !important;
-        overflow: hidden !important;
+        width: 100%;
+        position: relative;
+        overflow: hidden;
     }
     
-    /* Correção específica para iPhone e dispositivos móveis */
-    @media screen and (max-width: 767px) {
-        .SorteioTpl_imagem__2GXxI {
-            width: 100% !important;
-            max-height: 250px !important;
-        }
-        
-        .carousel-item {
-            width: 100% !important;
-            text-align: center !important;
-        }
-        
-        .SorteioTpl_imagemContainer__2-pl4 {
-            width: 100% !important;
-            padding-right: 0 !important;
-            margin-right: 0 !important;
-        }
-        
-        /* Correção para o contenedor da imagem */
-        [style*="display:block;overflow:hidden;position:absolute"] {
-            position: relative !important;
-            height: 200px !important;
-        }
+    /* Correção específica para o carrossel */
+    .carousel-inner, .carousel-item {
+        width: 100%;
     }
     
+    /* Correção específica para iPhone */
+    @media screen and (max-width: 767px), 
+           screen and (-webkit-min-device-pixel-ratio: 2), 
+           screen and (min-resolution: 192dpi) {
+        img {
+            max-width: 100%;
+        }
+        
+        .carousel, .carousel-inner, .carousel-item {
+            width: 100% !important;
+        }
+        
+        /* Correção para elementos com estilo inline */
+        [style*="position:absolute"] {
+            width: 100% !important;
+            max-width: 100% !important;
+        }
+    }
     
     .SorteioTpl_info__t1BZr {
         width:100%;
@@ -84,8 +83,6 @@ width: fit-content;
     background-color: #0f2 !important;
     }
     
-    
-    
     .preco {
     background: #000;
 width: fit-content;
@@ -96,28 +93,48 @@ width: fit-content;
     float: left;
 }
 
-/* Correção para o contenedor da imagem */
-[style*="display:block;overflow:hidden;position:absolute"] {
-    position: relative !important;
-    height: 200px !important;
-}
-
-/* Novo contêiner de imagem */
+/* Novo contêiner de imagem simplificado */
 .produto-img-container {
     width: 100%;
-    height: 200px;
-    overflow: hidden;
     position: relative;
     border-radius: 8px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    overflow: hidden;
 }
 
 .produto-img-container img {
-    object-fit: cover;
-    height: 100%;
     width: 100%;
+    display: block;
+}
+
+/* Estilos para os avatares de ganhadores */
+.avatar-container {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+    border-radius: 50%;
+}
+
+.winner-avatar {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* Estilos para as imagens de prêmios */
+.premio-img-container {
+    width: 40px;
+    height: 40px;
+    position: relative;
+    overflow: hidden;
+}
+
+.premio-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
 }
 </style>
          <div class="container app-main">
@@ -282,11 +299,9 @@ width: fit-content;
                        <div class="col-12">
                         <div class="ganhadorItem_ganhadorContainer__1Sbxm mb-2">
                            <div class="ganhadorItem_ganhadorFoto__324kH box-shadow-08">                              
-                              <div style="display:block;overflow:hidden;position:absolute;top:0;left:0;bottom:0;right:0;box-sizing:border-box;margin:0">
-                                 <img alt="<?= $draw_name; ?> ganhador do prêmio <?= $product_name; ?>" src="<?php echo base_url ?>assets/img/avatar.jpg" decoding="async" data-nimg="fill" style="position:absolute;top:0;left:0;bottom:0;right:0;box-sizing:border-box;padding:0;border:none;margin:auto;display:block;width:0;height:0;min-width:100%;max-width:100%;min-height:100%;max-height:100%">
-                                 <noscript><img alt="<?= $draw_name; ?> ganhador do prêmio <?= $product_name; ?>" src="<?php echo base_url ?>assets/img/avatar.jpg" decoding="async" data-nimg="fill" style="position:absolute;top:0;left:0;bottom:0;right:0;box-sizing:border-box;padding:0;border:none;margin:auto;display:block;width:0;height:0;min-width:100%;max-width:100%;min-height:100%;max-height:100%" loading="lazy"/></noscript>
+                              <div class="avatar-container">
+                                 <img alt="<?= $draw_name; ?> ganhador do prêmio <?= $product_name; ?>" src="<?php echo base_url ?>assets/img/avatar.jpg" class="winner-avatar">
                               </div>
-                           
                            </div>
                            <div class="undefined w-100">
                               <h3 class="ganhadorItem_ganhadorNome__2j_J-"><?= $draw_name; ?></h3>
@@ -295,13 +310,10 @@ width: fit-content;
                               </p>
                            </div>
                            <div>
-                              <div class="rounded-pill" style="width:40px;height:40px;position:relative;overflow:hidden">
+                              <div class="rounded-pill premio-img-container">
                                  <a href="/sorteio/<?= $row['slug'] ?>">
-                                 <div style="display:block;overflow:hidden;position:absolute;top:0;left:0;bottom:0;right:0;box-sizing:border-box;margin:0">
-                                    <img alt="<?= $product_name; ?>" src="<?= $image_path; ?>" decoding="async" data-nimg="fill" style="position:absolute;top:0;left:0;bottom:0;right:0;box-sizing:border-box;padding:0;border:none;margin:auto;display:block;width:0;height:0;min-width:100%;max-width:100%;min-height:100%;max-height:100%">
-                                    <noscript><img alt="<?= $product_name; ?>" src="<?= $image_path; ?>" decoding="async" data-nimg="fill" style="position:absolute;top:0;left:0;bottom:0;right:0;box-sizing:border-box;padding:0;border:none;margin:auto;display:block;width:0;height:0;min-width:100%;max-width:100%;min-height:100%;max-height:100%" loading="lazy"/></noscript>
-                                 </div>
-                              </a>
+                                    <img alt="<?= $product_name; ?>" src="<?= $image_path; ?>" class="premio-img">
+                                 </a>
                               </div>
                            </div>
                         </div>
