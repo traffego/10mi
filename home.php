@@ -30,7 +30,41 @@ sendConversionEvent($event_name, $event_id, $event_time, $user_data, $custom_dat
     }
     
     .SorteioTpl_imagem__2GXxI {
+        max-width: 100% !important;
+        height: auto !important;
+        object-fit: contain !important;
+    }
+    
+    .SorteioTpl_imagemContainer__2-pl4 {
+        width: 100% !important;
+        max-width: 100% !important;
+        position: relative !important;
+        overflow: hidden !important;
+    }
+    
+    /* Correção específica para iPhone e dispositivos móveis */
+    @media screen and (max-width: 767px) {
+        .SorteioTpl_imagem__2GXxI {
+            width: 100% !important;
+            max-height: 250px !important;
+        }
         
+        .carousel-item {
+            width: 100% !important;
+            text-align: center !important;
+        }
+        
+        .SorteioTpl_imagemContainer__2-pl4 {
+            width: 100% !important;
+            padding-right: 0 !important;
+            margin-right: 0 !important;
+        }
+        
+        /* Correção para o contenedor da imagem */
+        [style*="display:block;overflow:hidden;position:absolute"] {
+            position: relative !important;
+            height: 200px !important;
+        }
     }
     
     
@@ -61,6 +95,30 @@ width: fit-content;
     color: #fff;
     float: left;
 }
+
+/* Correção para o contenedor da imagem */
+[style*="display:block;overflow:hidden;position:absolute"] {
+    position: relative !important;
+    height: 200px !important;
+}
+
+/* Novo contêiner de imagem */
+.produto-img-container {
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+    position: relative;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.produto-img-container img {
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+}
 </style>
          <div class="container app-main">
             <div class="row">
@@ -79,26 +137,22 @@ width: fit-content;
                
                   <div class="col-12 mb-2">
                       
-                     <div class="SorteioTpl_sorteioTpl__2s2Wu SorteioTpl_destaque__3vnWR  pointer">
+                     <div class="SorteioTpl_sorteioTpl__2s2Wu SorteioTpl_destaque__3vnWR pointer">
                          
-                        <a href="/sorteio/<?= $row['slug'] ?>"><div class="SorteioTpl_imagemContainer__2-pl4 col-auto ">
-                           <div id="carouselSorteio640d0a84b1fef407920230311" class="carousel slide carousel-dark carousel-fade" data-bs-ride="carousel">
-                              <div class="carousel-inner">
-                                 <div class="carousel-item active" style="width:100%;">
-                                    <img alt="<?= $row['name'] ?>" src="<?= validate_image($row['image_path']) ?>" decoding="async" data-nimg="fill" class="SorteioTpl_imagem__2GXxI d-block">
-                                    
-                                    <noscript><img alt="<?= $row['name'] ?>" src="<?= validate_image($row['image_path']) ?>" decoding="async" data-nimg="fill" class="SorteioTpl_imagem__2GXxI d-block" loading="lazy"/></noscript>
-                                 
+                        <a href="/sorteio/<?= $row['slug'] ?>">
+                           <div class="SorteioTpl_imagemContainer__2-pl4">
+                              <div id="carouselSorteio640d0a84b1fef407920230311" class="carousel slide carousel-dark carousel-fade" data-bs-ride="carousel">
+                                 <div class="carousel-inner">
+                                    <div class="carousel-item active">
+                                       <img alt="<?= $row['name'] ?>" src="<?= validate_image($row['image_path']) ?>" decoding="async" data-nimg="fill" class="SorteioTpl_imagem__2GXxI d-block w-100">
+                                       <noscript><img alt="<?= $row['name'] ?>" src="<?= validate_image($row['image_path']) ?>" decoding="async" data-nimg="fill" class="SorteioTpl_imagem__2GXxI d-block w-100" loading="lazy"/></noscript>
+                                    </div>
                                  </div>
                               </div>
                            </div>
-                           </a>
-                           
-                        </div>
-                        
+                        </a>
                         
                         <div class="SorteioTpl_info__t1BZr">
-                            
                             
                            <h1 class="SorteioTpl_title__3RLtu"><a href="/sorteio/<?= $row['slug'] ?>"><?= $row['name'] ?></a></h1>
                            
@@ -143,11 +197,11 @@ width: fit-content;
                      ?>
                      <div class="col-12 mb-2">
                       <a href="/sorteio/<?= $row['slug'] ?>"> 
-                         <div class="SorteioTpl_sorteioTpl__2s2Wu   pointer">
-                           <div class="SorteioTpl_imagemContainer__2-pl4 col-auto ">
-                              <div style="display:block;overflow:hidden;position:absolute;top:0;left:0;bottom:0;right:0;box-sizing:border-box;margin:0">
-                                 <img alt="1.500,00 com apenas 0,03 centavos" src="<?= validate_image($row['image_path']) ?>" decoding="async" data-nimg="fill" class="SorteioTpl_imagem__2GXxI" style="position:absolute;top:0;left:0;bottom:0;right:0;box-sizing:border-box;padding:0;border:none;margin:auto;display:block;width:0;height:0;min-width:100%;max-width:100%;min-height:100%;max-height:100%">
-                                 <noscript><img alt="1.500,00 com apenas 0,03 centavos" src="<?= validate_image($row['image_path']) ?>" decoding="async" data-nimg="fill" style="position:absolute;top:0;left:0;bottom:0;right:0;box-sizing:border-box;padding:0;border:none;margin:auto;display:block;width:0;height:0;min-width:100%;max-width:100%;min-height:100%;max-height:100%" class="SorteioTpl_imagem__2GXxI" loading="lazy"/></noscript>
+                         <div class="SorteioTpl_sorteioTpl__2s2Wu pointer">
+                           <div class="SorteioTpl_imagemContainer__2-pl4">
+                              <div class="produto-img-container">
+                                 <img alt="<?= $row['name'] ?>" src="<?= validate_image($row['image_path']) ?>" decoding="async" class="SorteioTpl_imagem__2GXxI w-100">
+                                 <noscript><img alt="<?= $row['name'] ?>" src="<?= validate_image($row['image_path']) ?>" decoding="async" class="SorteioTpl_imagem__2GXxI w-100" loading="lazy"/></noscript>
                               </div>
                            </div>
                            <div class="SorteioTpl_info__t1BZr">
