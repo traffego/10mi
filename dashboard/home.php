@@ -632,21 +632,7 @@ tbody {
 
 }
 
-/* Dark mode style for adm-pedido-numeros */
-.dark .adm-pedido-numeros,
-html.dark .adm-pedido-numeros,
-.theme-dark .adm-pedido-numeros,
-html[class*="theme-dark"] .adm-pedido-numeros {
-  color: #000 !important; /* Ensuring text stays dark in dark mode */
-  background-color: #def7ec !important; /* Keep the light background */
-}
 
-.dark .adm-pedido-numeros:hover,
-html.dark .adm-pedido-numeros:hover,
-.theme-dark .adm-pedido-numeros:hover,
-html[class*="theme-dark"] .adm-pedido-numeros:hover {
-  color: #000 !important; /* Ensuring text stays dark on hover */
-}
 
 /* Fix for modal buttons */
 @media (max-width: 640px) {
